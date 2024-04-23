@@ -1,0 +1,9 @@
+# ninja log v5
+4	324	7355444921594266	test_function_autogen/timestamp	a402e16cefd6c962
+4	324	7355444921594266	test_function_autogen/mocs_compilation.cpp	a402e16cefd6c962
+4	324	7355444921594266	D:/Courses/The second semester/QT/Myproject/build-test_function-Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/test_function_autogen/timestamp	a402e16cefd6c962
+4	324	7355444921594266	D:/Courses/The second semester/QT/Myproject/build-test_function-Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/test_function_autogen/mocs_compilation.cpp	a402e16cefd6c962
+324	1190	7355444931116699	CMakeFiles/test_function.dir/test_function_autogen/mocs_compilation.cpp.obj	3fb58dd7828524c2
+329	1199	7355444931215252	CMakeFiles/test_function.dir/main.cpp.obj	c1ae366091784951
+334	1209	7355444931319681	CMakeFiles/test_function.dir/mainwindow.cpp.obj	3826c8543e630963
+1210	1468	7355444933732236	test_function.exe	7ecc81c83f66353
