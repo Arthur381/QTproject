@@ -11,5 +11,7 @@ int main(int argc, char *argv[])
     //在本地改变之后再次上传
     MainWindow w;
     w.show();
+    w.show();
+    w.show();
     return a.exec();
 }
