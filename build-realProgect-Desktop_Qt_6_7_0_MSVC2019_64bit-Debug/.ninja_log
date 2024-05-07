@@ -1,0 +1,10 @@
+# ninja log v5
+5	71	0	D:/Courses/The second semester/QT/Myproject/build-realProgect-Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/CMakeFiles/cmake.verify_globs	c9a23df3bffbf464
+74	556	7367834764612380	realProgect_autogen/timestamp	c5061d9f2d0b1a76
+74	556	7367834764612380	realProgect_autogen/mocs_compilation.cpp	c5061d9f2d0b1a76
+74	556	7367834764612380	D:/Courses/The second semester/QT/Myproject/build-realProgect-Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/realProgect_autogen/timestamp	c5061d9f2d0b1a76
+74	556	7367834764612380	D:/Courses/The second semester/QT/Myproject/build-realProgect-Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/realProgect_autogen/mocs_compilation.cpp	c5061d9f2d0b1a76
+556	2417	7367834783837100	CMakeFiles/realProgect.dir/realProgect_autogen/mocs_compilation.cpp.obj	bc846fcec9f96e1
+567	2476	7367834784542237	CMakeFiles/realProgect.dir/mainwindow.cpp.obj	833cb47a3d1c90f9
+562	2485	7367834784639188	CMakeFiles/realProgect.dir/main.cpp.obj	738c1401634801d
+2485	3017	7367834789617588	realProgect.exe	140925ab0e6fb9e0
