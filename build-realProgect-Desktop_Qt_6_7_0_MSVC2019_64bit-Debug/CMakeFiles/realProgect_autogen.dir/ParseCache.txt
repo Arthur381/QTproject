@@ -154,10 +154,10 @@ D:/Courses/The second semester/QT/Myproject/realProgect/mainwindow.h
  mdp:F:/project/QT/6.7.0/msvc2019_64/include/QtWidgets/qtwidgetsexports.h
  mdp:F:/project/QT/6.7.0/msvc2019_64/include/QtWidgets/qtwidgetsglobal.h
  mdp:F:/project/QT/6.7.0/msvc2019_64/include/QtWidgets/qwidget.h
+D:/Courses/The second semester/QT/Myproject/realProgect/schedulemsy.h
+D:/Courses/The second semester/QT/Myproject/realProgect/main.cpp
 D:/Courses/The second semester/QT/Myproject/realProgect/mainwindow.cpp
  uic:./ui_mainwindow.h
-D:/Courses/The second semester/QT/Myproject/realProgect/main.cpp
-D:/Courses/The second semester/QT/Myproject/realProgect/schedulemsy.h
 D:/Courses/The second semester/QT/Myproject/realProgect/timetable.h
  mmc:Q_OBJECT
  mdp:D:/Courses/The second semester/QT/Myproject/realProgect/timetable.h

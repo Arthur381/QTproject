@@ -30,7 +30,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
 
         clockhzj.h clockhzj.cpp clockhzj.ui
         calendarmc.h calendarmc.cpp calendarmc.ui
-        schedulemsy.h schedulemsy.cpp schedulemsy.ui
+
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET realProgect APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

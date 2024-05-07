@@ -170,7 +170,6 @@ set(OLD_GLOB
   "D:/Courses/The second semester/QT/Myproject/realProgect/calendarmc.ui"
   "D:/Courses/The second semester/QT/Myproject/realProgect/clockhzj.ui"
   "D:/Courses/The second semester/QT/Myproject/realProgect/mainwindow.ui"
-  "D:/Courses/The second semester/QT/Myproject/realProgect/schedulemsy.ui"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

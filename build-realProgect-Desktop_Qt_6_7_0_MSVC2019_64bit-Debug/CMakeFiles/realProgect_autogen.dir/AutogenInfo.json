@@ -298,12 +298,6 @@
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
 			null
-		],
-		[
-			"D:/Courses/The second semester/QT/Myproject/realProgect/schedulemsy.h",
-			"MU",
-			"EWIEGA46WW/moc_schedulemsy.cpp",
-			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -378,11 +372,6 @@
 		],
 		[
 			"D:/Courses/The second semester/QT/Myproject/realProgect/mainwindow.cpp",
-			"MU",
-			null
-		],
-		[
-			"D:/Courses/The second semester/QT/Myproject/realProgect/schedulemsy.cpp",
 			"MU",
 			null
 		]
