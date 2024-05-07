@@ -1,35 +1,17 @@
 # ninja log v5
-34	100	7368027427576044	D:/Courses/The second semester/QT/Myproject/build-realProgect-Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/CMakeFiles/cmake.verify_globs	c9a23df3bffbf464
-201	885	7368021958127477	realProgect_autogen/mocs_compilation.cpp	c5061d9f2d0b1a76
-201	885	7368021958127477	realProgect_autogen/timestamp	c5061d9f2d0b1a76
-201	885	7368021958127477	D:/Courses/The second semester/QT/Myproject/build-realProgect-Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/realProgect_autogen/mocs_compilation.cpp	c5061d9f2d0b1a76
-417	761	7368001354193347	CMakeFiles/realProgect.dir/schedulemsy.cpp.obj	288fe6ee8f26e507
-201	885	7368021958127477	D:/Courses/The second semester/QT/Myproject/build-realProgect-Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/realProgect_autogen/timestamp	c5061d9f2d0b1a76
-885	3494	7368021985274164	CMakeFiles/realProgect.dir/realProgect_autogen/mocs_compilation.cpp.obj	bc846fcec9f96e1
-899	3656	7368021986874176	CMakeFiles/realProgect.dir/mainwindow.cpp.obj	833cb47a3d1c90f9
-893	3622	7368021986504159	CMakeFiles/realProgect.dir/main.cpp.obj	738c1401634801d
-3656	3948	7368021989125473	realProgect.exe	dc8bfbd83ee6083b
-558	2665	7367988019363558	CMakeFiles/realProgect.dir/timetable.cpp.obj	941519118b0efc4c
-908	3601	7368021986314165	CMakeFiles/realProgect.dir/clockhzj.cpp.obj	797bed4bec630807
-914	3595	7368021986284160	CMakeFiles/realProgect.dir/calendarmc.cpp.obj	a3ad4a5b9dc41616
-101	1403	7368027439232948	build.ninja	5ee6fe7d2f688630
-19	68	0	D:/Courses/The second semester/QT/Myproject/build-realProgect-Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/CMakeFiles/cmake.verify_globs	c9a23df3bffbf464
-76	230	7368027442975261	realProgect_autogen/timestamp	c5061d9f2d0b1a76
-76	230	7368027442975261	realProgect_autogen/mocs_compilation.cpp	c5061d9f2d0b1a76
-76	230	7368027442975261	D:/Courses/The second semester/QT/Myproject/build-realProgect-Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/realProgect_autogen/timestamp	c5061d9f2d0b1a76
-76	230	7368027442975261	D:/Courses/The second semester/QT/Myproject/build-realProgect-Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/realProgect_autogen/mocs_compilation.cpp	c5061d9f2d0b1a76
-245	2837	7368027468931954	CMakeFiles/realProgect.dir/calendarmc.cpp.obj	a3ad4a5b9dc41616
-239	2870	7368027469261958	CMakeFiles/realProgect.dir/clockhzj.cpp.obj	797bed4bec630807
-233	2981	7368027470345846	CMakeFiles/realProgect.dir/mainwindow.cpp.obj	833cb47a3d1c90f9
-2981	3416	7368027473995777	realProgect.exe	999c2e6846befe8d
-33	210	0	D:/Courses/The second semester/QT/Myproject/build-realProgect-Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/CMakeFiles/cmake.verify_globs	c9a23df3bffbf464
-239	892	7368028783129541	realProgect_autogen/timestamp	c5061d9f2d0b1a76
 239	892	7368028783129541	realProgect_autogen/mocs_compilation.cpp	c5061d9f2d0b1a76
-239	892	7368028783129541	D:/Courses/The second semester/QT/Myproject/build-realProgect-Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/realProgect_autogen/timestamp	c5061d9f2d0b1a76
+5	50	7368030154619646	D:/Courses/The second semester/QT/Myproject/build-realProgect-Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/CMakeFiles/cmake.verify_globs	c9a23df3bffbf464
 239	892	7368028783129541	D:/Courses/The second semester/QT/Myproject/build-realProgect-Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/realProgect_autogen/mocs_compilation.cpp	c5061d9f2d0b1a76
+239	892	7368028783129541	realProgect_autogen/timestamp	c5061d9f2d0b1a76
+417	761	7368001354193347	CMakeFiles/realProgect.dir/schedulemsy.cpp.obj	288fe6ee8f26e507
+239	892	7368028783129541	D:/Courses/The second semester/QT/Myproject/build-realProgect-Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/realProgect_autogen/timestamp	c5061d9f2d0b1a76
+910	3401	7368028809108190	CMakeFiles/realProgect.dir/mainwindow.cpp.obj	833cb47a3d1c90f9
+892	3307	7368028808198190	CMakeFiles/realProgect.dir/realProgect_autogen/mocs_compilation.cpp.obj	bc846fcec9f96e1
+901	3295	7368028808043076	CMakeFiles/realProgect.dir/main.cpp.obj	738c1401634801d
+3401	3682	7368028811385012	realProgect.exe	999c2e6846befe8d
+558	2665	7367988019363558	CMakeFiles/realProgect.dir/timetable.cpp.obj	941519118b0efc4c
 916	3254	7368028807691586	CMakeFiles/realProgect.dir/clockhzj.cpp.obj	797bed4bec630807
 922	3284	7368028807970632	CMakeFiles/realProgect.dir/calendarmc.cpp.obj	a3ad4a5b9dc41616
-901	3295	7368028808043076	CMakeFiles/realProgect.dir/main.cpp.obj	738c1401634801d
-892	3307	7368028808198190	CMakeFiles/realProgect.dir/realProgect_autogen/mocs_compilation.cpp.obj	bc846fcec9f96e1
-910	3401	7368028809108190	CMakeFiles/realProgect.dir/mainwindow.cpp.obj	833cb47a3d1c90f9
-3401	3682	7368028811385012	realProgect.exe	999c2e6846befe8d
+101	1403	7368030163419343	build.ninja	5ee6fe7d2f688630
+50	1062	7368030163419343	build.ninja	5ee6fe7d2f688630
+22	74	0	D:/Courses/The second semester/QT/Myproject/build-realProgect-Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/CMakeFiles/cmake.verify_globs	c9a23df3bffbf464

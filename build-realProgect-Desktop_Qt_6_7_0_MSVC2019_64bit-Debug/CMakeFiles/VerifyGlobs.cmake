@@ -45,7 +45,6 @@ set(OLD_GLOB
   "D:/Courses/The second semester/QT/Myproject/realProgect/clockhzj.cpp"
   "D:/Courses/The second semester/QT/Myproject/realProgect/main.cpp"
   "D:/Courses/The second semester/QT/Myproject/realProgect/mainwindow.cpp"
-  "D:/Courses/The second semester/QT/Myproject/realProgect/schedulemsy.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -67,7 +66,6 @@ set(OLD_GLOB
   "D:/Courses/The second semester/QT/Myproject/realProgect/calendarmc.h"
   "D:/Courses/The second semester/QT/Myproject/realProgect/clockhzj.h"
   "D:/Courses/The second semester/QT/Myproject/realProgect/mainwindow.h"
-  "D:/Courses/The second semester/QT/Myproject/realProgect/schedulemsy.h"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
