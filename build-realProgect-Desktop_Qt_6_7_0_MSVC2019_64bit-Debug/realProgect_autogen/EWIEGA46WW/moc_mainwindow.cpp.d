@@ -1,4 +1,5 @@
 D:/Courses/The\ second\ semester/QT/Myproject/build-realProgect-Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/realProgect_autogen/EWIEGA46WW/moc_mainwindow.cpp: D:/Courses/The\ second\ semester/QT/Myproject/realProgect/mainwindow.h \
+  D:/Courses/The\ second\ semester/QT/Myproject/realProgect/calendarmc.h \
   F:/project/QT/6.7.0/msvc2019_64/include/QtCore/q20functional.h \
   F:/project/QT/6.7.0/msvc2019_64/include/QtCore/q20memory.h \
   F:/project/QT/6.7.0/msvc2019_64/include/QtCore/q20type_traits.h \
@@ -142,6 +143,7 @@ D:/Courses/The\ second\ semester/QT/Myproject/build-realProgect-Desktop_Qt_6_7_0
   F:/project/QT/6.7.0/msvc2019_64/include/QtGui/qwindowdefs.h \
   F:/project/QT/6.7.0/msvc2019_64/include/QtGui/qwindowdefs_win.h \
   F:/project/QT/6.7.0/msvc2019_64/include/QtWidgets/QMainWindow \
+  F:/project/QT/6.7.0/msvc2019_64/include/QtWidgets/QWidget \
   F:/project/QT/6.7.0/msvc2019_64/include/QtWidgets/qmainwindow.h \
   F:/project/QT/6.7.0/msvc2019_64/include/QtWidgets/qsizepolicy.h \
   F:/project/QT/6.7.0/msvc2019_64/include/QtWidgets/qtabwidget.h \
