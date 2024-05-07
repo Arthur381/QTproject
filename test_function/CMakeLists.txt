@@ -23,6 +23,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(test_function
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+
+        third.h third.cpp third.ui
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET test_function APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

@@ -11,9 +11,12 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QGroupBox>
+#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QTableView>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -22,6 +25,8 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
+    QTableView *tableView;
+    QGroupBox *GB;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -32,6 +37,12 @@ public:
         MainWindow->resize(800, 600);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
+        tableView = new QTableView(centralwidget);
+        tableView->setObjectName("tableView");
+        tableView->setGeometry(QRect(110, 100, 256, 192));
+        GB = new QGroupBox(centralwidget);
+        GB->setObjectName("GB");
+        GB->setGeometry(QRect(170, 180, 120, 80));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
@@ -49,6 +60,7 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        GB->setTitle(QCoreApplication::translate("MainWindow", "GroupBox", nullptr));
     } // retranslateUi
 
 };
