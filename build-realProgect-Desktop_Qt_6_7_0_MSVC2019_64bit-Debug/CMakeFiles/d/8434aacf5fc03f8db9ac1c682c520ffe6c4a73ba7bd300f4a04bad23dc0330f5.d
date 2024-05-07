@@ -4,6 +4,12 @@ realProgect_autogen/timestamp: \
   CMakeFiles/3.27.7/CMakeRCCompiler.cmake \
   CMakeFiles/3.27.7/CMakeSystem.cmake \
   D:/Courses/The\ second\ semester/QT/Myproject/realProgect/CMakeLists.txt \
+  D:/Courses/The\ second\ semester/QT/Myproject/realProgect/calendarmc.cpp \
+  D:/Courses/The\ second\ semester/QT/Myproject/realProgect/calendarmc.h \
+  D:/Courses/The\ second\ semester/QT/Myproject/realProgect/calendarmc.ui \
+  D:/Courses/The\ second\ semester/QT/Myproject/realProgect/clockhzj.cpp \
+  D:/Courses/The\ second\ semester/QT/Myproject/realProgect/clockhzj.h \
+  D:/Courses/The\ second\ semester/QT/Myproject/realProgect/clockhzj.ui \
   D:/Courses/The\ second\ semester/QT/Myproject/realProgect/main.cpp \
   D:/Courses/The\ second\ semester/QT/Myproject/realProgect/mainwindow.cpp \
   D:/Courses/The\ second\ semester/QT/Myproject/realProgect/mainwindow.h \
@@ -151,6 +157,7 @@ realProgect_autogen/timestamp: \
   F:/project/QT/6.7.0/msvc2019_64/include/QtGui/qwindowdefs.h \
   F:/project/QT/6.7.0/msvc2019_64/include/QtGui/qwindowdefs_win.h \
   F:/project/QT/6.7.0/msvc2019_64/include/QtWidgets/QMainWindow \
+  F:/project/QT/6.7.0/msvc2019_64/include/QtWidgets/QWidget \
   F:/project/QT/6.7.0/msvc2019_64/include/QtWidgets/qmainwindow.h \
   F:/project/QT/6.7.0/msvc2019_64/include/QtWidgets/qsizepolicy.h \
   F:/project/QT/6.7.0/msvc2019_64/include/QtWidgets/qtabwidget.h \
@@ -321,81 +328,24 @@ realProgect_autogen/timestamp: \
   F:/project/QT/6.7.0/msvc2019_64/lib/cmake/Qt6ZlibPrivate/Qt6ZlibPrivateTargets.cmake \
   F:/project/QT/6.7.0/msvc2019_64/lib/cmake/Qt6ZlibPrivate/Qt6ZlibPrivateVersionlessTargets.cmake \
   F:/project/QT/Tools/CMake_64/bin/cmake.exe \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/CMakeCXXCompiler.cmake.in \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp \
   F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake \
   F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
   F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/CMakeCompilerIdDetection.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/CMakeDetermineCompileFeatures.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/CMakeDetermineCompiler.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/CMakeDetermineRCCompiler.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/CMakeDetermineSystem.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/CMakeFindBinUtils.cmake \
   F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/CMakeFindDependencyMacro.cmake \
   F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake \
   F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake \
   F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/CMakeNinjaFindMake.cmake \
   F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/CMakeParseArguments.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/CMakeParseImplicitIncludeInfo.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/CMakeParseImplicitLinkInfo.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/CMakeParseLibraryArchitecture.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/CMakeRCCompiler.cmake.in \
   F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/CMakeRCInformation.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/CMakeSystem.cmake.in \
   F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake \
   F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/CMakeTestCompilerCommon.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/CMakeTestRCCompiler.cmake \
   F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/CheckCXXCompilerFlag.cmake \
   F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/CheckCXXSourceCompiles.cmake \
   F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/CheckIncludeFileCXX.cmake \
   F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/CheckLibraryExists.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/ADSP-DetermineCompiler.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/ARMCC-DetermineCompiler.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/ARMClang-DetermineCompiler.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/AppleClang-DetermineCompiler.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/Borland-DetermineCompiler.cmake \
   F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/Clang-DetermineCompiler.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/Clang-DetermineCompilerInternal.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/Cray-DetermineCompiler.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/Embarcadero-DetermineCompiler.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/Fujitsu-DetermineCompiler.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/GHS-DetermineCompiler.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/HP-CXX-DetermineCompiler.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/IAR-DetermineCompiler.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/Intel-DetermineCompiler.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake \
   F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/MSVC-CXX.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/MSVC-DetermineCompiler.cmake \
   F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/MSVC.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/NVHPC-DetermineCompiler.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/NVIDIA-DetermineCompiler.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/PGI-DetermineCompiler.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/PathScale-DetermineCompiler.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/SCO-DetermineCompiler.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/TI-DetermineCompiler.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/Tasking-DetermineCompiler.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/Watcom-DetermineCompiler.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/XL-CXX-DetermineCompiler.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake \
   F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake \
   F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/FindPackageMessage.cmake \
   F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/FindThreads.cmake \
@@ -404,8 +354,6 @@ realProgect_autogen/timestamp: \
   F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Internal/CheckCompilerFlag.cmake \
   F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Internal/CheckFlagCommonConfig.cmake \
   F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Internal/CheckSourceCompiles.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Internal/FeatureTesting.cmake \
-  F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Platform/Windows-Determine-CXX.cmake \
   F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Platform/Windows-Initialize.cmake \
   F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Platform/Windows-MSVC-CXX.cmake \
   F:/project/QT/Tools/CMake_64/share/cmake-3.27/Modules/Platform/Windows-MSVC.cmake \

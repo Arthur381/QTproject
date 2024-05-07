@@ -41,8 +41,11 @@ endif()
 # _directory_contents at F:/project/QT/6.7.0/msvc2019_64/lib/cmake/Qt6LinguistTools/Qt6LinguistToolsMacros.cmake:55 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "D:/Courses/The second semester/QT/Myproject/realProgect/*.cpp")
 set(OLD_GLOB
+  "D:/Courses/The second semester/QT/Myproject/realProgect/calendarmc.cpp"
+  "D:/Courses/The second semester/QT/Myproject/realProgect/clockhzj.cpp"
   "D:/Courses/The second semester/QT/Myproject/realProgect/main.cpp"
   "D:/Courses/The second semester/QT/Myproject/realProgect/mainwindow.cpp"
+  "D:/Courses/The second semester/QT/Myproject/realProgect/schedulemsy.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -61,7 +64,10 @@ endif()
 # _directory_contents at F:/project/QT/6.7.0/msvc2019_64/lib/cmake/Qt6LinguistTools/Qt6LinguistToolsMacros.cmake:55 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "D:/Courses/The second semester/QT/Myproject/realProgect/*.h")
 set(OLD_GLOB
+  "D:/Courses/The second semester/QT/Myproject/realProgect/calendarmc.h"
+  "D:/Courses/The second semester/QT/Myproject/realProgect/clockhzj.h"
   "D:/Courses/The second semester/QT/Myproject/realProgect/mainwindow.h"
+  "D:/Courses/The second semester/QT/Myproject/realProgect/schedulemsy.h"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -161,7 +167,10 @@ endif()
 # _directory_contents at F:/project/QT/6.7.0/msvc2019_64/lib/cmake/Qt6LinguistTools/Qt6LinguistToolsMacros.cmake:55 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "D:/Courses/The second semester/QT/Myproject/realProgect/*.ui")
 set(OLD_GLOB
+  "D:/Courses/The second semester/QT/Myproject/realProgect/calendarmc.ui"
+  "D:/Courses/The second semester/QT/Myproject/realProgect/clockhzj.ui"
   "D:/Courses/The second semester/QT/Myproject/realProgect/mainwindow.ui"
+  "D:/Courses/The second semester/QT/Myproject/realProgect/schedulemsy.ui"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
