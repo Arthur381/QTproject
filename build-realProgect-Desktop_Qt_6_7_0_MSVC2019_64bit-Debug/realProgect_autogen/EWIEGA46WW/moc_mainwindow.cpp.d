@@ -1,5 +1,7 @@
 D:/Courses/The\ second\ semester/QT/Myproject/build-realProgect-Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/realProgect_autogen/EWIEGA46WW/moc_mainwindow.cpp: D:/Courses/The\ second\ semester/QT/Myproject/realProgect/mainwindow.h \
   D:/Courses/The\ second\ semester/QT/Myproject/realProgect/calendarmc.h \
+  D:/Courses/The\ second\ semester/QT/Myproject/realProgect/clockhzj.h \
+  D:/Courses/The\ second\ semester/QT/Myproject/realProgect/dailymsy.h \
   F:/project/QT/6.7.0/msvc2019_64/include/QtCore/q20functional.h \
   F:/project/QT/6.7.0/msvc2019_64/include/QtCore/q20memory.h \
   F:/project/QT/6.7.0/msvc2019_64/include/QtCore/q20type_traits.h \

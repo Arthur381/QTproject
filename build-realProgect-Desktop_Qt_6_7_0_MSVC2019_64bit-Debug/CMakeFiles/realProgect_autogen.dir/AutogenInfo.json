@@ -294,9 +294,21 @@
 			null
 		],
 		[
+			"D:/Courses/The second semester/QT/Myproject/realProgect/dailymsy.h",
+			"MU",
+			"EWIEGA46WW/moc_dailymsy.cpp",
+			null
+		],
+		[
 			"D:/Courses/The second semester/QT/Myproject/realProgect/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
+			null
+		],
+		[
+			"D:/Courses/The second semester/QT/Myproject/realProgect/schedulemsy.h",
+			"MU",
+			"EWIEGA46WW/moc_schedulemsy.cpp",
 			null
 		]
 	],
@@ -366,12 +378,22 @@
 			null
 		],
 		[
+			"D:/Courses/The second semester/QT/Myproject/realProgect/dailymsy.cpp",
+			"MU",
+			null
+		],
+		[
 			"D:/Courses/The second semester/QT/Myproject/realProgect/main.cpp",
 			"MU",
 			null
 		],
 		[
 			"D:/Courses/The second semester/QT/Myproject/realProgect/mainwindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Courses/The second semester/QT/Myproject/realProgect/schedulemsy.cpp",
 			"MU",
 			null
 		]

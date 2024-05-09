@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include "calendarmc.h"
+#include "clockhzj.h"
+#include "dailymsy.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -22,6 +24,10 @@ public:
 
 private slots:
     void on_calBT_clicked();
+
+    void on_clockBT_clicked();
+
+    void on_pushButton_clicked();
 
 private:
     Ui::MainWindow *ui;

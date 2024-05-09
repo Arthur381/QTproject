@@ -43,8 +43,10 @@ file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "D:/Courses/The second semeste
 set(OLD_GLOB
   "D:/Courses/The second semester/QT/Myproject/realProgect/calendarmc.cpp"
   "D:/Courses/The second semester/QT/Myproject/realProgect/clockhzj.cpp"
+  "D:/Courses/The second semester/QT/Myproject/realProgect/dailymsy.cpp"
   "D:/Courses/The second semester/QT/Myproject/realProgect/main.cpp"
   "D:/Courses/The second semester/QT/Myproject/realProgect/mainwindow.cpp"
+  "D:/Courses/The second semester/QT/Myproject/realProgect/schedulemsy.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -65,7 +67,9 @@ file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "D:/Courses/The second semeste
 set(OLD_GLOB
   "D:/Courses/The second semester/QT/Myproject/realProgect/calendarmc.h"
   "D:/Courses/The second semester/QT/Myproject/realProgect/clockhzj.h"
+  "D:/Courses/The second semester/QT/Myproject/realProgect/dailymsy.h"
   "D:/Courses/The second semester/QT/Myproject/realProgect/mainwindow.h"
+  "D:/Courses/The second semester/QT/Myproject/realProgect/schedulemsy.h"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -167,7 +171,9 @@ file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "D:/Courses/The second semeste
 set(OLD_GLOB
   "D:/Courses/The second semester/QT/Myproject/realProgect/calendarmc.ui"
   "D:/Courses/The second semester/QT/Myproject/realProgect/clockhzj.ui"
+  "D:/Courses/The second semester/QT/Myproject/realProgect/dailymsy.ui"
   "D:/Courses/The second semester/QT/Myproject/realProgect/mainwindow.ui"
+  "D:/Courses/The second semester/QT/Myproject/realProgect/schedulemsy.ui"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

@@ -10,10 +10,16 @@ realProgect_autogen/timestamp: \
   D:/Courses/The\ second\ semester/QT/Myproject/realProgect/clockhzj.cpp \
   D:/Courses/The\ second\ semester/QT/Myproject/realProgect/clockhzj.h \
   D:/Courses/The\ second\ semester/QT/Myproject/realProgect/clockhzj.ui \
+  D:/Courses/The\ second\ semester/QT/Myproject/realProgect/dailymsy.cpp \
+  D:/Courses/The\ second\ semester/QT/Myproject/realProgect/dailymsy.h \
+  D:/Courses/The\ second\ semester/QT/Myproject/realProgect/dailymsy.ui \
   D:/Courses/The\ second\ semester/QT/Myproject/realProgect/main.cpp \
   D:/Courses/The\ second\ semester/QT/Myproject/realProgect/mainwindow.cpp \
   D:/Courses/The\ second\ semester/QT/Myproject/realProgect/mainwindow.h \
   D:/Courses/The\ second\ semester/QT/Myproject/realProgect/mainwindow.ui \
+  D:/Courses/The\ second\ semester/QT/Myproject/realProgect/schedulemsy.cpp \
+  D:/Courses/The\ second\ semester/QT/Myproject/realProgect/schedulemsy.h \
+  D:/Courses/The\ second\ semester/QT/Myproject/realProgect/schedulemsy.ui \
   F:/project/QT/6.7.0/msvc2019_64/include/QtCore/q20functional.h \
   F:/project/QT/6.7.0/msvc2019_64/include/QtCore/q20memory.h \
   F:/project/QT/6.7.0/msvc2019_64/include/QtCore/q20type_traits.h \
