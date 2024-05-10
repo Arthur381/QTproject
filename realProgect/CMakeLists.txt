@@ -88,6 +88,11 @@ install(TARGETS realProgect
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
 
+find_package(QT NAMES Qt6 QT5 REQUIRED COMPONENTS Widgets Sql)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Sql)
+target_link_libraries(realProgect PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Sql)
+
+
 if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(realProgect)
 endif()
