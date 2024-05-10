@@ -15,6 +15,11 @@ public:
     explicit calendarMC(QWidget *parent = nullptr);
     ~calendarMC();
 
+private slots:
+    void on_Modify_clicked();
+
+    void on_countdowndays_clicked();
+
 private:
     Ui::calendarMC *ui;
 };
