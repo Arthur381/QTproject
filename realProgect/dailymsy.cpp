@@ -29,6 +29,7 @@ void dailyMSY::on_iNote_clicked()
 
 void dailyMSY::on_allIn_clicked()
 {
-
+    dailymsy_allin *AllDay=new dailymsy_allin;
+    AllDay->show();
 }
 

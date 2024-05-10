@@ -15,7 +15,11 @@ public:
     explicit dailymsy_allin(QWidget *parent = nullptr);
     ~dailymsy_allin();
 
+private slots:
+    void on_missionAdd_clicked();
+
 private:
+    void CreatDataFunc();//创建SQLite数据库
     Ui::dailymsy_allin *ui;
 };
 

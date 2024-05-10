@@ -12,3 +12,9 @@ dailymsy_allin::~dailymsy_allin()
 {
     delete ui;
 }
+
+void dailymsy_allin::on_missionAdd_clicked()//添加任务并且显示
+{
+
+}
+
