@@ -32,6 +32,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         calendarmc.h calendarmc.cpp calendarmc.ui
         schedulemsy.h schedulemsy.cpp schedulemsy.ui
         dailymsy.h dailymsy.cpp dailymsy.ui
+        dailymsy2.h dailymsy2.cpp dailymsy2.ui
+        dailymsy_allin.h dailymsy_allin.cpp dailymsy_allin.ui
 
     )
 # Define target properties for Android with Qt 6 as:

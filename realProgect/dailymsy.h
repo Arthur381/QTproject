@@ -2,6 +2,7 @@
 #define DAILYMSY_H
 
 #include <QWidget>
+#include <QAbstractButton>
 
 namespace Ui {
 class dailyMSY;
@@ -17,6 +18,12 @@ public:
 
 private:
     Ui::dailyMSY *ui;
+
+public slots:
+
+private slots:
+    void on_iNote_clicked();
+    void on_allIn_clicked();
 };
 
 #endif // DAILYMSY_H
