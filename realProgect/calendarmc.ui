@@ -13,30 +13,43 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="countdowndays">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>240</y>
-     <width>80</width>
+     <x>240</x>
+     <y>250</y>
+     <width>111</width>
      <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>倒数日</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Modify">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>250</y>
+     <width>111</width>
+     <height>20</height>
     </rect>
    </property>
    <property name="text">
     <string>修改日程</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QCalendarWidget" name="calendarWidget">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>240</y>
-     <width>80</width>
-     <height>18</height>
+     <x>40</x>
+     <y>10</y>
+     <width>311</width>
+     <height>221</height>
     </rect>
    </property>
-   <property name="text">
-    <string>PushButton</string>
+   <property name="whatsThis">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;你好&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
  </widget>
