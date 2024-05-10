@@ -12,3 +12,9 @@ ModEvent::~ModEvent()
 {
     delete ui;
 }
+
+void ModEvent::on_pushButton_add_clicked()
+{
+
+}
+

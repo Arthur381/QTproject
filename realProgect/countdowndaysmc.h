@@ -2,7 +2,10 @@
 #define COUNTDOWNDAYSMC_H
 
 #include <QWidget>
+#include "calendarmc.h"
 
+
+//这里会用到在calendarmc.h中创建的数据库
 namespace Ui {
 class CountDownDaysMC;
 }

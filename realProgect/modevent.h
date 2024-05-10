@@ -15,6 +15,9 @@ public:
     explicit ModEvent(QWidget *parent = nullptr);
     ~ModEvent();
 
+private slots:
+    void on_pushButton_add_clicked();
+
 private:
     Ui::ModEvent *ui;
 };
