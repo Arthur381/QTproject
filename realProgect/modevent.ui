@@ -23,7 +23,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QTimeEdit" name="timeEdit">
+  <widget class="QTimeEdit" name="inputtime">
    <property name="geometry">
     <rect>
      <x>240</x>
@@ -46,7 +46,7 @@
     <string>加入日历</string>
    </property>
   </widget>
-  <widget class="QComboBox" name="comboBox_colorchange">
+  <widget class="QComboBox" name="comboBox_moodchange">
    <property name="geometry">
     <rect>
      <x>240</x>
@@ -55,6 +55,16 @@
      <height>20</height>
     </rect>
    </property>
+   <item>
+    <property name="text">
+     <string>开学</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>焦虑</string>
+    </property>
+   </item>
   </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
@@ -82,13 +92,13 @@
     <string>已有事项</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="textEdit">
+  <widget class="QLineEdit" name="WriteEve">
    <property name="geometry">
     <rect>
      <x>240</x>
-     <y>50</y>
-     <width>131</width>
-     <height>111</height>
+     <y>70</y>
+     <width>113</width>
+     <height>91</height>
     </rect>
    </property>
   </widget>
