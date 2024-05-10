@@ -11,7 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>PKU自律指南</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="images.qrc">
+    <normaloff>:/image/OIP.jpg</normaloff>:/image/OIP.jpg</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
@@ -319,6 +323,8 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
  <connections/>
 </ui>
