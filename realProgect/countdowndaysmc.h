@@ -2,6 +2,8 @@
 #define COUNTDOWNDAYSMC_H
 
 #include <QWidget>
+#include <QDate>
+#include<QDebug>
 #include "calendarmc.h"
 
 
@@ -13,6 +15,10 @@ class CountDownDaysMC;
 class CountDownDaysMC : public QWidget
 {
     Q_OBJECT
+
+public:
+    QDate TToday;
+
 
 public:
     explicit CountDownDaysMC(QWidget *parent = nullptr);

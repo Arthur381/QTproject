@@ -13,15 +13,35 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QTableView" name="tableView">
+  <widget class="QTableWidget" name="tableWidget">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>50</y>
-     <width>256</width>
-     <height>192</height>
+     <x>20</x>
+     <y>20</y>
+     <width>351</width>
+     <height>221</height>
     </rect>
    </property>
+   <column>
+    <property name="text">
+     <string>序号</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>标题</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>心情</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>距离今天还有？天</string>
+    </property>
+   </column>
   </widget>
  </widget>
  <resources/>
