@@ -1,12 +1,8 @@
 #include "modevent.h"
 #include "ui_modevent.h"
 #include "calendarmc.h"
-<<<<<<< HEAD
 //现存的问题：List始终是空的，每次添加一个元素，就要打印出来；
 //使用单例,每次重新初始化列表
-=======
-
->>>>>>> 4c714ed7a7a96e4ae67ed713879be9aa970af1cf
 ModEvent::ModEvent(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::ModEvent)
@@ -41,8 +37,6 @@ ModEvent::~ModEvent()
     delete ui;
 }
 
-<<<<<<< HEAD
-
 void ModEvent::on_pushButton_add_clicked()//点击之后加入事项
 {
     AEventInfo aeve;
@@ -58,33 +52,6 @@ void ModEvent::on_pushButton_add_clicked()//点击之后加入事项
     aeve.details=ui->WriteEve->text();
     calendarMC::getinstance()->AddEvent(aeve);
     PrintP();//将数据显示在TableWidget上；
-=======
-void ModEvent::on_pushButton_add_clicked()//点击之后加入事项
-{
-    QSqlQuery sqlquery;
-    QString date=ui->inputdate->text();
-    if(date==""){
-        QMessageBox::critical(this,"输入错误","不能插入过去的时间");
-        return;
-    }
-    QString atimes=ui->inputtime->text();
-    QString details=ui->WriteEve->text();
-    QString mood=ui->comboBox_moodchange->currentText();
-
-
-
-    QString strs=QString("insert into event "
-                           "values('%1','%2','%3','%4')")
-                            .arg(date).arg(atimes).arg(mood).arg(details);
-
-
-    if(sqlquery.exec(strs)!=true){//已经创建
-        QMessageBox::critical(0,"失败","数据表插入新数据失败!",QMessageBox::Ok);
-    }
-    else{
-        QMessageBox::information(0,"Success","插入新事项成功。",QMessageBox::Ok);
-    }
->>>>>>> 4c714ed7a7a96e4ae67ed713879be9aa970af1cf
 }
 
 
