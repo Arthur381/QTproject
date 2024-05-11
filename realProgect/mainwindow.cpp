@@ -19,7 +19,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_calBT_clicked()
 {
-    this->cal.show();
+    this->cal->show();
 }
 
 

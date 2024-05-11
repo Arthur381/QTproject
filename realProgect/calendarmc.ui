@@ -11,7 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>日历</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="images.qrc">
+    <normaloff>:/image/cal_ico.jpg</normaloff>:/image/cal_ico.jpg</iconset>
   </property>
   <widget class="QPushButton" name="countdowndays">
    <property name="geometry">
@@ -53,6 +57,8 @@
    </property>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
  <connections/>
 </ui>

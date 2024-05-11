@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/image"/>
+    <qresource prefix="/">
+        <file>image/cal_ico.jpg</file>
+        <file>image/OIP.jpg</file>
+    </qresource>
+</RCC>
