@@ -14,7 +14,10 @@ calendarMC::calendarMC(QWidget *parent)
 {
     ui->setupUi(this);
     //创建且打开数据库,调用函数
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4c714ed7a7a96e4ae67ed713879be9aa970af1cf
     CreatDataFunc();
     CreatTableFunc();
 }
@@ -42,9 +45,13 @@ void calendarMC::CreatTableFunc(){
 
     QSqlQuery createquery;
     QString strsql=QString("create table event("
+<<<<<<< HEAD
                              "id int not null,"
                              "name text primary key not null,"
                              "date text not null,"
+=======
+                             "date text primary key not null,"
+>>>>>>> 4c714ed7a7a96e4ae67ed713879be9aa970af1cf
                              "atime text not null,"
                              "mood text not null,"
                              "details text not null)");
@@ -58,6 +65,7 @@ void calendarMC::CreatTableFunc(){
     }
 }
 
+<<<<<<< HEAD
 int calendarMC::countNum(){//统计行数
     QSqlQuery sql(sqldb);
     sql.exec("select count(id) from event;");
@@ -110,6 +118,11 @@ bool calendarMC::iffind(QString name_){
         return (count > 0);
     }
     return false;
+=======
+
+
+void calendarMC::QueryTableFunc(){
+>>>>>>> 4c714ed7a7a96e4ae67ed713879be9aa970af1cf
 
 }
 
