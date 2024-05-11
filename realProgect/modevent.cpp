@@ -7,21 +7,27 @@ ModEvent::ModEvent(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::ModEvent)
 {
+
     ui->setupUi(this);
-    //PrintP();//将数据显示在TableWidget上；
+
+    //ui->tableWidget->clear();
+    calendarMC* m_ptrcalendar=calendarMC::getinstance();
+    //auto cnt=m_ptrcalendar->countNum();
+    //m_ptrcalendar->getEventList()=m_ptrcalendar->getPage(0,cnt);//从SQL中读取到,并存在了列表中；
+    //qDebug()<<"ListOri:"<<m_ptrcalendar->getPage(0,cnt).size(),
+    PrintP();//将数据显示在TableWidget上；
 
 }
 
 void ModEvent::PrintP(){
     calendarMC* m_ptrcalendar=calendarMC::getinstance();
-
     auto cnt = m_ptrcalendar->countNum();
-    QList<AEventInfo> listeve=m_ptrcalendar->getEventList();
-    //ui->tableWidget->clear();
-    qDebug()<<"Emepty:"<<listeve.size();
+    QList<AEventInfo> listeve=m_ptrcalendar->getPage(0,cnt);//仅仅跟踪到它指向的Qlist里面
+    ui->tableWidget->clearContents();
+    //qDebug()<<"Emepty:"<<listeve.size();
     ui->tableWidget->setRowCount(cnt);
-    qDebug()<<"cnt:"<<cnt;
-    for(int i=0;i<cnt;i++){
+    //qDebug()<<"cnt:"<<cnt;
+    for(int i=0;i<listeve.size();i++){
         ui->tableWidget->setItem(i,0,new QTableWidgetItem(QString::number(i)));
         ui->tableWidget->setItem(i,1,new QTableWidgetItem(listeve[i].name));
         ui->tableWidget->setItem(i,2,new QTableWidgetItem(listeve[i].date));
@@ -50,7 +56,7 @@ void ModEvent::on_pushButton_add_clicked()//点击之后加入事项
     aeve.atimes=ui->inputtime->text();
     aeve.mood=ui->comboBox_moodchange->currentText();
     aeve.details=ui->WriteEve->text();
-    calendarMC::getinstance()->AddEvent(aeve);
+    calendarMC::getinstance()->AddEvent(aeve);//将数据加入到数据库中，并加入在相应的List中
     PrintP();//将数据显示在TableWidget上；
 }
 

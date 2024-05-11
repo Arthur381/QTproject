@@ -35,7 +35,25 @@ void calendarMC::CreatDataFunc(){//sqldb实际上是一个静态变量
 
 }
 
-
+QList<AEventInfo> calendarMC::getPage(int page,int uicnt){//根本目的是得到列表
+    QList<AEventInfo> l;
+    QSqlQuery sql(sqldb);
+    QString strsql=QString("select * from event order by id limit %1 offset %2")
+                         .arg(uicnt).arg(page*uicnt);
+    sql.exec(strsql);
+    int id;
+    AEventInfo info;
+    while(sql.next()){
+        id=sql.value(0).toInt();
+        info.name=sql.value(1).toString();
+        info.date=sql.value(2).toString();
+        info.atimes=sql.value(3).toString();
+        info.mood=sql.value(4).toString();
+        info.details=sql.value(5).toString();
+        l.push_back(info);
+    }
+    return l;
+}
 void calendarMC::CreatTableFunc(){
     //创建SQL
 
@@ -70,7 +88,6 @@ int calendarMC::countNum(){//统计行数
 
 bool calendarMC::AddEvent(AEventInfo newEve){
 
-
     qDebug() << "Value:" << newEve.date << ", Name:" << newEve.name;
     QSqlQuery sqlquery(sqldb);
     quint32 id=calendarMC::countNum()+1;
@@ -83,10 +100,9 @@ bool calendarMC::AddEvent(AEventInfo newEve){
     }
     else{
         QMessageBox::information(0,"Success","插入新事项成功。",QMessageBox::Ok);
-        eves.append(newEve);
+        //getinstance()->getEventList().push_back(newEve);//加入在类内列表中,!!!不需要QLIst了！！！
     }
-    qDebug()<<"listsize"<<getEventList().size();
-
+    //qDebug()<<"listsize"<<getEventList().size();
     return true;
 }
 
@@ -125,16 +141,14 @@ bool calendarMC::DeleteEvent(QString name_){//输入序号之后删除一个事�
     QString dequery="delete from event where name==:name";
     sql.prepare(dequery);
     sql.bindValue(":name", name_);
-
     // 执行 SQL 删除查询
     if (!sql.exec()) {
         qDebug() << "Error executing query:" << sql.lastError().text();
         return false;
     }
-
     // 如果删除成功，返回 true
+    //eves.remove()
     return true;
-    //return sql.exec(QString("delete from event where name==%1").arg(name_));
 }
 
 

@@ -25,6 +25,7 @@ private slots:
 private:
     Ui::ModEvent *ui;
     void PrintP();
+    //void PrintOne(AEventInfo);不需要
     //calendarMC * m_ptrcalendar;
 };
 

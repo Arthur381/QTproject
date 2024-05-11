@@ -4,7 +4,6 @@
 #include<QDebug>
 
 QDate currentDate = QDate::currentDate();
-
 //qDebug() << "Current Date:" << currentDate.toString(Qt::ISODate);
 
 
