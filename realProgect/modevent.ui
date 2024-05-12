@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>修改日程</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>image/heart.jpg</normaloff>image/heart.jpg</iconset>
+  </property>
   <widget class="QDateEdit" name="inputdate">
    <property name="geometry">
     <rect>

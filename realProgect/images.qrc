@@ -3,5 +3,6 @@
     <qresource prefix="/">
         <file>image/cal_ico.jpg</file>
         <file>image/OIP.jpg</file>
+        <file>image/heart.jpg</file>
     </qresource>
 </RCC>
