@@ -12,9 +12,7 @@ ModEvent::ModEvent(QWidget *parent)
 
     //ui->tableWidget->clear();
     calendarMC* m_ptrcalendar=calendarMC::getinstance();
-    //auto cnt=m_ptrcalendar->countNum();
-    //m_ptrcalendar->getEventList()=m_ptrcalendar->getPage(0,cnt);//从SQL中读取到,并存在了列表中；
-    //qDebug()<<"ListOri:"<<m_ptrcalendar->getPage(0,cnt).size(),
+
     PrintP();//将数据显示在TableWidget上；
 
 }
@@ -24,9 +22,7 @@ void ModEvent::PrintP(){
     auto cnt = m_ptrcalendar->countNum();
     QList<AEventInfo> listeve=m_ptrcalendar->getPage(0,cnt);//仅仅跟踪到它指向的Qlist里面
     ui->tableWidget->clearContents();
-    //qDebug()<<"Emepty:"<<listeve.size();
     ui->tableWidget->setRowCount(cnt);
-    //qDebug()<<"cnt:"<<cnt;
     for(int i=0;i<listeve.size();i++){
         ui->tableWidget->setItem(i,0,new QTableWidgetItem(QString::number(i)));
         ui->tableWidget->setItem(i,1,new QTableWidgetItem(listeve[i].name));
@@ -47,7 +43,16 @@ void ModEvent::on_pushButton_add_clicked()//点击之后加入事项
 {
     AEventInfo aeve;
     ;//创建实例化对象
-    aeve.date=ui->inputdate->text();
+    QString Sdate=ui->inputdate->text();
+    //这一段是为了转化形式##############################################
+    //qDebug()<<"Sdate"<<Sdate;
+    QDate Tmpdate = QDate::fromString(Sdate, "yyyy/M/d");
+    //qDebug()<<"Tmpdate"<<Tmpdate;
+    //QString Findate=Tmpdate.toString();//这里是单词
+    QString Findate = Tmpdate.toString("yyyy/MM/dd");
+    //qDebug()<<"Findate"<<Findate;
+    //#################################################################
+    aeve.date=Findate;
     if(aeve.date==""){
         QMessageBox::critical(this,"输入错误","不能插入过去的时间");
         return;

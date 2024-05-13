@@ -17,7 +17,7 @@ class CountDownDaysMC : public QWidget
     Q_OBJECT
 
 public:
-    QDate TToday;
+    void PrintForView();
 
 
 public:

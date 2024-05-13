@@ -1,9 +1,10 @@
 #include "countdowndaysmc.h"
 #include "ui_countdowndaysmc.h"
 #include <QDateTime>
+#include<QDate>
 #include<QDebug>
 
-QDate currentDate = QDate::currentDate();
+//QDate currentDate = QDate::currentDate();
 //qDebug() << "Current Date:" << currentDate.toString(Qt::ISODate);
 
 
@@ -11,23 +12,35 @@ QDate currentDate = QDate::currentDate();
 CountDownDaysMC::CountDownDaysMC(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::CountDownDaysMC)
-    ,TToday(2024,5,11)
 {
     ui->setupUi(this);
+    calendarMC* m_ptrcalendar=calendarMC::getinstance();
+    CountDownDaysMC::PrintForView();
+}
+
+void CountDownDaysMC::PrintForView(){
+    calendarMC* m_ptrcalendar=calendarMC::getinstance();
+    auto cnt = m_ptrcalendar->countNum();
+    qDebug()<<"here2?";
+    QList<AEventInfo> listeve=m_ptrcalendar->selectPage(0,cnt);//仅仅跟踪到它指向的Qlist里面
+    cnt = listeve.size();
+    ui->tableWidget->clearContents();
+    //qDebug()<<"Emepty:"<<listeve.size();
+    ui->tableWidget->setRowCount(cnt);
+    //qDebug()<<"cnt:"<<cnt;
+    for(int i=0;i<listeve.size();i++){
+        ui->tableWidget->setItem(i,0,new QTableWidgetItem(QString::number(i)));
+        ui->tableWidget->setItem(i,1,new QTableWidgetItem(listeve[i].name));
+        ui->tableWidget->setItem(i,2,new QTableWidgetItem(listeve[i].mood));
+        QDate date = QDate::fromString(listeve[i].date,"yyyy/MM/dd");
+        //qDebug()<<"date:"<<date;
+        int diff=m_ptrcalendar->TToday.daysTo(date);
+        ui->tableWidget->setItem(i,3,new QTableWidgetItem(QString::number(diff)));
+    }
 }
 
 
 
-
-
-/*
-筛选出未发生的事件然后，根据相隔的天数由近到远排序，最后输出到一个新的TableWidget中
-int daysDifference = date1.daysTo(date2); // 计算 date1 和 date2 之间的天数差异
-    qDebug() << "Days difference:" << daysDifference; // 打印天数差异
-    return 0;
-
-
-*/
 CountDownDaysMC::~CountDownDaysMC()
 {
     delete ui;
