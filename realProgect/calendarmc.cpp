@@ -2,9 +2,10 @@
 #include "ui_calendarmc.h"
 #include "modevent.h"
 #include "countdowndaysmc.h"
-
+#include "win_cal_viewmc.h"
+#include "QDate"
 #include<QDebug>
-
+#include <QTextCharFormat>
 
 calendarMC* calendarMC::ptrcalendar = nullptr;//在类外初始化
 
@@ -27,14 +28,67 @@ calendarMC::~calendarMC()
     delete ui;
 }
 
+void calendarMC::ChangeOneDay(const QDate date,const QString mood){
+    /**
+     * @brief specialDayFormat
+     *
+     * 根据moodString给指定位置上色
+     *
+     *
+     */
+    QTextCharFormat specialDayFormat;
+    if(mood=="delete"){
+        specialDayFormat.setBackground(Qt::white);
+    }
+    else if(mood=="开心"){
+        specialDayFormat.setBackground(Qt::yellow);
+    }
+    else if(mood=="自信满满"){
+        specialDayFormat.setBackground(Qt::red);
+    }
+    else if(mood=="焦虑"){
+        specialDayFormat.setBackground(Qt::lightGray);
+    }
+    else if(mood=="无法形容"){
+        specialDayFormat.setBackground(Qt::transparent);
+    }
+    else if(mood=="紧张"){
+        specialDayFormat.setBackground(Qt::blue);
+    }
+    else if(mood=="激动"){
+        specialDayFormat.setBackground(Qt::magenta);
+    }
+    else if(mood=="激动且紧张"){
+        specialDayFormat.setBackground(Qt::green);
+    }
+    else if(mood=="波澜不惊"){
+        specialDayFormat.setBackground(Qt::cyan);
+    }
+    //specialDayFormat.setBackground(Qt::red); // 设置背景色为红色
+    //specialDayFormat.setForeground(Qt::white); // 设置文本颜色为白色
 
-        //单击信号
+    // 要标记的特定日期
+    //QDate specialDate(2024, 5, 15);
 
-//单击信号
-void calendarMC::clickedSlot(const QDate date)
-{
-    qDebug()<< "clickedSlot";
-    qDebug()<< date;
+    // 设置特定日期的文本格式
+    ui->calendarWidget->setDateTextFormat(date, specialDayFormat);
+
+
+
+}
+void calendarMC::ColorDays(){
+/**
+ *
+ *在开始时调用，查看数据库中的事件，并且在这一天根据心情改变格子的颜色
+ *
+ */
+    calendarMC* m_ptrcalendar=calendarMC::getinstance();
+    auto cnt = m_ptrcalendar->countNum();//需要标记的次数
+    QList<AEventInfo> listeve=m_ptrcalendar->getPage(0,cnt);//仅仅跟踪到它指向的Qlist里面
+    for(int i=0;i<listeve.size();i++){
+        QDate date = QDate::fromString(listeve[i].date,"yyyy/MM/dd");
+        ChangeOneDay(date,listeve[i].mood);//将每一个改变颜色；
+    }
 }
 
 void calendarMC::CreatDataFunc(){//sqldb实际上是一个静态变量
@@ -174,15 +228,23 @@ bool calendarMC::iffind(QString name_){
 
     // 获取查询结果
     if (sql.next()) {
+        qDebug()<<"delete search"<<sql.value(1).toInt();
         int count = sql.value(0).toInt();
-        return (count > 0);
+        if(count>0){
+            QDate date = QDate::fromString(sql.value(2).toString(),"yyyy/MM/dd");
+            calendarMC::getinstance()->ChangeOneDay(date,"delete");
+            return true;
+        }
+
     }
+
     return false;
 
 }
 
 
 bool calendarMC::DeleteEvent(QString name_){//输入序号之后删除一个事件；
+    //为了取消标记，应该先找到，再删除
     QSqlQuery sql(sqldb);
     qDebug()<<"return:"<<calendarMC::iffind(name_)<<"name:"<<name_;
     if(calendarMC::iffind(name_)){
@@ -200,7 +262,7 @@ bool calendarMC::DeleteEvent(QString name_){//输入序号之后删除一个事�
         return false;
     }
     // 如果删除成功，返回 true
-    //eves.remove()
+
     return true;
 }
 
@@ -221,3 +283,14 @@ void calendarMC::on_countdowndays_clicked()
     days->show();
 }
 
+//单击信号
+void calendarMC::clickedSlot(const QDate date)
+{
+    //为了能把这一天的日期传给新的窗口，需要实现单例化
+    win_cal_viewMC* small_win=win_cal_viewMC::getinstance();
+    qDebug()<<"input"<< date;
+    win_cal_viewMC::getinstance()->curdate=date;
+    small_win->show();
+    //qDebug()<< "clickedSlot";
+    //qDebug()<< date;
+}

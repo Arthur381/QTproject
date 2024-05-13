@@ -63,15 +63,17 @@ void ModEvent::on_pushButton_add_clicked()//点击之后加入事项
     aeve.details=ui->WriteEve->text();
     calendarMC::getinstance()->AddEvent(aeve);//将数据加入到数据库中，并加入在相应的List中
     PrintP();//将数据显示在TableWidget上；
+    calendarMC::getinstance()->ChangeOneDay(Tmpdate,aeve.mood);
 }
 
 
 void ModEvent::on_pushButton_delete_clicked()
 {
     //创建实例化对象,单例
-    QString Aname=ui->lineEdit_eve->text();
+    QString Aname=ui->lineEdit_eve->text();//读取到标题
     calendarMC::getinstance()->DeleteEvent(Aname);
     PrintP();
+
 }
 
 

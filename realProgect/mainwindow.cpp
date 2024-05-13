@@ -20,6 +20,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_calBT_clicked()
 {
     this->cal->show();
+    cal->ColorDays();
 }
 
 

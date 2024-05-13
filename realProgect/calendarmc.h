@@ -19,6 +19,8 @@
 2.点击Qt日历中的一天，展开这一天的日程。（如果这一天没有则显示无日程）。
 3.日历，修改事项和倒数日共同使用一个数据库，方便数据的修改和查询。
 4.可以学习创建一个表。
+//单击查看有事件标记的那一天
+//当然，我需要先实现事件标记；暂时决定根据，心情不同使用不同的颜色标记；
 ……
 */
 
@@ -43,7 +45,6 @@ class calendarMC : public QWidget
 
 public:
     static calendarMC *ptrcalendar;//类内声明的静态指针
-
     static calendarMC *getinstance(){//单例化，希望eves也单例化
         if(nullptr==ptrcalendar){
             ptrcalendar=new calendarMC;
@@ -56,7 +57,8 @@ public:
 private slots:
     void on_Modify_clicked();
     void on_countdowndays_clicked();
-    void clickedSlot(const QDate date);
+    void clickedSlot(const QDate date);//单击查看有事件标记的那一天
+    //当然，我需要先实现事件标记；暂时决定根据，心情不同使用不同的颜色标记；
 
 private:
     explicit calendarMC(QWidget *parent = nullptr);
@@ -78,12 +80,15 @@ public:
     QList<AEventInfo> getPage(int page,int uicnt);//从数据库中读取列表
     QList<AEventInfo> selectPage(int page,int uint);//从数据库中选择出未发生的数据；
 
-
+    void ChangeOneDay(const QDate date,const QString mood);//在删除和添加时仅仅改变一天的颜色；
     QDate TToday;//当天的日期
+    void ColorDays();//打开窗口时改变许多天的颜色
 
 
 private:
     Ui::calendarMC *ui;
+
+
 };
 
 #endif // CALENDARMC_H

@@ -61,12 +61,46 @@
    </property>
    <item>
     <property name="text">
-     <string>开学</string>
+     <string>自信满满</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>开心</string>
     </property>
    </item>
    <item>
     <property name="text">
      <string>焦虑</string>
+    </property>
+    <property name="icon">
+     <iconset resource="images.qrc">
+      <normaloff>:/image/heart.jpg</normaloff>:/image/heart.jpg</iconset>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>激动</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>紧张</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>激动且紧张</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>无法形容</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>波澜不惊</string>
     </property>
    </item>
   </widget>
@@ -244,6 +278,8 @@
    </column>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
  <connections/>
 </ui>
