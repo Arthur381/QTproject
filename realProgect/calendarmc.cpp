@@ -11,8 +11,10 @@ calendarMC* calendarMC::ptrcalendar = nullptr;//在类外初始化
 calendarMC::calendarMC(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::calendarMC)
+    ,TToday(2000,1,1)
 {
     ui->setupUi(this);
+    TToday=QDate::currentDate();
     //创建且打开数据库,调用函数
     CreatDataFunc();
     CreatTableFunc();
@@ -47,6 +49,7 @@ QList<AEventInfo> calendarMC::getPage(int page,int uicnt){//根本目的是得�
         id=sql.value(0).toInt();
         info.name=sql.value(1).toString();
         info.date=sql.value(2).toString();
+        //qDebug()<<info.date;
         info.atimes=sql.value(3).toString();
         info.mood=sql.value(4).toString();
         info.details=sql.value(5).toString();
@@ -54,6 +57,46 @@ QList<AEventInfo> calendarMC::getPage(int page,int uicnt){//根本目的是得�
     }
     return l;
 }
+
+QList<AEventInfo> calendarMC::selectPage(int page,int uicnt){//根本目的是得到列表
+    QList<AEventInfo> l;
+    /**
+     * @brief sql
+     *
+     *筛选出未发生的事件然后，根据相隔的天数由近到远排序，最后输出到一个新的TableWidget中
+    */
+    // 构造查询语句，选择指定页面的事件数据
+    QString strsql = QString("SELECT * FROM event WHERE date > :nowdate order by date");//直接排好序
+    // 执行查询
+    QSqlQuery sql(sqldb);
+    sql.prepare(strsql);
+    //强行规定形式，保证可排序
+    sql.bindValue(":nowdate", TToday.toString("yyyy/MM/dd"));
+    // 遍历查询结果
+    qDebug()<<TToday.toString("yyyy/MM/dd");
+    if(sql.exec()){
+        while (sql.next()) {
+            AEventInfo info;
+            //qDebug()<<"date_val"<<sql.value(2).toString();
+            info.name = sql.value(1).toString();
+            info.date=sql.value(2).toString();
+            info.atimes = sql.value(3).toString();
+            info.mood = sql.value(4).toString();
+            info.details = sql.value(5).toString();
+            l.push_back(info);
+            //qDebug()<<"if execute";
+        }
+    }
+    else{
+        QSqlError error = sql.lastError();
+        qDebug() << "Database error:" << error.text();
+    }
+
+    return l;
+}
+
+
+
 void calendarMC::CreatTableFunc(){
     //创建SQL
 
@@ -88,10 +131,9 @@ int calendarMC::countNum(){//统计行数
 
 bool calendarMC::AddEvent(AEventInfo newEve){
 
-    qDebug() << "Value:" << newEve.date << ", Name:" << newEve.name;
     QSqlQuery sqlquery(sqldb);
     quint32 id=calendarMC::countNum()+1;
-    qDebug()<<"id:"<<id;
+    //qDebug()<<"id:"<<id;
     QString strs=QString("INSERT INTO event VALUES(%1,'%2','%3','%4','%5','%6')").
                    arg(id).arg(newEve.name).arg(newEve.date).arg(newEve.atimes).arg(newEve.mood).arg(newEve.details);
 
@@ -102,7 +144,6 @@ bool calendarMC::AddEvent(AEventInfo newEve){
         QMessageBox::information(0,"Success","插入新事项成功。",QMessageBox::Ok);
         //getinstance()->getEventList().push_back(newEve);//加入在类内列表中,!!!不需要QLIst了！！！
     }
-    //qDebug()<<"listsize"<<getEventList().size();
     return true;
 }
 

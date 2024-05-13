@@ -12,6 +12,7 @@
 #include <QDateTime>
 
 
+
 /*
 功能说明：
 1.插入事项的日子在日历中如果能显示（如颜色）则尽可能完成。
@@ -28,7 +29,7 @@ class calendarMC;
 struct AEventInfo
 {
     QString name;
-    QString date;
+    QString date;//为了可以比较大小，严格要求YYYY//MM//DD的形式
     QString atimes;
     QString mood;
     QString details;
@@ -75,6 +76,10 @@ public:
     //}
     bool iffind(QString name);
     QList<AEventInfo> getPage(int page,int uicnt);//从数据库中读取列表
+    QList<AEventInfo> selectPage(int page,int uint);//从数据库中选择出未发生的数据；
+
+
+    QDate TToday;//当天的日期
 
 
 private:
