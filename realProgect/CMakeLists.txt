@@ -34,10 +34,11 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         dailymsy.h dailymsy.cpp dailymsy.ui
         dailymsy2.h dailymsy2.cpp dailymsy2.ui
         dailymsy_allin.h dailymsy_allin.cpp dailymsy_allin.ui
-        foodiro.h foodiro.cpp foodiro.ui
+
         modevent.h modevent.cpp modevent.ui
         countdowndaysmc.h countdowndaysmc.cpp countdowndaysmc.ui
         images.qrc
+        win_cal_viewmc.h win_cal_viewmc.cpp win_cal_viewmc.ui
 
 
 

@@ -6,12 +6,16 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>482</width>
+    <width>619</width>
     <height>236</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>倒数日</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>image/cal_ico.jpg</normaloff>image/cal_ico.jpg</iconset>
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout">
    <item>

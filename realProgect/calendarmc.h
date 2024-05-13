@@ -56,7 +56,7 @@ public:
 private slots:
     void on_Modify_clicked();
     void on_countdowndays_clicked();
-
+    void clickedSlot(const QDate date);
 
 private:
     explicit calendarMC(QWidget *parent = nullptr);

@@ -15,7 +15,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>image/heart.jpg</normaloff>image/heart.jpg</iconset>
+    <normaloff>image/cal_ico.jpg</normaloff>image/cal_ico.jpg</iconset>
   </property>
   <widget class="QDateEdit" name="inputdate">
    <property name="geometry">

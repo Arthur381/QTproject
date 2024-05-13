@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>FoodIro</class>
- <widget class="QWidget" name="FoodIro">
+ <class>win_cal_viewMC</class>
+ <widget class="QWidget" name="win_cal_viewMC">
   <property name="geometry">
    <rect>
     <x>0</x>

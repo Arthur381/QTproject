@@ -15,7 +15,9 @@ calendarMC::calendarMC(QWidget *parent)
 {
     ui->setupUi(this);
     TToday=QDate::currentDate();
+    connect(ui->calendarWidget,SIGNAL(clicked(QDate)),this,SLOT(clickedSlot(QDate)));
     //创建且打开数据库,调用函数
+    //ui->calendarWidget->setFont(QFont("Timers",8,QFont::Bold));
     CreatDataFunc();
     CreatTableFunc();
 }
@@ -23,6 +25,16 @@ calendarMC::calendarMC(QWidget *parent)
 calendarMC::~calendarMC()
 {
     delete ui;
+}
+
+
+        //单击信号
+
+//单击信号
+void calendarMC::clickedSlot(const QDate date)
+{
+    qDebug()<< "clickedSlot";
+    qDebug()<< date;
 }
 
 void calendarMC::CreatDataFunc(){//sqldb实际上是一个静态变量
