@@ -17,8 +17,8 @@ struct BEventInfo
 {
     QString id;
     QString thingsname;
-    QString im;
-    QString em;
+    int im;
+    int em;
 };
 
 class dailymsy_allin : public QDialog
@@ -36,6 +36,13 @@ public:
         return ptrdailymsy_allin;
     }
     QList<BEventInfo> getPage(int page,int uicnt);//从数据库中读取列表
+
+    //添加数据
+    bool addOne(BEventInfo);
+
+    void PrintP();
+
+    int CountNum();
     ~dailymsy_allin();
 
 

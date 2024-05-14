@@ -4,6 +4,7 @@
 
 #include<QDebug>
 dailymsy_allin* dailymsy_allin::ptrdailymsy_allin = nullptr;//在类外初始化
+
 dailymsy_allin::dailymsy_allin(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::dailymsy_allin)
@@ -24,7 +25,36 @@ dailymsy_allin::~dailymsy_allin()
 
 void dailymsy_allin::on_missionAdd_clicked()//添加任务并且显示
 {
+    BEventInfo info;
+    info.thingsname=ui->thingsname->text();
+    info.im=ui->imNum->text().toInt();
+    info.em=ui->emNum->text().toUInt();
+    dailymsy_allin::getinstance()->addOne(info);//将数据加入到数据库中，并加入在相应的List中
+    PrintP();//将数据显示在TableWidget上；
+}
 
+int dailymsy_allin::CountNum(){//统计行数
+    QSqlQuery sql(sqldb);
+    sql.exec("select count(id) from event;");
+    int uiCnt=0;
+    while(sql.next()){
+        uiCnt=sql.value(0).toUInt();//有可能会有bug
+    }
+    return uiCnt;
+}
+
+void dailymsy_allin::PrintP(){
+    dailymsy_allin* m_ptrdailymsy_allin=dailymsy_allin::getinstance();
+    auto cnt = m_ptrdailymsy_allin->CountNum();
+    QList<BEventInfo> listeve=m_ptrdailymsy_allin->getPage(0,cnt);//仅仅跟踪到它指向的Qlist里面
+    ui->workTable->clearContents();
+    ui->workTable->setRowCount(cnt);
+    for(int i=0;i<listeve.size();i++){
+        ui->workTable->setItem(i,0,new QTableWidgetItem(QString::number(i)));
+        ui->workTable->setItem(i,1,new QTableWidgetItem(listeve[i].thingsname));
+        ui->workTable->setItem(i,2,new QTableWidgetItem(listeve[i].im));
+        ui->workTable->setItem(i,2,new QTableWidgetItem(listeve[i].em));
+        }
 }
 
 void dailymsy_allin::CreatDataFunc(){//创建SQLite数据库
@@ -54,13 +84,14 @@ QList<BEventInfo> dailymsy_allin::getPage(int page,int uicnt){//根本目的是�
     while(sql.next()){
         id=sql.value(0).toInt();
         info.thingsname=sql.value(1).toString();
-        info.im=sql.value(2).toString();
-        info.em=sql.value(3).toString();
+        info.im=sql.value(2).toUInt();
+        info.em=sql.value(3).toUInt();
         l.push_back(info);
     }
     return l;
 }
 void dailymsy_allin::CreatTableFunc(){//创建sqlite数据表
+
     QSqlQuery creatquery;
 
     QString strsql=QString("create table event("
@@ -77,3 +108,20 @@ void dailymsy_allin::CreatTableFunc(){//创建sqlite数据表
          QMessageBox::information(0,"正确","恭喜你，数据表创建成功",QMessageBox::Ok);
     }
     }
+
+bool dailymsy_allin::addOne(BEventInfo info){
+    QSqlQuery sql(sqldb);
+    QString strSql= QString("insert into demo values(%1,'%2','%3','%4')").
+                     arg(info.id).
+                     arg(info.thingsname).
+                     arg(info.im).
+                     arg(info.em);
+    if(sql.exec(strSql)!=true){
+        QMessageBox::critical(0,"失败","数据表插入新数据失败!可能是标题重复。",QMessageBox::Ok);
+    }
+    else{
+        QMessageBox::information(0,"Success","插入新事项成功。",QMessageBox::Ok);
+        //getinstance()->getEventList().push_back(newEve);//加入在类内列表中,!!!不需要QLIst了！！！
+    }
+    return true;
+}
