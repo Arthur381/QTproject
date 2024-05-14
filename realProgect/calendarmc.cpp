@@ -58,7 +58,7 @@ void calendarMC::ChangeOneDay(const QDate date,const QString mood){
     else if(mood=="激动"){
         specialDayFormat.setBackground(Qt::magenta);
     }
-    else if(mood=="激动且紧张"){
+    else if(mood=="伤心"){
         specialDayFormat.setBackground(Qt::green);
     }
     else if(mood=="波澜不惊"){
@@ -288,9 +288,35 @@ void calendarMC::clickedSlot(const QDate date)
 {
     //为了能把这一天的日期传给新的窗口，需要实现单例化
     win_cal_viewMC* small_win=win_cal_viewMC::getinstance();
+    QList<AEventInfo> sssList;
+    QSqlQuery sql(sqldb);
+    QString strsql = QString("SELECT * FROM event WHERE date = :cdate");//直接排好序
+    sql.prepare(strsql);
+    sql.bindValue(":cdate",date.toString("yyyy/MM/dd"));
     qDebug()<<"input"<< date;
-    win_cal_viewMC::getinstance()->curdate=date;
-    small_win->show();
-    //qDebug()<< "clickedSlot";
-    //qDebug()<< date;
+    // 遍历查询结果
+    if(sql.exec()){
+        while (sql.next()) {
+            AEventInfo info;
+            //qDebug()<<"date_val"<<sql.value(2).toString();
+            info.name = sql.value(1).toString();
+            info.date=sql.value(2).toString();
+            info.atimes = sql.value(3).toString();
+            info.mood = sql.value(4).toString();
+            info.details = sql.value(5).toString();
+            sssList.push_back(info);
+            qDebug()<<"if execute";
+        }
+    }
+    else{
+        QMessageBox::critical(0,"抱歉","查询失败",QMessageBox::Ok);
+    }
+    if(sssList.size()==0){
+        QMessageBox::information(0,"这一天空空如也","加入日程或写点日记吧！",QMessageBox::Ok);
+    }
+    else{
+        qDebug()<<sssList.size();
+        small_win->show();
+        small_win->FindAndPrint(sssList);
+    }
 }

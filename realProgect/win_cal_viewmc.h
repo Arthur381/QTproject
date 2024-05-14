@@ -1,5 +1,6 @@
 #ifndef WIN_CAL_VIEWMC_H
 #define WIN_CAL_VIEWMC_H
+#include "calendarmc.h"
 
 #include <QWidget>
 #include<QDate>
@@ -28,10 +29,11 @@ public:
 
 public:
     QDate curdate;
+    void FindAndPrint(QList<AEventInfo> aeve);
 
 private:
     Ui::win_cal_viewMC *ui;
-    void FindAndPrint();
+
 };
 
 #endif // WIN_CAL_VIEWMC_H

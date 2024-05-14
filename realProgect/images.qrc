@@ -4,5 +4,15 @@
         <file>image/cal_ico.jpg</file>
         <file>image/OIP.jpg</file>
         <file>image/heart.jpg</file>
+        <file>image/bin.jpg</file>
+        <file>image/happy.jpg</file>
+        <file>image/plain.jpg</file>
+        <file>image/sad.jpg</file>
+        <file>image/WCIS.jpg</file>
+        <file>image/worry.jpg</file>
+        <file>image/confid.jpg</file>
+        <file>image/dog.jpg</file>
+        <file>image/excit.jpg</file>
+        <file>image/ner.jpg</file>
     </qresource>
 </RCC>

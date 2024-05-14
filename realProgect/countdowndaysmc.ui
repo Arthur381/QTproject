@@ -6,9 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>619</width>
-    <height>236</height>
+    <width>600</width>
+    <height>400</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>600</width>
+    <height>400</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>600</width>
+    <height>400</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>倒数日</string>
@@ -17,41 +29,89 @@
    <iconset>
     <normaloff>image/cal_ico.jpg</normaloff>image/cal_ico.jpg</iconset>
   </property>
-  <layout class="QHBoxLayout" name="horizontalLayout">
-   <item>
-    <widget class="QTableWidget" name="tableWidget">
-     <property name="minimumSize">
-      <size>
-       <width>607</width>
-       <height>0</height>
-      </size>
-     </property>
-     <attribute name="verticalHeaderVisible">
-      <bool>false</bool>
-     </attribute>
-     <column>
-      <property name="text">
-       <string>序号</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>标题</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>心情</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>距离今天还有？天</string>
-      </property>
-     </column>
-    </widget>
-   </item>
-  </layout>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>30</y>
+     <width>500</width>
+     <height>200</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>500</width>
+     <height>200</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>500</width>
+     <height>200</height>
+    </size>
+   </property>
+   <attribute name="horizontalHeaderMinimumSectionSize">
+    <number>100</number>
+   </attribute>
+   <attribute name="horizontalHeaderDefaultSectionSize">
+    <number>100</number>
+   </attribute>
+   <attribute name="horizontalHeaderHighlightSections">
+    <bool>true</bool>
+   </attribute>
+   <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+    <bool>true</bool>
+   </attribute>
+   <attribute name="verticalHeaderVisible">
+    <bool>false</bool>
+   </attribute>
+   <column>
+    <property name="text">
+     <string>序号</string>
+    </property>
+    <property name="toolTip">
+     <string notr="true"/>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+      <bold>true</bold>
+      <stylestrategy>PreferDefault</stylestrategy>
+     </font>
+    </property>
+    <property name="background">
+     <color>
+      <red>85</red>
+      <green>170</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="foreground">
+     <brush brushstyle="NoBrush">
+      <color alpha="255">
+       <red>0</red>
+       <green>0</green>
+       <blue>0</blue>
+      </color>
+     </brush>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>标题</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>心情</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>距离今天还有  ?  天</string>
+    </property>
+   </column>
+  </widget>
  </widget>
  <resources/>
  <connections/>
