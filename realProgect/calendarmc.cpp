@@ -7,6 +7,10 @@
 #include<QDebug>
 #include <QTextCharFormat>
 
+#include<QKeyEvent>
+#include<QFile>
+#include<QCoreApplication>
+
 calendarMC* calendarMC::ptrcalendar = nullptr;//在类外初始化
 
 calendarMC::calendarMC(QWidget *parent)
@@ -21,6 +25,13 @@ calendarMC::calendarMC(QWidget *parent)
     //ui->calendarWidget->setFont(QFont("Timers",8,QFont::Bold));
     CreatDataFunc();
     CreatTableFunc();
+    QFile f;
+    auto str=QCoreApplication::applicationDirPath();
+    f.setFileName(str+"//"+"MWBqss.css");
+    qDebug()<<str+"//"+"MWBqss.css";
+    f.open(QIODevice::ReadOnly);
+    QString str1=f.readAll();
+    this->setStyleSheet(str1);
 }
 
 calendarMC::~calendarMC()
@@ -316,7 +327,7 @@ void calendarMC::clickedSlot(const QDate date)
     }
     else{
         qDebug()<<sssList.size();
-        small_win->show();
+        small_win->show();//仍然是单例
         small_win->FindAndPrint(sssList);
     }
 }

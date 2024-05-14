@@ -37,22 +37,6 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0">
-     <widget class="QLabel" name="label">
-      <property name="font">
-       <font>
-        <family>Bahnschrift Light</family>
-        <pointsize>24</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>大学生自律助手</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
     <item row="1" column="0">
      <widget class="QWidget" name="widget_2" native="true">
       <property name="minimumSize">
@@ -178,6 +162,13 @@
         <string>时间HZJ</string>
        </property>
       </widget>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>自律 DIY</string>
+      </property>
      </widget>
     </item>
    </layout>

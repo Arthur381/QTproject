@@ -15,6 +15,7 @@ class ModEvent : public QWidget
 public:
     explicit ModEvent(QWidget *parent = nullptr);
     ~ModEvent();
+    //virtual void keyPressEvent(QKeyEvent * event);
 
 private slots:
     void on_pushButton_add_clicked();

@@ -10,8 +10,7 @@
 #include <QtDebug>
 #include<QMessageBox>
 #include <QDateTime>
-
-
+//这里面不能include"win_cal_viewmc.h"
 
 /*
 功能说明：

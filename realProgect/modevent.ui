@@ -34,13 +34,13 @@
     <widget class="QLabel" name="label_2">
      <property name="minimumSize">
       <size>
-       <width>80</width>
+       <width>110</width>
        <height>30</height>
       </size>
      </property>
      <property name="maximumSize">
       <size>
-       <width>80</width>
+       <width>110</width>
        <height>30</height>
       </size>
      </property>
@@ -50,7 +50,7 @@
     </widget>
    </item>
    <item row="1" column="0">
-    <widget class="QTableWidget" name="tableWidget">
+    <widget class="QTableWidget" name="tableWidgetInmod">
      <property name="minimumSize">
       <size>
        <width>800</width>
@@ -164,19 +164,19 @@
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>80</width>
+           <width>110</width>
            <height>30</height>
           </rect>
          </property>
          <property name="minimumSize">
           <size>
-           <width>80</width>
+           <width>110</width>
            <height>30</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>50</width>
+           <width>110</width>
            <height>25</height>
           </size>
          </property>
@@ -248,11 +248,11 @@
           </rect>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_delete">
+        <widget class="QPushButton" name="pushButtondelete">
          <property name="geometry">
           <rect>
-           <x>70</x>
-           <y>90</y>
+           <x>20</x>
+           <y>80</y>
            <width>60</width>
            <height>60</height>
           </rect>
@@ -306,8 +306,8 @@
          <property name="geometry">
           <rect>
            <x>10</x>
-           <y>50</y>
-           <width>70</width>
+           <y>80</y>
+           <width>111</width>
            <height>21</height>
           </rect>
          </property>
@@ -315,9 +315,9 @@
         <widget class="QTimeEdit" name="inputtime">
          <property name="geometry">
           <rect>
-           <x>100</x>
-           <y>50</y>
-           <width>44</width>
+           <x>120</x>
+           <y>80</y>
+           <width>71</width>
            <height>21</height>
           </rect>
          </property>
@@ -326,7 +326,7 @@
          <property name="geometry">
           <rect>
            <x>10</x>
-           <y>80</y>
+           <y>100</y>
            <width>181</width>
            <height>61</height>
           </rect>
@@ -420,8 +420,8 @@
         <widget class="QLineEdit" name="lineEditID">
          <property name="geometry">
           <rect>
-           <x>90</x>
-           <y>30</y>
+           <x>10</x>
+           <y>50</y>
            <width>91</width>
            <height>22</height>
           </rect>
@@ -432,9 +432,21 @@
           <rect>
            <x>10</x>
            <y>30</y>
-           <width>72</width>
+           <width>180</width>
            <height>16</height>
           </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>180</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>180</width>
+           <height>16777215</height>
+          </size>
          </property>
          <property name="text">
           <string>标题（不可重复）</string>
@@ -445,19 +457,19 @@
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>80</width>
+           <width>130</width>
            <height>25</height>
           </rect>
          </property>
          <property name="minimumSize">
           <size>
-           <width>80</width>
+           <width>130</width>
            <height>25</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>80</width>
+           <width>130</width>
            <height>25</height>
           </size>
          </property>

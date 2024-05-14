@@ -1,10 +1,14 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
+#include"calendarmc.h"
 #include <QMainWindow>
 #include <QLabel>
 #include <QVBoxLayout>
 #include <QPushButton>
 #include <QWidget>
+#include<QKeyEvent>
+#include<QFile>
+#include<QCoreApplication>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -29,10 +33,6 @@ MainWindow::MainWindow(QWidget *parent)
     *layout->addWidget(button);
     */
 
-
-
-
-
     ui->setupUi(this);
     //setCentralWidget(ui->widget);
     ui->calBT->setText("日历");
@@ -42,6 +42,21 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::keyPressEvent(QKeyEvent *event)
+{
+    if(event->key()== Qt::Key_6){
+        QFile f;
+        auto str=QCoreApplication::applicationDirPath();
+        f.setFileName(str+"//"+"MWBqss.css");
+        qDebug()<<str+"//"+"MWBqss.css";
+        f.open(QIODevice::ReadOnly);
+        QString str1=f.readAll();
+        this->setStyleSheet(str1);
+        //calendarMC::getinstance()->setStyleSheet(str1);
+        //this->cal->wcv->setStyleSheet(str1);
+    }
 }
 
 

@@ -29,7 +29,7 @@
    <iconset>
     <normaloff>image/cal_ico.jpg</normaloff>image/cal_ico.jpg</iconset>
   </property>
-  <widget class="QTableWidget" name="tableWidget">
+  <widget class="QTableWidget" name="tableWidgetCD">
    <property name="geometry">
     <rect>
      <x>50</x>

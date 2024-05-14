@@ -16,10 +16,7 @@ win_cal_viewMC::win_cal_viewMC(QWidget *parent)
 void win_cal_viewMC::FindAndPrint(QList<AEventInfo> speeve){
     /**
      *
-     *
      * @note:调用这个函数之前已经将这一天的日程列出来了，且保证list不为空
-     *
-     *
      *
      */
     //从数据库中找到属于这一天的事件，然后通过“有趣的语句组合起来”
