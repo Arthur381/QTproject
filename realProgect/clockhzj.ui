@@ -13,6 +13,14 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+    background-image: url(:/background/HP1.jpg);
+    background-position: center; /* 图片居中 */
+    background-repeat: no-repeat; /* 图片不重复 */
+    background-attachment: fixed; /* 图片固定，不随滚动条移动 */
+}</string>
+  </property>
  </widget>
  <resources/>
  <connections/>

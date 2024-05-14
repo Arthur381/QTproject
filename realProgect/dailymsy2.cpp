@@ -1,5 +1,7 @@
 #include "dailymsy2.h"
 #include "ui_dailymsy2.h"
+#include <QPainter>
+#include <QStyleOption>
 
 dailymsy2::dailymsy2(QWidget *parent)
     : QDialog(parent)

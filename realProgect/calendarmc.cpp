@@ -5,8 +5,11 @@
 #include "win_cal_viewmc.h"
 #include "QDate"
 #include<QDebug>
+#include <QWidget>
+#include <QPainter>
+#include <QStyleOption>
 #include <QTextCharFormat>
-
+#include<qpainter.h>
 #include<QKeyEvent>
 #include<QFile>
 #include<QCoreApplication>
@@ -25,13 +28,17 @@ calendarMC::calendarMC(QWidget *parent)
     //ui->calendarWidget->setFont(QFont("Timers",8,QFont::Bold));
     CreatDataFunc();
     CreatTableFunc();
-    QFile f;
-    auto str=QCoreApplication::applicationDirPath();
-    f.setFileName(str+"//"+"MWBqss.css");
-    qDebug()<<str+"//"+"MWBqss.css";
-    f.open(QIODevice::ReadOnly);
-    QString str1=f.readAll();
-    this->setStyleSheet(str1);
+    //QFile f;
+    //auto str=QCoreApplication::applicationDirPath();
+    //f.setFileName(str+"//"+"MWBqss.css");
+    //if(f.open(QIODevice::ReadOnly)){
+    //    QString str1=f.readAll();
+    //    this->setStyleSheet(str1);
+    //    f.close();
+    //}
+    //else{
+    //    qDebug() << "Failed to open stylesheet file";
+    //}
 }
 
 calendarMC::~calendarMC()
@@ -87,6 +94,16 @@ void calendarMC::ChangeOneDay(const QDate date,const QString mood){
 
 
 }
+
+void calendarMC::paintEvent(QPaintEvent *e)
+{
+    QStyleOptionFrame opt;
+    opt.initFrom(this);  // 初始化 QStyleOptionFrame
+    QPainter p(this);
+    style()->drawPrimitive(QStyle::PE_Widget, &opt, &p, this);
+}
+
+
 void calendarMC::ColorDays(){
 /**
  *

@@ -9,32 +9,14 @@
 #include<QKeyEvent>
 #include<QFile>
 #include<QCoreApplication>
+#include <QPainter>
+#include <QStyleOption>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
-
-    /**
-    * @brief centralWidget
-    * @attention 在非ui情况下展示代码的实现
-    *
-    *QWidget *centralWidget = new QWidget(this);
-    *setCentralWidget(centralWidget);
-    *
-    * 创建一个 QVBoxLayout 布局管理器
-    *QVBoxLayout *layout = new QVBoxLayout(centralWidget);
-    * 创建一些控件
-    *QLabel *label = new QLabel("这是一个示例文本", centralWidget);
-    *label->setAlignment(Qt::AlignCenter); // 设置文本居中对齐
-    *QPushButton *button = new QPushButton("按钮", centralWidget);
-    * 将控件添加到布局管理器
-    *layout->addWidget(label);
-    *layout->addWidget(button);
-    */
-
     ui->setupUi(this);
-    //setCentralWidget(ui->widget);
     ui->calBT->setText("日历");
 
 }
@@ -44,20 +26,27 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::keyPressEvent(QKeyEvent *event)
+
+/**
+ * @brief MainWindow::keyPressEvent//通过键盘刷新，方便检测颜色变化
+ * @param event
+ *
+ */
+/*void MainWindow::setAW()
 {
-    if(event->key()== Qt::Key_6){
-        QFile f;
-        auto str=QCoreApplication::applicationDirPath();
-        f.setFileName(str+"//"+"MWBqss.css");
-        qDebug()<<str+"//"+"MWBqss.css";
-        f.open(QIODevice::ReadOnly);
-        QString str1=f.readAll();
-        this->setStyleSheet(str1);
-        //calendarMC::getinstance()->setStyleSheet(str1);
-        //this->cal->wcv->setStyleSheet(str1);
-    }
-}
+
+    QFile f;
+    auto str=QCoreApplication::applicationDirPath();
+    f.setFileName(str+"//"+"MWBqss.css");
+    //qDebug()<<str+"//"+"MWBqss.css";
+    f.open(QIODevice::ReadOnly);
+    QString str1=f.readAll();
+    this->setStyleSheet(str1);
+}*/
+
+
+
+
 
 
 

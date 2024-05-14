@@ -3,7 +3,8 @@
 #include"calendarmc.h"
 #include<QDebug>
 #include<QDate>
-
+#include <QPainter>
+#include <QStyleOption>
 win_cal_viewMC* win_cal_viewMC::ptrWCV = nullptr;//在类外初始化
 
 win_cal_viewMC::win_cal_viewMC(QWidget *parent)
@@ -24,7 +25,7 @@ void win_cal_viewMC::FindAndPrint(QList<AEventInfo> speeve){
     ui->tableWidget->clearContents();
     ui->tableWidget->setColumnCount(1);
     ui->tableWidget->setRowCount(cnt);
-    qDebug()<<"cnt:"<<cnt;
+    //qDebug()<<"cnt:"<<cnt;
     for(int i=0;i<cnt;i++){
         QString s0="这一天，怀着";
         QString s1=speeve[i].mood;
@@ -43,7 +44,13 @@ void win_cal_viewMC::FindAndPrint(QList<AEventInfo> speeve){
 }
 
 
-
+void win_cal_viewMC::paintEvent(QPaintEvent *e)
+{
+    QStyleOptionFrame opt;
+    opt.initFrom(this);  // 初始化 QStyleOptionFrame
+    QPainter p(this);
+    style()->drawPrimitive(QStyle::PE_Widget, &opt, &p, this);
+}
 
 win_cal_viewMC::~win_cal_viewMC()
 {

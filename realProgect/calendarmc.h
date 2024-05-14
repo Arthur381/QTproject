@@ -82,6 +82,7 @@ public:
     void ChangeOneDay(const QDate date,const QString mood);//在删除和添加时仅仅改变一天的颜色；
     QDate TToday;//当天的日期
     void ColorDays();//打开窗口时改变许多天的颜色
+    virtual void paintEvent(QPaintEvent *e);
 
 
 private:

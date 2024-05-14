@@ -25,7 +25,7 @@ public:
     ~win_cal_viewMC();
 
 
-
+    void paintEvent(QPaintEvent *e);
 
 public:
     QDate curdate;

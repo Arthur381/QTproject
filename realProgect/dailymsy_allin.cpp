@@ -1,6 +1,8 @@
 #include "dailymsy_allin.h"
 #include "ui_dailymsy_allin.h"
 #include <QMessageBox>
+#include <QPainter>
+#include <QStyleOption>
 
 #include<QDebug>
 dailymsy_allin* dailymsy_allin::ptrdailymsy_allin = nullptr;//在类外初始化

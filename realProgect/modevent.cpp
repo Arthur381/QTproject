@@ -4,6 +4,8 @@
 #include<QKeyEvent>
 #include<QFile>
 #include<QCoreApplication>
+#include <QPainter>
+#include <QStyleOption>
 
 //现存的问题：List始终是空的，每次添加一个元素，就要打印出来；
 //使用单例,每次重新初始化列表
@@ -16,15 +18,6 @@ ModEvent::ModEvent(QWidget *parent)
 
     //ui->tableWidget->clear();
     calendarMC* m_ptrcalendar=calendarMC::getinstance();
-
-
-    QFile f;
-    auto str=QCoreApplication::applicationDirPath();
-    f.setFileName(str+"//"+"MWBqss.css");
-    qDebug()<<str+"//"+"MWBqss.css";
-    f.open(QIODevice::ReadOnly);
-    QString str1=f.readAll();
-    this->setStyleSheet(str1);
     PrintP();//将数据显示在TableWidget上；
 
 }
@@ -86,11 +79,17 @@ void ModEvent::on_pushButton_delete_clicked()
 {
     //创建实例化对象,单例
     QString Aname=ui->lineEdit_eve->text();//读取到标题
+    qDebug()<<"delete Enter";
     calendarMC::getinstance()->DeleteEvent(Aname);
     PrintP();
-
 }
 
-
+void ModEvent::paintEvent(QPaintEvent *e)
+{
+    QStyleOptionFrame opt;
+    opt.initFrom(this);  // 初始化 QStyleOptionFrame
+    QPainter p(this);
+    style()->drawPrimitive(QStyle::PE_Widget, &opt, &p, this);
+}
 
 

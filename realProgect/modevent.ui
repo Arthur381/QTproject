@@ -29,6 +29,13 @@
    <iconset>
     <normaloff>image/cal_ico.jpg</normaloff>image/cal_ico.jpg</iconset>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#ModEvent{
+    background-image: url(:/background/HP6.jpg);
+    background-position: center; /* 图片居中 */
+    background-repeat: no-repeat; /* 图片不重复 */
+}</string>
+  </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
     <widget class="QLabel" name="label_2">
@@ -248,7 +255,7 @@
           </rect>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButtondelete">
+        <widget class="QPushButton" name="pushButton_delete">
          <property name="geometry">
           <rect>
            <x>20</x>

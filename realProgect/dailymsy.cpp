@@ -2,6 +2,8 @@
 #include "ui_dailymsy.h"
 #include "dailymsy2.h"
 #include "dailymsy_allin.h"
+#include <QPainter>
+#include <QStyleOption>
 
 dailyMSY::dailyMSY(QWidget *parent)
     : QWidget(parent)

@@ -3,6 +3,8 @@
 #include <QDateTime>
 #include<QDate>
 #include<QDebug>
+#include <QPainter>
+#include <QStyleOption>
 
 #include<QKeyEvent>
 #include<QFile>
@@ -24,13 +26,6 @@ CountDownDaysMC::CountDownDaysMC(QWidget *parent)
     ui->tableWidgetCD->horizontalHeader()->setSectionResizeMode(0, QHeaderView::Stretch);
     calendarMC* m_ptrcalendar=calendarMC::getinstance();
     CountDownDaysMC::PrintForView();
-    QFile f;
-    auto str=QCoreApplication::applicationDirPath();
-    f.setFileName(str+"//"+"MWBqss.css");
-    qDebug()<<str+"//"+"MWBqss.css";
-    f.open(QIODevice::ReadOnly);
-    QString str1=f.readAll();
-    this->setStyleSheet(str1);
 }
 
 void CountDownDaysMC::PrintForView(){
@@ -58,6 +53,13 @@ void CountDownDaysMC::PrintForView(){
 }
 
 
+void CountDownDaysMC::paintEvent(QPaintEvent *e)
+{
+    QStyleOptionFrame opt;
+    opt.initFrom(this);  // 初始化 QStyleOptionFrame
+    QPainter p(this);
+    style()->drawPrimitive(QStyle::PE_Widget, &opt, &p, this);
+}
 
 CountDownDaysMC::~CountDownDaysMC()
 {

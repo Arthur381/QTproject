@@ -23,6 +23,7 @@ public:
 public:
     explicit CountDownDaysMC(QWidget *parent = nullptr);
     ~CountDownDaysMC();
+    void paintEvent(QPaintEvent *e);
 
 private:
     Ui::CountDownDaysMC *ui;
