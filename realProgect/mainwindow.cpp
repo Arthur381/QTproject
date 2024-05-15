@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
+#include"dailymsy.h"
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -32,7 +33,9 @@ void MainWindow::on_clockBT_clicked()
 
 void MainWindow::on_pushButton_clicked()
 {
-    dailyMSY *Aday=new dailyMSY;
-    Aday->show();
+    //dailyMSY *Aday=new dailyMSY;
+    //dailyMSY* Aday=dailyMSY::getinstance();//在类外初始化
+    //Aday->show();
+    dailyMSY::getinstance()->show();
 }
 
