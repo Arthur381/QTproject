@@ -21,6 +21,9 @@ public:
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    //virtual void keyPressEvent(QKeyEvent * event);
+    //void paintEvent(QPaintEvent *e);
+    void setAW();
 
 private slots:
     void on_calBT_clicked();

@@ -4,5 +4,23 @@
         <file>image/cal_ico.jpg</file>
         <file>image/OIP.jpg</file>
         <file>image/heart.jpg</file>
+        <file>image/bin.jpg</file>
+        <file>image/happy.jpg</file>
+        <file>image/plain.jpg</file>
+        <file>image/sad.jpg</file>
+        <file>image/WCIS.jpg</file>
+        <file>image/worry.jpg</file>
+        <file>image/confid.jpg</file>
+        <file>image/dog.jpg</file>
+        <file>image/excit.jpg</file>
+        <file>image/ner.jpg</file>
+        <file>background/HP1.jpg</file>
+        <file>background/HP2.jpg</file>
+        <file>background/HP3.jpg</file>
+        <file>background/HP4.jpg</file>
+        <file>background/HP5.jpg</file>
+        <file>background/HP6.jpg</file>
+        <file>background/HP7.jpg</file>
     </qresource>
+    <qresource prefix="/background"/>
 </RCC>

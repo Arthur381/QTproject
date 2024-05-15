@@ -2,10 +2,15 @@
 #include "ui_dailymsy.h"
 #include "dailymsy2.h"
 #include "dailymsy_allin.h"
+<<<<<<< HEAD
 #include<QMessageBox>
 dailyMSY* dailyMSY::ptrdailymsy_allin = nullptr;//在类外初始化
 
 
+=======
+#include <QPainter>
+#include <QStyleOption>
+>>>>>>> a4882ed9379af9caed3c0b05926fd62b6150abf6
 
 dailyMSY::dailyMSY(QWidget *parent)
     : QWidget(parent)
