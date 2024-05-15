@@ -30,11 +30,11 @@
     <normaloff>:/image/cal_ico.jpg</normaloff>:/image/cal_ico.jpg</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true">QWidget#calendarMC{
+   <string notr="true">/*QWidget#calendarMC{
     background-image: url(:/background/HP1.jpg);
-    background-position: center; /* 图片居中 */
-    background-repeat: no-repeat; /* 图片不重复 */
-}</string>
+    background-position: center; /* 图片居中 
+    background-repeat: no-repeat; /* 图片不重复 
+}*/</string>
   </property>
   <widget class="QFrame" name="frame">
    <property name="geometry">
@@ -135,7 +135,7 @@
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;你好&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="styleSheet">
-       <string notr="true">QCalendarWidget{background-color:rgb(239, 82, 129,0.38); }</string>
+       <string notr="true"/>
       </property>
      </widget>
     </item>
