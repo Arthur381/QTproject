@@ -1,9 +1,7 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
-<<<<<<< HEAD
 #include"dailymsy.h"
-
-=======
+#include"coursemsy.h"
 #include"calendarmc.h"
 #include <QMainWindow>
 #include <QLabel>
@@ -15,7 +13,6 @@
 #include<QCoreApplication>
 #include <QPainter>
 #include <QStyleOption>
->>>>>>> a4882ed9379af9caed3c0b05926fd62b6150abf6
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -75,5 +72,12 @@ void MainWindow::on_pushButton_clicked()
     //dailyMSY* Aday=dailyMSY::getinstance();//在类外初始化
     //Aday->show();
     dailyMSY::getinstance()->show();
+}
+
+
+void MainWindow::on_TTBT_clicked()//课程表
+{
+    coursemsy *Acoursemsy=new coursemsy;
+    Acoursemsy->show();
 }
 

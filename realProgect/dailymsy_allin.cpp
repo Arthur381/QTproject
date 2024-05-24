@@ -2,12 +2,8 @@
 #include "ui_dailymsy_allin.h"
 #include"dailymsy.h"
 #include <QMessageBox>
-<<<<<<< HEAD
-=======
 #include <QPainter>
 #include <QStyleOption>
-
->>>>>>> a4882ed9379af9caed3c0b05926fd62b6150abf6
 #include<QDebug>
 
 
@@ -52,4 +48,30 @@ void dailymsy_allin::PrintP(){
 
 
 
+
+
+void dailymsy_allin::on_pushButton_clicked()//完成了该项任务，将文字设置成划线形式
+{
+    QList<QTableWidgetItem*> item=ui->workTable->selectedItems();
+    int ncount=item.count();
+    int nCurrentRow,nMaxRow;
+    nMaxRow=ui->workTable->rowCount();
+    if(ncount>0){
+        nCurrentRow=ui->workTable->row(item.at(0));
+        nCurrentRow+=1;
+        ui->workTable->setCurrentCell(nCurrentRow,QItemSelectionModel::Select);
+        if(nCurrentRow>=nMaxRow)
+            ui->workTable->setCurrentCell(0,QItemSelectionModel::Select);
+        else
+            ui->workTable->setCurrentCell(nCurrentRow,QItemSelectionModel::Select);
+    }
+    else
+        ui->workTable->setCurrentCell(0,QItemSelectionModel::Select);
+}
+
+
+void dailymsy_allin::on_workTable_cellClicked(int row, int column)
+{
+
+}
 

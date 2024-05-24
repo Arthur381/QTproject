@@ -25,11 +25,15 @@ public:
     void PrintP();
 
     int CountNum();
+
+    void on_workTable_cellClicked(int row, int column);
     ~dailymsy_allin();
 
 
 private slots:
     void on_missionAdd_clicked();
+
+    void on_pushButton_clicked();
 
 private:
 

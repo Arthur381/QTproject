@@ -39,6 +39,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         countdowndaysmc.h countdowndaysmc.cpp countdowndaysmc.ui
         images.qrc
         win_cal_viewmc.h win_cal_viewmc.cpp win_cal_viewmc.ui
+        coursemsy.h coursemsy.cpp coursemsy.ui
 
 
 
