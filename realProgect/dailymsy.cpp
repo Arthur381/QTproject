@@ -9,6 +9,7 @@
 #include <QStyleOption>
 
 dailyMSY* dailyMSY::ptrdailymsy_allin = nullptr;//在类外初始化
+
 dailyMSY::dailyMSY(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::dailyMSY)
@@ -31,10 +32,12 @@ int dailyMSY::CountNum(){//统计行数
     }
     return uiCnt;
 }
+
 /*void dailyMSY::on_iNote_clicked(){
     dailyMSY *Aday=new dailyMSY;
     Aday->show();
 }*/
+
 void dailyMSY::CreatTableFunc(){//创建sqlite数据表
 
     QSqlQuery creatquery;
@@ -64,7 +67,7 @@ void dailyMSY::CreatDataFunc(){//创建SQLite数据库
 
     //3.打开数据库是否成功
     if(sqldb.open()==true){
-        //QMessageBox::information(0,"正确","恭喜你，数据库打开成功",QMessageBox::Ok);
+        QMessageBox::information(0,"正确","恭喜你，数据库打开成功",QMessageBox::Ok);
     }
     else{
         QMessageBox::critical(0,"错误","数据库打开失败",QMessageBox::Ok);
@@ -93,7 +96,7 @@ bool dailyMSY::addOne(BEventInfo info){
     QSqlQuery sqlquery(sqldb);
     quint32 id=dailyMSY::CountNum()+1;
     //qDebug()<<"id:"<<id;
-    QString strs=QString("INSERT INTO event VALUES(%1,'%2','%3','%4','%5','%6')").
+    QString strs=QString("INSERT INTO event VALUES(%1,'%2',%3,%4,'%5','%6')").
                    arg(id).arg(info.thingsname).arg(info.im).arg(info.em);
 
     if(sqlquery.exec(strs)!=true){

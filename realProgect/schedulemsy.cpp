@@ -1,5 +1,7 @@
 #include "schedulemsy.h"
 #include "ui_schedulemsy.h"
+#include "coursemsy.h"
+
 #include <QPainter>
 #include <QStyleOption>
 
@@ -32,4 +34,8 @@ scheduleMSY::scheduleMSY(QWidget *parent)
 scheduleMSY::~scheduleMSY()
 {
     delete ui;
+}
+
+void Print(){
+
 }

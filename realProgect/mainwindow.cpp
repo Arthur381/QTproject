@@ -78,7 +78,8 @@ void MainWindow::on_pushButton_clicked()
 
 void MainWindow::on_TTBT_clicked()//课程表
 {
-    coursemsy *Acoursemsy=new coursemsy;
-    Acoursemsy->show();
+ //   coursemsy *Acoursemsy=new coursemsy;
+   // Acoursemsy->show();
+    coursemsy::getinstance()->show();
 }
 

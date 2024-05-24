@@ -26,7 +26,7 @@ public:
     explicit dailyMSY(QWidget *parent = nullptr);
     static dailyMSY *ptrdailymsy_allin;//类内声明的静态指针
 
-    static dailyMSY*getinstance(){//单例化
+    static dailyMSY *getinstance(){//单例化
         if(nullptr==ptrdailymsy_allin){
             ptrdailymsy_allin=new dailyMSY;
         }

@@ -12,6 +12,8 @@ dailymsy_allin::dailymsy_allin(QWidget *parent)
     , ui(new Ui::dailymsy_allin)
 {
     ui->setupUi(this);
+    ui->workTable->setSelectionBehavior(QAbstractItemView::SelectRows);
+    ui->workTable->setSelectionMode(QAbstractItemView::SingleSelection);
     PrintP();
 }
 
@@ -40,9 +42,9 @@ void dailymsy_allin::PrintP(){
     ui->workTable->setRowCount(cnt);
     for(int i=0;i<listeve.size();i++){
         ui->workTable->setItem(i,0,new QTableWidgetItem(QString::number(i)));
-        //ui->workTable->setItem(i,1,new QTableWidgetItem(listeve[i].thingsname));
-        ui->workTable->setItem(i,2,new QTableWidgetItem(listeve[i].im));
-        ui->workTable->setItem(i,3,new QTableWidgetItem(listeve[i].em));
+        ui->workTable->setItem(i,1,new QTableWidgetItem(listeve[i].thingsname));
+        ui->workTable->setItem(i,2,new QTableWidgetItem(QString::number(listeve[i].im)));
+        ui->workTable->setItem(i,3,new QTableWidgetItem(QString::number(listeve[i].em)));
     }
 }
 
@@ -53,6 +55,8 @@ void dailymsy_allin::PrintP(){
 void dailymsy_allin::on_pushButton_clicked()//完成了该项任务，将文字设置成划线形式
 {
     QList<QTableWidgetItem*> item=ui->workTable->selectedItems();
+    //设置选中行样式
+    ui->workTable->setStyleSheet("QTableWidge::item:selected{background-color:blue;color:white;}");
     int ncount=item.count();
     int nCurrentRow,nMaxRow;
     nMaxRow=ui->workTable->rowCount();
@@ -72,6 +76,68 @@ void dailymsy_allin::on_pushButton_clicked()//完成了该项任务，将文字�
 
 void dailymsy_allin::on_workTable_cellClicked(int row, int column)
 {
+    ui->show->setText(QString("%1").arg(row+1));
+}
 
+
+void dailymsy_allin::on_delectAll_clicked()
+{
+    int nCount=ui->workTable->rowCount();
+    if(nCount>0){
+        ui->workTable->clearContents();
+    }
+}
+
+
+void dailymsy_allin::on_nextRow_clicked()//转到选择行的下一行
+{
+    QList<QTableWidgetItem*> items=ui->workTable->selectedItems();
+    int nCount=items.count();
+    int nCurrentRow,nMaxRow;
+
+    nMaxRow=ui->workTable->rowCount();
+
+    if(nCount>0){
+        nCurrentRow=ui->workTable->row(items.at(0));
+        nCurrentRow+=1;
+
+        if(nCurrentRow>=nMaxRow){
+            ui->workTable->setCurrentCell(0,QItemSelectionModel::Select);
+            ui->show->setText(QString("%1").arg(1));
+        }
+        else{
+            ui->workTable->setCurrentCell(nCurrentRow,QItemSelectionModel::Select);
+            ui->show->setText(QString("%1").arg(nCurrentRow+1));
+        }
+    }
+    else{//没选中则设置为首行
+        ui->workTable->setCurrentCell(0,QItemSelectionModel::Select);
+        ui->show->setText(QString("%1").arg(1));
+    }
+
+}
+
+
+void dailymsy_allin::on_horizontalSlider_valueChanged(int value)
+{
+    ui->imNum->setText(QString("%1").arg(value));
+}
+
+
+void dailymsy_allin::on_horizontalSlider_2_valueChanged(int value)
+{
+     ui->emNum->setText(QString("%1").arg(value));
+}
+
+
+void dailymsy_allin::on_imNum_textChanged(const QString &arg1)
+{
+    ui->horizontalSlider->setValue(arg1.toUInt());
+}
+
+
+void dailymsy_allin::on_emNum_textChanged(const QString &arg1)
+{
+    ui->horizontalSlider_2->setValue(arg1.toUInt());
 }
 
