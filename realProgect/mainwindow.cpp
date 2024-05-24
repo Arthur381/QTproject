@@ -1,7 +1,10 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 #include"dailymsy.h"
+<<<<<<< HEAD
 #include"coursemsy.h"
+=======
+>>>>>>> 892b0e877f7240b24e298794dee0beb5f0457153
 #include"calendarmc.h"
 #include <QMainWindow>
 #include <QLabel>
@@ -13,6 +16,10 @@
 #include<QCoreApplication>
 #include <QPainter>
 #include <QStyleOption>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 892b0e877f7240b24e298794dee0beb5f0457153
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -54,8 +61,9 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_calBT_clicked()
 {
-    this->cal->show();
     cal->ColorDays();
+    this->cal->show();
+
 }
 
 

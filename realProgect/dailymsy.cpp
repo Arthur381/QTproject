@@ -3,12 +3,12 @@
 #include "dailymsy2.h"
 #include "dailymsy_allin.h"
 #include<QMessageBox>
-dailyMSY* dailyMSY::ptrdailymsy_allin = nullptr;//在类外初始化
 
 
 #include <QPainter>
 #include <QStyleOption>
 
+dailyMSY* dailyMSY::ptrdailymsy_allin = nullptr;//在类外初始化
 dailyMSY::dailyMSY(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::dailyMSY)

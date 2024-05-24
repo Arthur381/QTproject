@@ -2,6 +2,10 @@
 #include "ui_dailymsy_allin.h"
 #include"dailymsy.h"
 #include <QMessageBox>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 892b0e877f7240b24e298794dee0beb5f0457153
 #include <QPainter>
 #include <QStyleOption>
 #include<QDebug>

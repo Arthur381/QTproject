@@ -28,17 +28,6 @@ calendarMC::calendarMC(QWidget *parent)
     //ui->calendarWidget->setFont(QFont("Timers",8,QFont::Bold));
     CreatDataFunc();
     CreatTableFunc();
-    //QFile f;
-    //auto str=QCoreApplication::applicationDirPath();
-    //f.setFileName(str+"//"+"MWBqss.css");
-    //if(f.open(QIODevice::ReadOnly)){
-    //    QString str1=f.readAll();
-    //    this->setStyleSheet(str1);
-    //    f.close();
-    //}
-    //else{
-    //    qDebug() << "Failed to open stylesheet file";
-    //}
 }
 
 calendarMC::~calendarMC()
@@ -89,9 +78,8 @@ void calendarMC::ChangeOneDay(const QDate date,const QString mood){
     //QDate specialDate(2024, 5, 15);
 
     // 设置特定日期的文本格式
+    qDebug()<<"oneday";
     ui->calendarWidget->setDateTextFormat(date, specialDayFormat);
-
-
 
 }
 
