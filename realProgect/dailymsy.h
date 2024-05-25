@@ -44,9 +44,6 @@ private:
     void CreatDataFunc();//创建SQLite数据库
     void CreatTableFunc();//创建sqlite数据表
 
-
-    //QSqlQueryModel sqimodel;//存储结果集
-
 public slots:
 
 private slots:

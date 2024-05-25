@@ -2,15 +2,20 @@
 #include "ui_dailymsy3.h"
 #include "dailymsy.h"
 
+#include <QMessageBox>
+
 dailymsy3::dailymsy3(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::dailymsy3)
 {
     ui->setupUi(this);
-    sqldb.setDatabaseName("ThingsDemo.db");
-    if(!sqldb.open())
-        qDebug()<<"database open failed";
-    Print();
+
+    //固定行宽
+    ui->nine->horizontalHeader()->setSectionResizeMode(QHeaderView::Fixed);
+    ui->nine->setColumnWidth(0,200);
+    ui->nine->setColumnWidth(1,200);
+
+    modifyDatabase();
 }
 
 dailymsy3::~dailymsy3()
@@ -18,14 +23,21 @@ dailymsy3::~dailymsy3()
     delete ui;
 }
 
-void dailymsy3::Print(){
-    //显示相应的分类,不重要不紧急 重要：50以下，紧急：50以下
+void dailymsy3::modifyDatabase(){
+    QSqlDatabase db=QSqlDatabase::database("myConnection");
+    if(!db.isOpen()){
+        qDebug()<<"error";
+        return;
+    }
+    QSqlQuery sql(db);
+    QString strsql=QString("select * from event where im<50 and em<50;");
+    if(sql.exec(strsql)){
+        //QMessageBox::information(0,"Success","放入特定分类成功。",QMessageBox::Ok);
+    }
+    else{
+        QMessageBox::critical(0,"失败","特定分类失败。",QMessageBox::Ok);
+    }
     QList<BEventInfo> l;
-    QSqlQuery sql(sqldb);
-    //此处可能有问题，怎么根据im和em的值去筛选出相应的条列
-    QString strsql=QString("select * from courseDemo WHERE im<50 and em<50;");
-    sql.exec(strsql);
-
     BEventInfo info;
     while(sql.next()){
         info.id=sql.value(0).toInt();
@@ -43,3 +55,4 @@ void dailymsy3::Print(){
         ui->nine->setItem(i,1,new QTableWidgetItem(l[i].thingsname));
     }
 }
+

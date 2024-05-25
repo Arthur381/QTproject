@@ -66,7 +66,7 @@ void dailyMSY::CreatTableFunc(){//创建sqlite数据表
 
 void dailyMSY::CreatDataFunc(){//创建SQLite数据库
     //1.添加数据库驱动
-    sqldb=QSqlDatabase::addDatabase("QSQLITE");
+    sqldb=QSqlDatabase::addDatabase("QSQLITE","myConnection");
 
     //2.设置数据库名称
     sqldb.setDatabaseName("ThingsDemo.db");
@@ -139,8 +139,6 @@ void dailyMSY::on_iAnde_clicked()
     dailymsy4 *Dday=new dailymsy4;
     Dday->show();
 }
-
-
 
 void dailyMSY::on_eNoti_clicked()
 {
