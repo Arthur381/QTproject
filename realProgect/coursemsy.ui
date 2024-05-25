@@ -180,7 +180,7 @@
     <rect>
      <x>90</x>
      <y>190</y>
-     <width>241</width>
+     <width>111</width>
      <height>41</height>
     </rect>
    </property>
@@ -270,6 +270,19 @@
      <width>161</width>
      <height>20</height>
     </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="delCourse">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>190</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>删除课程</string>
    </property>
   </widget>
  </widget>

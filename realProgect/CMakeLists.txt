@@ -40,6 +40,9 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         images.qrc
         win_cal_viewmc.h win_cal_viewmc.cpp win_cal_viewmc.ui
         coursemsy.h coursemsy.cpp coursemsy.ui
+        dailymsy3.h dailymsy3.cpp dailymsy3.ui
+        dailymsy4.h dailymsy4.cpp dailymsy4.ui
+        dailymsy5.h dailymsy5.cpp dailymsy5.ui
 
 
 

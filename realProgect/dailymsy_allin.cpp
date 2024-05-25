@@ -14,6 +14,7 @@ dailymsy_allin::dailymsy_allin(QWidget *parent)
     ui->setupUi(this);
     ui->workTable->setSelectionBehavior(QAbstractItemView::SelectRows);
     ui->workTable->setSelectionMode(QAbstractItemView::SingleSelection);
+    ui->workTable->setEditTriggers(QAbstractItemView::NoEditTriggers);//禁止对表格内容进行修改
     PrintP();
 }
 
@@ -48,37 +49,19 @@ void dailymsy_allin::PrintP(){
     }
 }
 
-
-
-
-
 void dailymsy_allin::on_pushButton_clicked()//完成了该项任务，将文字设置成划线形式
 {
+    QSqlQuery creatquery;
+    //这里有问题，我先将其划线，再从中删去可以实现么
     QList<QTableWidgetItem*> item=ui->workTable->selectedItems();
-    //设置选中行样式
-    ui->workTable->setStyleSheet("QTableWidge::item:selected{background-color:blue;color:white;}");
     int ncount=item.count();
-    int nCurrentRow,nMaxRow;
-    nMaxRow=ui->workTable->rowCount();
-    if(ncount>0){
-        nCurrentRow=ui->workTable->row(item.at(0));
-        nCurrentRow+=1;
-        ui->workTable->setCurrentCell(nCurrentRow,QItemSelectionModel::Select);
-        if(nCurrentRow>=nMaxRow)
-            ui->workTable->setCurrentCell(0,QItemSelectionModel::Select);
-        else
-            ui->workTable->setCurrentCell(nCurrentRow,QItemSelectionModel::Select);
+    qDebug() << ncount;
+    QString strsql=QString("delete from courseDemo where id=(select id from courseDemo limit %1,1)").arg(ncount);
+    if(creatquery.exec(strsql)==false){
+        QMessageBox::critical(0,"错误","删除事项失败",QMessageBox::Ok);
     }
-    else
-        ui->workTable->setCurrentCell(0,QItemSelectionModel::Select);
+
 }
-
-
-void dailymsy_allin::on_workTable_cellClicked(int row, int column)
-{
-    ui->show->setText(QString("%1").arg(row+1));
-}
-
 
 void dailymsy_allin::on_delectAll_clicked()
 {
@@ -139,5 +122,12 @@ void dailymsy_allin::on_imNum_textChanged(const QString &arg1)
 void dailymsy_allin::on_emNum_textChanged(const QString &arg1)
 {
     ui->horizontalSlider_2->setValue(arg1.toUInt());
+}
+
+
+void dailymsy_allin::on_workTable_itemClicked(QTableWidgetItem *item)
+{
+    int nrow=item->row();
+    ui->show->setText(QString("%1").arg(nrow));
 }
 

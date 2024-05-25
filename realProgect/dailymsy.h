@@ -52,6 +52,9 @@ public slots:
 private slots:
     void on_iNote_clicked();
     void on_allIn_clicked();
+    void on_nine_clicked();
+    void on_iAnde_clicked();
+    void on_eNoti_clicked();
 };
 
 

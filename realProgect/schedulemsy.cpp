@@ -29,6 +29,8 @@ scheduleMSY::scheduleMSY(QWidget *parent)
     ui->courseTable->setRowHeight(7,20);
     ui->courseTable->setRowHeight(8,20);
     ui->courseTable->setAlternatingRowColors(true);
+
+    Print();
 }
 
 scheduleMSY::~scheduleMSY()
@@ -36,6 +38,13 @@ scheduleMSY::~scheduleMSY()
     delete ui;
 }
 
-void Print(){
-
+void scheduleMSY::Print(){
+    coursemsy* m_coursemsy=coursemsy::getinstance();
+    auto cnt = m_coursemsy->countnum();
+    QList<CEventInfo>listeve=m_coursemsy->getPage(0,cnt);
+    ui->courseTable->clearContents();
+    ui->courseTable->setRowCount(12);
+    for(int i=0;i<listeve.size();i++){
+        ui->courseTable->setItem(listeve[i].row,listeve[i].col,new QTableWidgetItem(listeve[i].courseName));
+    }
 }

@@ -7,6 +7,7 @@
 #include <QSqlError>
 #include <QSqlQuery>//专用于DML（数据操纵语言），DDL（数据定义语言）
 #include <QSqlQueryModel>
+#include <QTableWidget>
 #include <QtDebug>
 
 namespace Ui {
@@ -26,7 +27,6 @@ public:
 
     int CountNum();
 
-    void on_workTable_cellClicked(int row, int column);
     ~dailymsy_allin();
 
 
@@ -46,6 +46,8 @@ private slots:
     void on_imNum_textChanged(const QString &arg1);
 
     void on_emNum_textChanged(const QString &arg1);
+
+    void on_workTable_itemClicked(QTableWidgetItem *item);
 
 private:
 

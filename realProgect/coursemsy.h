@@ -36,6 +36,7 @@ public:
         }
         return ptrcoursemsy;
     }
+    int countnum();
 
     QList<CEventInfo> getPage(int page,int uicnt);//从数据库中读取列表
     QSqlDatabase sqldb;//创建qt和数据库连接
@@ -43,12 +44,15 @@ public:
     ~coursemsy();
 
 public:
-
+    bool addone(CEventInfo info);
+    bool delone(CEventInfo info);
 
 private slots:
     void on_pushButton_clicked();
 
     void on_pushButton_2_clicked();
+
+    void on_delCourse_clicked();
 
 private:
     Ui::coursemsy *ui;
