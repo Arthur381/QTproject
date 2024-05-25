@@ -29,6 +29,9 @@ coursemsy::coursemsy(QWidget *parent)
     ui->selectTime->addItem("晚饭时间");
     ui->selectTime->addItem("第五节");
     ui->selectTime->addItem("第六节");
+
+    CreatDataFunc();
+    CreatTableFunc();
 }
 
 coursemsy::~coursemsy()
@@ -56,7 +59,7 @@ void coursemsy::CreatTableFunc(){//创建sqlite数据表
 
     QSqlQuery creatquery;
 
-    QString strsql=QString("create table event("
+    QString strsql=QString("create table courseDemo("
                              "col int not null,"
                              "row int not null,"
                              "courseName text primary key not null)");

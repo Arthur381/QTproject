@@ -15,6 +15,10 @@ dailyMSY::dailyMSY(QWidget *parent)
     , ui(new Ui::dailyMSY)
 {
     ui->setupUi(this);//建立窗口和界面的关系
+
+    CreatDataFunc();
+    CreatTableFunc();
+
 }
 
 dailyMSY::~dailyMSY()
@@ -67,7 +71,7 @@ void dailyMSY::CreatDataFunc(){//创建SQLite数据库
 
     //3.打开数据库是否成功
     if(sqldb.open()==true){
-        QMessageBox::information(0,"正确","恭喜你，数据库打开成功",QMessageBox::Ok);
+        //QMessageBox::information(0,"正确","恭喜你，数据库打开成功",QMessageBox::Ok);
     }
     else{
         QMessageBox::critical(0,"错误","数据库打开失败",QMessageBox::Ok);
@@ -96,7 +100,7 @@ bool dailyMSY::addOne(BEventInfo info){
     QSqlQuery sqlquery(sqldb);
     quint32 id=dailyMSY::CountNum()+1;
     //qDebug()<<"id:"<<id;
-    QString strs=QString("INSERT INTO event VALUES(%1,'%2',%3,%4,'%5','%6')").
+    QString strs=QString("INSERT INTO event VALUES(%1,'%2',%3,%4)").
                    arg(id).arg(info.thingsname).arg(info.im).arg(info.em);
 
     if(sqlquery.exec(strs)!=true){
