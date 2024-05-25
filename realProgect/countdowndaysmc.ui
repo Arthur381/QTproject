@@ -31,7 +31,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">QWidget#CountDownDaysMC{
-    background-image: url(:/background/HP5.jpg);
+    background-image: url(:/background/current.jpg);
     background-position: center; /* 图片居中 */
     background-repeat: no-repeat; /* 图片不重复 */
 }</string>

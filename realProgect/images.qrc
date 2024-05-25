@@ -21,6 +21,8 @@
         <file>background/HP5.jpg</file>
         <file>background/HP6.jpg</file>
         <file>background/HP7.jpg</file>
+        <file>background/current.jpg</file>
+        <file>background/Loki2.jpg</file>
     </qresource>
     <qresource prefix="/background"/>
 </RCC>

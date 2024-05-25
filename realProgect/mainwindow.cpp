@@ -3,6 +3,7 @@
 #include"dailymsy.h"
 #include"coursemsy.h"
 #include"calendarmc.h"
+#include "intro.h"
 #include <QMainWindow>
 #include <QLabel>
 #include <QVBoxLayout>
@@ -13,6 +14,7 @@
 #include<QCoreApplication>
 #include <QPainter>
 #include <QStyleOption>
+#include "choosetheme.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -54,8 +56,9 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_calBT_clicked()
 {
-    cal->ColorDays();
     this->cal->show();
+    cal->ColorDays();
+
 
 }
 
@@ -69,9 +72,6 @@ void MainWindow::on_clockBT_clicked()
 
 void MainWindow::on_pushButton_clicked()
 {
-    //dailyMSY *Aday=new dailyMSY;
-    //dailyMSY* Aday=dailyMSY::getinstance();//在类外初始化
-    //Aday->show();
     dailyMSY::getinstance()->show();
 }
 
@@ -80,5 +80,19 @@ void MainWindow::on_TTBT_clicked()//课程表
 {
     coursemsy *Acoursemsy=new coursemsy;
     Acoursemsy->show();
+}
+
+
+void MainWindow::on_readme_clicked()
+{
+    Intro *intro=new Intro;
+    intro->show();
+}
+
+
+void MainWindow::on_style_clicked()
+{
+    ChooseTheme * ChoT=new ChooseTheme;
+    ChoT->show();
 }
 

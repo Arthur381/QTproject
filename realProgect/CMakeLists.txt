@@ -40,6 +40,12 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         images.qrc
         win_cal_viewmc.h win_cal_viewmc.cpp win_cal_viewmc.ui
         coursemsy.h coursemsy.cpp coursemsy.ui
+        intro.h intro.cpp intro.ui
+        choosetheme.h choosetheme.cpp choosetheme.ui
+        global.cpp
+        global.h
+
+
 
 
 
