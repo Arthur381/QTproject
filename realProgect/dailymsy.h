@@ -26,7 +26,7 @@ public:
     explicit dailyMSY(QWidget *parent = nullptr);
     static dailyMSY *ptrdailymsy_allin;//类内声明的静态指针
 
-    static dailyMSY*getinstance(){//单例化
+    static dailyMSY *getinstance(){//单例化
         if(nullptr==ptrdailymsy_allin){
             ptrdailymsy_allin=new dailyMSY;
         }
@@ -52,6 +52,9 @@ public slots:
 private slots:
     void on_iNote_clicked();
     void on_allIn_clicked();
+    void on_nine_clicked();
+    void on_iAnde_clicked();
+    void on_eNoti_clicked();
 };
 
 

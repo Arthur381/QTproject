@@ -3,17 +3,24 @@
 #include "dailymsy2.h"
 #include "dailymsy_allin.h"
 #include<QMessageBox>
-
+#include "dailymsy3.h"
+#include "dailymsy4.h"
+#include "dailymsy5.h"
 
 #include <QPainter>
 #include <QStyleOption>
 
 dailyMSY* dailyMSY::ptrdailymsy_allin = nullptr;//在类外初始化
+
 dailyMSY::dailyMSY(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::dailyMSY)
 {
     ui->setupUi(this);//建立窗口和界面的关系
+
+    CreatDataFunc();
+    CreatTableFunc();
+
 }
 
 dailyMSY::~dailyMSY()
@@ -31,14 +38,16 @@ int dailyMSY::CountNum(){//统计行数
     }
     return uiCnt;
 }
+
 /*void dailyMSY::on_iNote_clicked(){
     dailyMSY *Aday=new dailyMSY;
     Aday->show();
 }*/
+
 void dailyMSY::CreatTableFunc(){//创建sqlite数据表
 
     QSqlQuery creatquery;
-
+//这里设置的thingname是不能为空的，但是为什么我可以为空
     QString strsql=QString("create table event("
                              "id int not null,"
                              "thingsname text primary key not null,"
@@ -93,7 +102,7 @@ bool dailyMSY::addOne(BEventInfo info){
     QSqlQuery sqlquery(sqldb);
     quint32 id=dailyMSY::CountNum()+1;
     //qDebug()<<"id:"<<id;
-    QString strs=QString("INSERT INTO event VALUES(%1,'%2','%3','%4','%5','%6')").
+    QString strs=QString("INSERT INTO event VALUES(%1,'%2',%3,%4)").
                    arg(id).arg(info.thingsname).arg(info.im).arg(info.em);
 
     if(sqlquery.exec(strs)!=true){
@@ -106,16 +115,36 @@ bool dailyMSY::addOne(BEventInfo info){
     return true;
 }
 
+void dailyMSY::on_allIn_clicked()
+{
+    dailymsy_allin *AllDay=new dailymsy_allin;
+    AllDay->show();
+}
+
 void dailyMSY::on_iNote_clicked()
 {
     dailymsy2 *Bday=new dailymsy2;
     Bday->show();
 }
 
-
-void dailyMSY::on_allIn_clicked()
+void dailyMSY::on_nine_clicked()
 {
-    dailymsy_allin *AllDay=new dailymsy_allin;
-    AllDay->show();
+    dailymsy3 *Cday=new dailymsy3;
+    Cday->show();
+}
+
+
+void dailyMSY::on_iAnde_clicked()
+{
+    dailymsy4 *Dday=new dailymsy4;
+    Dday->show();
+}
+
+
+
+void dailyMSY::on_eNoti_clicked()
+{
+    dailymsy5 *Eday=new dailymsy5;
+    Eday->show();
 }
 
