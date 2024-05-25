@@ -39,6 +39,9 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         countdowndaysmc.h countdowndaysmc.cpp countdowndaysmc.ui
         images.qrc
         win_cal_viewmc.h win_cal_viewmc.cpp win_cal_viewmc.ui
+        sec_clock.h sec_clock.cpp sec_clock.ui
+        r_clock.h r_clock.cpp r_clock.ui
+        alarm.h alarm.cpp alarm.ui
 
 
 
