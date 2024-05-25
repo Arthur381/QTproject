@@ -13,6 +13,114 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <widget class="QTableWidget" name="courseTable">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>421</width>
+     <height>321</height>
+    </rect>
+   </property>
+   <property name="autoScroll">
+    <bool>false</bool>
+   </property>
+   <row>
+    <property name="text">
+     <string>8:00-9:50</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>9:50-10:10</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>10:10-12:00</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>12:00-13:00</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>13:00-14:50</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>14:50-15:10</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>15:10-17:00</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>17:10-18:00</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>18:00-18:40</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>18:40-20:30</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>20:30-21:30</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string/>
+    </property>
+   </row>
+   <column>
+    <property name="text">
+     <string>周一</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>周二</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>周三</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>周四</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>周五</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>周六</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>周天</string>
+    </property>
+   </column>
+  </widget>
  </widget>
  <resources/>
  <connections/>

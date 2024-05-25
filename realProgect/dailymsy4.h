@@ -1,5 +1,5 @@
-#ifndef DAILYMSY2_H
-#define DAILYMSY2_H
+#ifndef DAILYMSY4_H
+#define DAILYMSY4_H
 
 #include <QDialog>
 #include<QList>
@@ -9,22 +9,23 @@
 #include <QSqlQueryModel>
 #include <QtDebug>
 
+
 namespace Ui {
-class dailymsy2;
+class dailymsy4;
 }
 
-class dailymsy2 : public QDialog
+class dailymsy4 : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit dailymsy2(QWidget *parent = nullptr);
-    ~dailymsy2();
+    explicit dailymsy4(QWidget *parent = nullptr);
+    ~dailymsy4();
     void Print();
     QSqlDatabase sqldb=QSqlDatabase::addDatabase("QSQLITE");//创建qt和数据库连接
 
 private:
-    Ui::dailymsy2 *ui;
+    Ui::dailymsy4 *ui;
 };
 
-#endif // DAILYMSY2_H
+#endif // DAILYMSY4_H

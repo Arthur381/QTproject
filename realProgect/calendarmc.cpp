@@ -216,6 +216,10 @@ bool calendarMC::AddEvent(AEventInfo newEve){
     QSqlQuery sqlquery(sqldb);
     quint32 id=calendarMC::countNum()+1;
     //qDebug()<<"id:"<<id;
+    if(newEve.details==""){
+        QMessageBox::critical(0,"失败","数据表插入新数据失败!详细信息不能为空！",QMessageBox::Ok);
+        return true;
+    }
     QString strs=QString("INSERT INTO event VALUES(%1,'%2','%3','%4','%5','%6')").
                    arg(id).arg(newEve.name).arg(newEve.date).arg(newEve.atimes).arg(newEve.mood).arg(newEve.details);
 

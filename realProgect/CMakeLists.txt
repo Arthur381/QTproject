@@ -39,9 +39,19 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         countdowndaysmc.h countdowndaysmc.cpp countdowndaysmc.ui
         images.qrc
         win_cal_viewmc.h win_cal_viewmc.cpp win_cal_viewmc.ui
+        coursemsy.h coursemsy.cpp coursemsy.ui
+        global.cpp
+        choosetheme.h choosetheme.cpp choosetheme.ui
+        intro.h intro.cpp intro.ui
+        global.h
+        dailymsy3.h dailymsy3.cpp dailymsy3.ui
+        dailymsy4.h dailymsy4.cpp dailymsy4.ui
+        dailymsy5.h dailymsy5.cpp dailymsy5.ui
         sec_clock.h sec_clock.cpp sec_clock.ui
         r_clock.h r_clock.cpp r_clock.ui
         alarm.h alarm.cpp alarm.ui
+
+
 
 
 

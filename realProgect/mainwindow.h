@@ -32,6 +32,12 @@ private slots:
 
     void on_pushButton_clicked();
 
+    void on_TTBT_clicked();
+
+    void on_readme_clicked();
+
+    void on_style_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
