@@ -12,7 +12,7 @@
 //QDate currentDate = QDate::currentDate();
 //qDebug() << "Current Date:" << currentDate.toString(Qt::ISODate);
 
-
+#include"global.h"
 
 CountDownDaysMC::CountDownDaysMC(QWidget *parent)
     : QWidget(parent)
@@ -26,6 +26,9 @@ CountDownDaysMC::CountDownDaysMC(QWidget *parent)
     ui->tableWidgetCD->horizontalHeader()->setSectionResizeMode(0, QHeaderView::Stretch);
     calendarMC* m_ptrcalendar=calendarMC::getinstance();
     CountDownDaysMC::PrintForView();
+    if(ThemeStyle==1){
+        this->setStyleSheet("background-image: url(:/background/HP5.jpg);");
+    }
 }
 
 void CountDownDaysMC::PrintForView(){
@@ -39,6 +42,8 @@ void CountDownDaysMC::PrintForView(){
     ui->tableWidgetCD->setRowCount(cnt);
     //qDebug()<<"cnt:"<<cnt;
     for(int i=0;i<listeve.size();i++){
+
+
         QTableWidgetItem *item = new QTableWidgetItem(QString::number(i));
         item->setTextAlignment(Qt::AlignCenter); // 设置水平和垂直居中对齐
         ui->tableWidgetCD->setItem(i,0,item);
