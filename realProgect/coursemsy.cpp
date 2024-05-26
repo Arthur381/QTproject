@@ -93,7 +93,7 @@ void coursemsy::on_pushButton_clicked()//显示课程表的
 
 int coursemsy::countnum(){
     QSqlQuery sql(sqldb);
-    sql.exec("select count(id) from courseDemo;");
+    sql.exec("select * from courseDemo");
     int uiCnt=0;
     while(sql.next()){
         uiCnt=sql.value(0).toUInt();//有可能会有bug

@@ -47,6 +47,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         dailymsy3.h dailymsy3.cpp dailymsy3.ui
         dailymsy4.h dailymsy4.cpp dailymsy4.ui
         dailymsy5.h dailymsy5.cpp dailymsy5.ui
+        hoverbutton.h hoverbutton.cpp
 
 
 
