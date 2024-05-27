@@ -26,6 +26,8 @@ dailymsy_allin::~dailymsy_allin()
 void dailymsy_allin::on_missionAdd_clicked()//添加任务并且显示
 {
     BEventInfo info;
+    // dailyMSY* m_ptrdailymsy_allin=dailyMSY::getinstance();
+    // auto cnt = m_ptrdailymsy_allin->CountNum();
     info.thingsname=ui->thingsname->text();
     info.id=1;
     info.im=ui->imNum->text().toInt();
@@ -47,20 +49,6 @@ void dailymsy_allin::PrintP(){
         ui->workTable->setItem(i,2,new QTableWidgetItem(QString::number(listeve[i].im)));
         ui->workTable->setItem(i,3,new QTableWidgetItem(QString::number(listeve[i].em)));
     }
-}
-
-void dailymsy_allin::on_pushButton_clicked()//完成了该项任务，将文字设置成划线形式
-{
-    QSqlQuery creatquery;
-    //这里有问题，我先将其划线，再从中删去可以实现么
-    QList<QTableWidgetItem*> item=ui->workTable->selectedItems();
-    int ncount=item.count();
-    qDebug() << ncount;
-    QString strsql=QString("delete from courseDemo where id=(select id from courseDemo limit %1,1)").arg(ncount);
-    if(creatquery.exec(strsql)==false){
-        QMessageBox::critical(0,"错误","删除事项失败",QMessageBox::Ok);
-    }
-
 }
 
 void dailymsy_allin::on_delectAll_clicked()
@@ -129,5 +117,27 @@ void dailymsy_allin::on_workTable_itemClicked(QTableWidgetItem *item)
 {
     int nrow=item->row();
     ui->show->setText(QString("%1").arg(nrow));
+}
+
+
+void dailymsy_allin::on_deleteMission_clicked()
+{
+    QSqlDatabase db=QSqlDatabase::database("myConnection");
+    if(!db.isOpen()){
+        qDebug()<<"error";
+        return;
+    }
+    QSqlQuery sql(db);
+    //这里有问题，我先将其划线，再从中删去可以实现么
+    QList<QTableWidgetItem*> item=ui->workTable->selectedItems();
+    int ncount=item[0]->row();
+    // ui->workTable->setStyleSheet("selection-background-color:rgb(255,209,128)");
+    // ui->workTable->selectRow(ncount);
+    qDebug() << ncount;
+    QString strsql=QString("delete from event where id=%1;").arg(ncount);
+    PrintP();
+    if(sql.exec(strsql)==false){
+        QMessageBox::critical(0,"错误","删除事项失败",QMessageBox::Ok);
+    }
 }
 

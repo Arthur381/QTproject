@@ -42,6 +42,8 @@ void CountDownDaysMC::PrintForView(){
     ui->tableWidgetCD->setRowCount(cnt);
     //qDebug()<<"cnt:"<<cnt;
     for(int i=0;i<listeve.size();i++){
+
+
         QTableWidgetItem *item = new QTableWidgetItem(QString::number(i));
         item->setTextAlignment(Qt::AlignCenter); // 设置水平和垂直居中对齐
         ui->tableWidgetCD->setItem(i,0,item);
