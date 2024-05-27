@@ -20,7 +20,7 @@ r_clock::r_clock(QWidget *parent)
     ui->sb_sec->setMinimum(0);
     ui->sb_sec->setMaximum(59);
     //插入动图
-    QMovie *shalou = new QMovie("C:\\Users\\lenovo\\Desktop\\shalou.gif");
+    QMovie *shalou = new QMovie(":image\\shalou.gif");
     ui->label_shalou->setMovie(shalou);
     shalou->setScaledSize(ui->label_shalou->size());
     shalou->start();

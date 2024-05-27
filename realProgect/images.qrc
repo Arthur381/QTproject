@@ -23,6 +23,7 @@
         <file>background/HP7.jpg</file>
         <file>background/current.jpg</file>
         <file>background/Loki2.jpg</file>
+        <file>image/shalou.gif</file>
     </qresource>
     <qresource prefix="/background"/>
 </RCC>
