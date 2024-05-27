@@ -172,10 +172,10 @@
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>70</x>
+     <x>30</x>
      <y>140</y>
      <width>251</width>
      <height>71</height>
@@ -233,7 +233,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QLabel" name="min1">
+     <widget class="QLabel" name="min2">
       <property name="font">
        <font>
         <pointsize>40</pointsize>
@@ -248,7 +248,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QLabel" name="min2">
+     <widget class="QLabel" name="min1">
       <property name="font">
        <font>
         <pointsize>40</pointsize>
@@ -308,6 +308,19 @@
      </widget>
     </item>
    </layout>
+  </widget>
+  <widget class="QLabel" name="label_shalou">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>130</y>
+     <width>71</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
   </widget>
  </widget>
  <resources/>

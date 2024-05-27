@@ -2,6 +2,8 @@
 #include "ui_r_clock.h"
 #include <QPushButton>
 #include <QMessageBox>
+#include <QLabel>
+#include <QMovie>
 
 static bool if_pause;
 
@@ -17,6 +19,12 @@ r_clock::r_clock(QWidget *parent)
     ui->sb_min->setMaximum(59);
     ui->sb_sec->setMinimum(0);
     ui->sb_sec->setMaximum(59);
+    //插入动图
+    QMovie *shalou = new QMovie("C:\\Users\\lenovo\\Desktop\\shalou.gif");
+    ui->label_shalou->setMovie(shalou);
+    shalou->setScaledSize(ui->label_shalou->size());
+    shalou->start();
+
     //初始化
     total = 0;
     if_pause=1;
@@ -106,7 +114,7 @@ void r_clock::on_pause_clicked()
     }else{
         p_timer->start();
         ui->pause->setText("暂停");
-        if_pause=0;
+        if_pause=1;
     }
 }
 
