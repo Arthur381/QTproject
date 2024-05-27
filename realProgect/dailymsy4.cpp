@@ -2,29 +2,41 @@
 #include "ui_dailymsy4.h"
 #include "dailymsy.h"
 
+#include <QMessageBox>
+
 dailymsy4::dailymsy4(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::dailymsy4)
 {
     ui->setupUi(this);
-    sqldb.setDatabaseName("ThingsDemo.db");
-    if(!sqldb.open())
-        qDebug()<<"database open failed";
-    Print();
+
+    //固定行宽
+    ui->iAndE->horizontalHeader()->setSectionResizeMode(QHeaderView::Fixed);
+    ui->iAndE->setColumnWidth(0,200);
+    ui->iAndE->setColumnWidth(1,200);
+
+    modifyDatabase();
 }
 
 dailymsy4::~dailymsy4()
 {
     delete ui;
 }
-void dailymsy4::Print(){
-    //显示相应的分类,重要紧急 重要：50以上，紧急：50以上
+void dailymsy4::modifyDatabase(){
+    QSqlDatabase db=QSqlDatabase::database("myConnection");
+    if(!db.isOpen()){
+        qDebug()<<"error";
+        return;
+    }
+    QSqlQuery sql(db);
+    QString strsql=QString("select * from event where im>=50 and em>=50;");
+    if(sql.exec(strsql)){
+        //QMessageBox::information(0,"Success","放入特定分类成功。",QMessageBox::Ok);
+    }
+    else{
+        QMessageBox::critical(0,"失败","特定分类失败。",QMessageBox::Ok);
+    }
     QList<BEventInfo> l;
-    QSqlQuery sql(sqldb);
-    //此处可能有问题，怎么根据im和em的值去筛选出相应的条列
-    QString strsql=QString("select * from courseDemo WHERE im>=50 and em>=50;");
-    sql.exec(strsql);
-
     BEventInfo info;
     while(sql.next()){
         info.id=sql.value(0).toInt();

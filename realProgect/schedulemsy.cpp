@@ -45,6 +45,6 @@ void scheduleMSY::Print(){
     ui->courseTable->clearContents();
     ui->courseTable->setRowCount(12);
     for(int i=0;i<listeve.size();i++){
-        ui->courseTable->setItem(listeve[i].row,listeve[i].col,new QTableWidgetItem(listeve[i].courseName));
+        ui->courseTable->setItem(listeve[i].row-1,listeve[i].col-1,new QTableWidgetItem(listeve[i].courseName));
     }
 }

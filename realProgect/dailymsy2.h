@@ -21,7 +21,8 @@ public:
     explicit dailymsy2(QWidget *parent = nullptr);
     ~dailymsy2();
     void Print();
-    QSqlDatabase sqldb=QSqlDatabase::addDatabase("QSQLITE");//创建qt和数据库连接
+    void modifyDatabase();
+    //QSqlDatabase sqldb=QSqlDatabase::addDatabase("QSQLITE");//创建qt和数据库连接
 
 private:
     Ui::dailymsy2 *ui;

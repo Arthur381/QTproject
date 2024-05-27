@@ -33,8 +33,6 @@ public:
 private slots:
     void on_missionAdd_clicked();
 
-    void on_pushButton_clicked();
-
     void on_delectAll_clicked();
 
     void on_nextRow_clicked();
@@ -48,6 +46,8 @@ private slots:
     void on_emNum_textChanged(const QString &arg1);
 
     void on_workTable_itemClicked(QTableWidgetItem *item);
+
+    void on_deleteMission_clicked();
 
 private:
 

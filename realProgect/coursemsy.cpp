@@ -30,6 +30,10 @@ coursemsy::coursemsy(QWidget *parent)
     ui->selectTime->addItem("6");
     ui->selectTime->addItem("7");
     ui->selectTime->addItem("8");
+    ui->selectTime->addItem("9");
+    ui->selectTime->addItem("10");
+    ui->selectTime->addItem("11");
+
 
     /*
     ui->selectTime->addItem("第一节");
@@ -72,16 +76,18 @@ void coursemsy::CreatTableFunc(){//创建sqlite数据表
     QSqlQuery creatquery;
 
     QString strsql=QString("create table courseDemo("
+                             "id int primary key not null,"
                              "col int not null,"
                              "row int not null,"
-                             "courseName text primary key not null)");
+                             "courseName text not null,"
+                             "unique(col,row))");
 
     //执行SQL语句
     if(creatquery.exec(strsql)==false){
         //QMessageBox::critical(0,"错误","数据表创建失败",QMessageBox::Ok);
     }
     else{
-        //QMessageBox::information(0,"正确","恭喜你，数据表创建成功",QMessageBox::Ok);
+       //QMessageBox::information(0,"正确","恭喜你，数据表创建成功",QMessageBox::Ok);
     }
 }
 
@@ -93,7 +99,7 @@ void coursemsy::on_pushButton_clicked()//显示课程表的
 
 int coursemsy::countnum(){
     QSqlQuery sql(sqldb);
-    sql.exec("select count(id) from courseDemo;");
+    sql.exec("select * from courseDemo");
     int uiCnt=0;
     while(sql.next()){
         uiCnt=sql.value(0).toUInt();//有可能会有bug
@@ -103,23 +109,23 @@ int coursemsy::countnum(){
 
 bool coursemsy::addone(CEventInfo info){
     QSqlQuery sqlquery(sqldb);
-    QString strsql=QString("INSERT INTO courseDemo VALUES(%1,%2,'%3')").
-                     arg(info.col).arg(info.row).arg(info.courseName);
+
+    QString strsql=QString("INSERT INTO courseDemo VALUES(%1,%2,%3,'%4')").
+                     arg(info.row*8+info.col).arg(info.col).arg(info.row).arg(info.courseName);
 
     //查询原表中有没有和当前一样的
-    QString strsearch=QString("SELECT col=%1 row=%2 FROM courseDemo;").
+    /*QString strsearch=QString("SELECT col=%1 and row=%2 FROM courseDemo;").
                         arg(info.col).arg(info.row);
 
     if(sqlquery.exec(strsearch)==true){//原先这个位置已经有了，不能重复插入
         QMessageBox::critical(0,"失败","插入新课程失败!该时间段已有课程，请删除后加入新课程",QMessageBox::Ok);
     }
-    else{
+    else{*/
     if(sqlquery.exec(strsql)!=true){
         QMessageBox::critical(0,"失败","插入新课程失败!可能是时间重复。",QMessageBox::Ok);
     }
     else{
         QMessageBox::information(0,"Success","插入新课程成功。",QMessageBox::Ok);
-    }
     }
     return true;
 }
@@ -132,9 +138,9 @@ QList<CEventInfo> coursemsy::getPage(int page,int uicnt){//根本目的是得到
     sql.exec(strsql);
     CEventInfo info;
     while(sql.next()){
-        info.col=sql.value(0).toInt();
-        info.row=sql.value(1).toInt();
-        info.courseName=sql.value(2).toString();
+        info.col=sql.value(1).toInt();
+        info.row=sql.value(2).toInt();
+        info.courseName=sql.value(3).toString();
         l.push_back(info);
     }
     return l;

@@ -47,6 +47,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         dailymsy3.h dailymsy3.cpp dailymsy3.ui
         dailymsy4.h dailymsy4.cpp dailymsy4.ui
         dailymsy5.h dailymsy5.cpp dailymsy5.ui
+        hoverbutton.h hoverbutton.cpp
         sec_clock.h sec_clock.cpp sec_clock.ui
         r_clock.h r_clock.cpp r_clock.ui
         alarm.h alarm.cpp alarm.ui
@@ -102,7 +103,9 @@ install(TARGETS realProgect
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
-
+INCLUDE_DIRECTORIES(
+    ${PROJECT_SOURCE_DIR}
+)
 find_package(QT NAMES Qt6 QT5 REQUIRED COMPONENTS Widgets Sql)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Sql)
 target_link_libraries(realProgect PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Sql)

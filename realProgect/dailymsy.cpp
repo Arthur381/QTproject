@@ -46,7 +46,7 @@ int dailyMSY::CountNum(){//统计行数
 
 void dailyMSY::CreatTableFunc(){//创建sqlite数据表
 
-    QSqlQuery creatquery;
+    QSqlQuery sql(sqldb);
 //这里设置的thingname是不能为空的，但是为什么我可以为空
     QString strsql=QString("create table event("
                              "id int not null,"
@@ -55,8 +55,8 @@ void dailyMSY::CreatTableFunc(){//创建sqlite数据表
                              "em int not null)");
 
     //执行SQL语句
-    if(creatquery.exec(strsql)==false){
-        //QMessageBox::critical(0,"错误","数据表创建失败",QMessageBox::Ok);
+    if(sql.exec(strsql)==false){
+        QMessageBox::critical(0,"错误","数据表创建失败",QMessageBox::Ok);
     }
     else{
         //QMessageBox::information(0,"正确","恭喜你，数据表创建成功",QMessageBox::Ok);
@@ -66,7 +66,7 @@ void dailyMSY::CreatTableFunc(){//创建sqlite数据表
 
 void dailyMSY::CreatDataFunc(){//创建SQLite数据库
     //1.添加数据库驱动
-    sqldb=QSqlDatabase::addDatabase("QSQLITE");
+    sqldb=QSqlDatabase::addDatabase("QSQLITE","myConnection");
 
     //2.设置数据库名称
     sqldb.setDatabaseName("ThingsDemo.db");
@@ -139,8 +139,6 @@ void dailyMSY::on_iAnde_clicked()
     dailymsy4 *Dday=new dailymsy4;
     Dday->show();
 }
-
-
 
 void dailyMSY::on_eNoti_clicked()
 {

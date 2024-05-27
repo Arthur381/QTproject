@@ -21,8 +21,7 @@ class dailymsy5 : public QDialog
 public:
     explicit dailymsy5(QWidget *parent = nullptr);
     ~dailymsy5();
-    void Print();
-    QSqlDatabase sqldb=QSqlDatabase::addDatabase("QSQLITE");//创建qt和数据库连接
+    void modifyDatabase();
 
 private:
     Ui::dailymsy5 *ui;
