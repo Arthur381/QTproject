@@ -43,6 +43,7 @@ void clockHZJ::showcurtime(){
 void clockHZJ::on_sec_clock_clicked()
 {
     sec_clock *sec=new sec_clock;
+    connect(this, &clockHZJ::themeChanged, sec, &sec_clock::changetheme);
     sec->show();
 }
 
@@ -50,6 +51,7 @@ void clockHZJ::on_sec_clock_clicked()
 void clockHZJ::on_rsec_clo_clicked()
 {
     r_clock *rck=new r_clock;
+    connect(this, &clockHZJ::themeChanged, rck, &r_clock::changetheme);
     rck->show();
 }
 
@@ -57,6 +59,7 @@ void clockHZJ::on_rsec_clo_clicked()
 void clockHZJ::on_alarms_clicked()
 {
     alarm *ala=new alarm;
+    connect(this, &clockHZJ::themeChanged, ala, &alarm::changetheme);
     ala->show();
 }
 /**

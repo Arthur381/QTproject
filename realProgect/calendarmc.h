@@ -55,6 +55,7 @@ public:
 
 signals:
     void themeChanged();//在更改主题之后，传递更改完成的信号
+
 private slots:
     void on_Modify_clicked();
     void on_countdowndays_clicked();

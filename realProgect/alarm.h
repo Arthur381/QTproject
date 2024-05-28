@@ -23,6 +23,10 @@ public:
     QTimer timer_cur,timerunner;
     QDateTime curDTime;
 
+public slots:
+    void changetheme();
+
+
 private slots:
     void showcurtime();
     void checktime();

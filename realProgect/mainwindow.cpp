@@ -34,52 +34,32 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
-
-
-/**
- * @brief MainWindow::keyPressEvent//通过键盘刷新，方便检测颜色变化
- * @param event
- *
- */
-
-
-
 void MainWindow::on_calBT_clicked()
 {
     this->cal->show();
     cal->ColorDays();
-
-
 }
-
-
 void MainWindow::on_clockBT_clicked()//闹钟系列
 {
     clockHZJ *AclockWindow=new clockHZJ;
+    connect(this,&MainWindow::themeChanged,AclockWindow,&clockHZJ::changetheme);
     AclockWindow->show();
 }
-
-
 void MainWindow::on_pushButton_clicked()
 {
+    connect(this,&MainWindow::themeChanged,dailyMSY::getinstance(),&dailyMSY::changetheme);
     dailyMSY::getinstance()->show();
 }
-
-
 void MainWindow::on_TTBT_clicked()//课程表
 {
-
+    connect(this,&MainWindow::themeChanged,coursemsy::getinstance(),&coursemsy::changetheme);
     coursemsy::getinstance()->show();
 }
-
-
 void MainWindow::on_readme_clicked()
 {
     Intro *intro=new Intro;
     intro->show();
 }
-
-
 void MainWindow::on_style_clicked()
 {
     ChooseTheme * ChoT=new ChooseTheme;

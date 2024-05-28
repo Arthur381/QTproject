@@ -1,6 +1,6 @@
 #ifndef DAILYMSY_H
 #define DAILYMSY_H
-
+#include"global.h"
 #include <QWidget>
 #include<QSqlDatabase>
 #include <QAbstractButton>
@@ -44,8 +44,12 @@ private:
     void CreatDataFunc();//创建SQLite数据库
     void CreatTableFunc();//创建sqlite数据表
 
+signals:
+    void themechanged();
+
 public slots:
 
+    void changetheme();
 private slots:
     void on_iNote_clicked();
     void on_allIn_clicked();

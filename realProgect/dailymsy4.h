@@ -23,6 +23,10 @@ public:
     ~dailymsy4();
     void modifyDatabase();
 
+public slots:
+    void changetheme();
+
+
 private:
     Ui::dailymsy4 *ui;
 };

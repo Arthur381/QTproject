@@ -16,6 +16,7 @@ public:
     explicit r_clock(QWidget *parent = nullptr);
     ~r_clock();
 
+
 private:
     Ui::r_clock *ui;
     QTimer* p_timer;
@@ -30,6 +31,9 @@ private slots:
     void secChanged();
     void on_end_clicked();
     void on_pause_clicked();
+
+public slots:
+    void changetheme();
 };
 
 

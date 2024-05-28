@@ -46,3 +46,10 @@ void scheduleMSY::Print(){
         ui->courseTable->setItem(listeve[i].row-1,listeve[i].col-1,new QTableWidgetItem(listeve[i].courseName));
     }
 }
+/**
+ *
+ * @arg 课程表暂时先不设置背景
+ *
+ *
+ *
+ */

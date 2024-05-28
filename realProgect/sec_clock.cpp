@@ -1,5 +1,6 @@
 #include "sec_clock.h"
 #include "ui_sec_clock.h"
+#include"global.h"
 
 static int i;//打点计数
 
@@ -63,3 +64,17 @@ void sec_clock::on_setpoint_clicked()
     ui->showpoints->append(temp+time.toString("HH:mm:ss.zzz"));
 }
 
+void sec_clock::changetheme(){
+    if(ThemeStyle==0){
+
+    }
+    else if(ThemeStyle==1){
+
+
+    }
+    else if(ThemeStyle==2){
+
+
+    }
+
+}

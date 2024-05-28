@@ -1,4 +1,5 @@
 #include "coursemsy.h"
+#include"global.h"
 #include "ui_coursemsy.h"
 #include "schedulemsy.h"
 //建立数据库存储所有数据
@@ -202,3 +203,18 @@ void coursemsy::on_delCourse_clicked()
     coursemsy::getinstance()->delone(info);
 }
 
+void coursemsy::changetheme(){
+    if(ThemeStyle==0){
+
+
+    }
+    else if(ThemeStyle==1){
+
+
+
+    }
+    else if(ThemeStyle==2){
+
+    }
+    emit themechanged();
+}

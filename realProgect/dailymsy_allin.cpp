@@ -141,3 +141,17 @@ void dailymsy_allin::on_deleteMission_clicked()
     }
 }
 
+void dailymsy_allin::changetheme(){
+    if(ThemeStyle==0){
+
+
+    }
+    else if(ThemeStyle==1){
+
+
+
+    }
+    else if(ThemeStyle==2){
+
+    }
+}

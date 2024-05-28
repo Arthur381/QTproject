@@ -62,6 +62,22 @@ void CountDownDaysMC::paintEvent(QPaintEvent *e)
     style()->drawPrimitive(QStyle::PE_Widget, &opt, &p, this);
 }
 
+void CountDownDaysMC::changetheme(){
+    if(ThemeStyle==0){
+
+
+    }
+    else if(ThemeStyle==1){
+
+
+
+    }
+    else if(ThemeStyle==2){
+
+    }
+    themechanged();
+}
+
 CountDownDaysMC::~CountDownDaysMC()
 {
     delete ui;

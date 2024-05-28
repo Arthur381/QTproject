@@ -58,3 +58,18 @@ void dailymsy2::modifyDatabase(){
         ui->showImNem->setItem(i,1,new QTableWidgetItem(l[i].thingsname));
     }
 }
+
+void dailymsy2::changetheme(){
+    if(ThemeStyle==0){
+
+
+    }
+    else if(ThemeStyle==1){
+
+
+
+    }
+    else if(ThemeStyle==2){
+
+    }
+}
