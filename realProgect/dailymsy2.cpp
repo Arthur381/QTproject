@@ -17,7 +17,7 @@ dailymsy2::dailymsy2(QWidget *parent)
     //固定行宽
     ui->showImNem->horizontalHeader()->setSectionResizeMode(QHeaderView::Fixed);
     ui->showImNem->setColumnWidth(0,100);
-    ui->showImNem->setColumnWidth(1,150);
+    ui->showImNem->setColumnWidth(1,175);
     modifyDatabase();
 }
 

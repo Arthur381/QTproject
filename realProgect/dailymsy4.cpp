@@ -13,7 +13,7 @@ dailymsy4::dailymsy4(QWidget *parent)
     //固定行宽
     ui->iAndE->horizontalHeader()->setSectionResizeMode(QHeaderView::Fixed);
     ui->iAndE->setColumnWidth(0,100);
-    ui->iAndE->setColumnWidth(1,150);
+    ui->iAndE->setColumnWidth(1,175);
 
     modifyDatabase();
 }
