@@ -26,7 +26,7 @@
    <string>日历</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="images.qrc">
+   <iconset>
     <normaloff>:/image/cal_ico.jpg</normaloff>:/image/cal_ico.jpg</iconset>
   </property>
   <property name="styleSheet">
@@ -35,10 +35,10 @@
   <widget class="QCalendarWidget" name="calendarWidget">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>30</y>
-     <width>651</width>
-     <height>351</height>
+     <x>20</x>
+     <y>40</y>
+     <width>741</width>
+     <height>521</height>
     </rect>
    </property>
    <property name="whatsThis">
@@ -51,10 +51,10 @@
   <widget class="QPushButton" name="Modify">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>490</y>
-     <width>80</width>
-     <height>41</height>
+     <x>830</x>
+     <y>40</y>
+     <width>121</width>
+     <height>71</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -67,10 +67,10 @@
   <widget class="QPushButton" name="countdowndays">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>410</y>
-     <width>80</width>
-     <height>41</height>
+     <x>830</x>
+     <y>150</y>
+     <width>121</width>
+     <height>71</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -81,8 +81,6 @@
    </property>
   </widget>
  </widget>
- <resources>
-  <include location="images.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
