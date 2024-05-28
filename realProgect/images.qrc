@@ -26,6 +26,17 @@
         <file>image/shalou.gif</file>
         <file>image/1.png</file>
         <file>background/pku_mainbg.jpg</file>
+        <file>PKU/length.jpg</file>
+        <file>PKU/mainbg.jpg</file>
+        <file>PKU/mini1.webp</file>
+        <file>PKU/mini2.png</file>
+        <file>PKU/mini3.png</file>
+        <file>PKU/mini4.webp</file>
+        <file>PKU/mini5.png</file>
+        <file>PKU/mini6.webp</file>
+        <file>PKU/symbol.png</file>
+        <file>PKU/width.jpg</file>
     </qresource>
     <qresource prefix="/background"/>
+    <qresource prefix="/\PKU"/>
 </RCC>
