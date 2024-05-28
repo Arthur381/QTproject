@@ -55,3 +55,18 @@ void dailymsy5::modifyDatabase(){
         ui->eNoti->setItem(i,1,new QTableWidgetItem(l[i].thingsname));
     }
 }
+
+void dailymsy5::changetheme(){
+    if(ThemeStyle==0){
+
+
+    }
+    else if(ThemeStyle==1){
+
+
+
+    }
+    else if(ThemeStyle==2){
+
+    }
+}

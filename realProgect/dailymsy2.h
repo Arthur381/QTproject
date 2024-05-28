@@ -24,6 +24,8 @@ public:
     void modifyDatabase();
     //QSqlDatabase sqldb=QSqlDatabase::addDatabase("QSQLITE");//创建qt和数据库连接
 
+public slots:
+    void changetheme();
 private:
     Ui::dailymsy2 *ui;
 };

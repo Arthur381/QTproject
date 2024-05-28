@@ -54,3 +54,18 @@ void dailymsy4::modifyDatabase(){
         ui->iAndE->setItem(i,1,new QTableWidgetItem(l[i].thingsname));
     }
 }
+
+void dailymsy4::changetheme(){
+    if(ThemeStyle==0){
+
+
+    }
+    else if(ThemeStyle==1){
+
+
+
+    }
+    else if(ThemeStyle==2){
+
+    }
+}

@@ -30,6 +30,8 @@ public:
     ~dailymsy_allin();
 
 
+public slots:
+    void changetheme();
 private slots:
     void on_missionAdd_clicked();
 

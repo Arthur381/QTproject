@@ -295,6 +295,7 @@ bool calendarMC::DeleteEvent(QString name_){//输入序号之后删除一个事�
 void calendarMC::on_Modify_clicked()
 {
     ModEvent* eve=new ModEvent;
+    connect(this, &calendarMC::themeChanged,eve, &ModEvent::changetheme);
     eve->show();
 }
 
@@ -302,6 +303,7 @@ void calendarMC::on_Modify_clicked()
 void calendarMC::on_countdowndays_clicked()
 {
     CountDownDaysMC* days=new CountDownDaysMC;
+    connect(this, &calendarMC::themeChanged,days, &CountDownDaysMC::changetheme);
     days->show();
 
 }

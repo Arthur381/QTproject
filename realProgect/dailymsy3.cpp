@@ -56,3 +56,17 @@ void dailymsy3::modifyDatabase(){
     }
 }
 
+void dailymsy3::changetheme(){
+    if(ThemeStyle==0){
+
+
+    }
+    else if(ThemeStyle==1){
+
+
+
+    }
+    else if(ThemeStyle==2){
+
+    }
+}

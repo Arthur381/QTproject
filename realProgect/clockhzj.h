@@ -40,6 +40,8 @@ private slots:
 
     void showcurtime();
 
+
+public slots:
     void changetheme();
 
 private:

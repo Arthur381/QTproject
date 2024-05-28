@@ -23,6 +23,10 @@ public:
     QTime time;
     QDateTime curDTime;
 
+public slots:
+    void changetheme();
+
+
 private slots:
     void on_start_clicked();
     void timeout_slot();//计时开始的槽函数
