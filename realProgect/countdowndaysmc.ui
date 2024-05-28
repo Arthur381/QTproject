@@ -6,20 +6,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1000</width>
-    <height>618</height>
+    <width>500</width>
+    <height>700</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>1000</width>
-    <height>618</height>
+    <width>500</width>
+    <height>700</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>1000</width>
-    <height>618</height>
+    <width>500</width>
+    <height>700</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -39,22 +39,22 @@
   <widget class="QTableWidget" name="tableWidgetCD">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>30</y>
-     <width>500</width>
-     <height>200</height>
+     <x>20</x>
+     <y>80</y>
+     <width>450</width>
+     <height>500</height>
     </rect>
    </property>
    <property name="minimumSize">
     <size>
-     <width>500</width>
-     <height>200</height>
+     <width>450</width>
+     <height>500</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
-     <width>500</width>
-     <height>200</height>
+     <width>450</width>
+     <height>500</height>
     </size>
    </property>
    <property name="styleSheet">
@@ -121,6 +121,19 @@
      <string>距离今天还有  ?  天</string>
     </property>
    </column>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>20</y>
+     <width>131</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>倒数日</string>
+   </property>
   </widget>
  </widget>
  <resources/>
