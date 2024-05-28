@@ -27,12 +27,12 @@ coursemsy::coursemsy(QWidget *parent)
     ui->selectTime->addItem("3");
     ui->selectTime->addItem("4");
     ui->selectTime->addItem("5");
-    ui->selectTime->addItem("6");
-    ui->selectTime->addItem("7");
-    ui->selectTime->addItem("8");
-    ui->selectTime->addItem("9");
-    ui->selectTime->addItem("10");
-    ui->selectTime->addItem("11");
+    // ui->selectTime->addItem("6");
+    // ui->selectTime->addItem("7");
+    // ui->selectTime->addItem("8");
+    // ui->selectTime->addItem("9");
+    // ui->selectTime->addItem("10");
+    // ui->selectTime->addItem("11");
 
 
     /*

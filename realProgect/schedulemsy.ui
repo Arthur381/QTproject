@@ -6,9 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>700</width>
+    <height>432</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>700</width>
+    <height>432</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>700</width>
+    <height>432</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Form</string>
@@ -18,9 +30,21 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>421</width>
-     <height>321</height>
+     <width>700</width>
+     <height>432</height>
     </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>700</width>
+     <height>432</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>700</width>
+     <height>432</height>
+    </size>
    </property>
    <property name="autoScroll">
     <bool>false</bool>
@@ -32,17 +56,7 @@
    </row>
    <row>
     <property name="text">
-     <string>9:50-10:10</string>
-    </property>
-   </row>
-   <row>
-    <property name="text">
      <string>10:10-12:00</string>
-    </property>
-   </row>
-   <row>
-    <property name="text">
-     <string>12:00-13:00</string>
     </property>
    </row>
    <row>
@@ -52,32 +66,12 @@
    </row>
    <row>
     <property name="text">
-     <string>14:50-15:10</string>
+     <string>15:10-17:00/18:00</string>
     </property>
    </row>
    <row>
     <property name="text">
-     <string>15:10-17:00</string>
-    </property>
-   </row>
-   <row>
-    <property name="text">
-     <string>17:10-18:00</string>
-    </property>
-   </row>
-   <row>
-    <property name="text">
-     <string>18:00-18:40</string>
-    </property>
-   </row>
-   <row>
-    <property name="text">
-     <string>18:40-20:30</string>
-    </property>
-   </row>
-   <row>
-    <property name="text">
-     <string>20:30-21:30</string>
+     <string>18:40-20:30/21:30</string>
     </property>
    </row>
    <row>

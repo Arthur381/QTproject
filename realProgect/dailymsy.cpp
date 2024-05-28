@@ -56,7 +56,7 @@ void dailyMSY::CreatTableFunc(){//创建sqlite数据表
 
     //执行SQL语句
     if(sql.exec(strsql)==false){
-        QMessageBox::critical(0,"错误","数据表创建失败",QMessageBox::Ok);
+        //QMessageBox::critical(0,"错误","数据表创建失败",QMessageBox::Ok);
     }
     else{
         //QMessageBox::information(0,"正确","恭喜你，数据表创建成功",QMessageBox::Ok);

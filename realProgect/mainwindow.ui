@@ -6,27 +6,27 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>612</width>
-    <height>800</height>
+    <width>1000</width>
+    <height>618</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>600</width>
-    <height>800</height>
+    <width>1000</width>
+    <height>618</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>612</width>
-    <height>800</height>
+    <width>1000</width>
+    <height>618</height>
    </size>
   </property>
   <property name="windowTitle">
    <string>PKU自律指南</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="images.qrc">
+   <iconset>
     <normaloff>:/image/OIP.jpg</normaloff>:/image/OIP.jpg</iconset>
   </property>
   <property name="toolTip">
@@ -254,7 +254,7 @@ background-attachment: fixed; }*/</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>612</width>
+     <width>1000</width>
      <height>17</height>
     </rect>
    </property>
@@ -268,8 +268,6 @@ background-attachment: fixed; }*/</string>
    <header>hoverbutton.h</header>
   </customwidget>
  </customwidgets>
- <resources>
-  <include location="images.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
