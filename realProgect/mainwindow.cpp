@@ -38,9 +38,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->readme->setStyleSheet(
         "QPushButton {"
         "    background-color: rgba(247, 22, 60, 0.865);"
-        "    border: 2px solid rgba(115, 177, 166, 0.865);"//设置边框
+        "    border: 0px solid rgba(115, 177, 166, 0.865);"//设置边框
         "    color:rgb(5, 12, 12);"// 设置按钮文本的颜色为黑色（RGB值为5, 12, 12）
-        "    border-radius: 6;"// 设置按钮的边框半径为6像素，使其圆角化
+        "    border-radius: 24;"// 设置按钮的边框半径为6像素，使其圆角化
         "    font: 10pt '楷体';"// 设置按钮文本的字体为 10 点大小的楷体
         "}"
         "QPushButton:hover {"
@@ -52,9 +52,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->TTBT->setStyleSheet(
         "QPushButton {"
         "    background-color: rgba(247, 22, 60, 0.865);"
-        "    border: 2px solid rgba(115, 177, 166, 0.865);"//设置边框
+        "    border: 0px solid rgba(115, 177, 166, 0.865);"//设置边框
         "    color:rgb(5, 12, 12);"// 设置按钮文本的颜色为黑色（RGB值为5, 12, 12）
-        "    border-radius: 6;"// 设置按钮的边框半径为6像素，使其圆角化
+        "    border-radius: 24;"// 设置按钮的边框半径为6像素，使其圆角化
         "    font: 10pt '楷体';"// 设置按钮文本的字体为 10 点大小的楷体
         "}"
         "QPushButton:hover {"
@@ -66,9 +66,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->clockBT->setStyleSheet(
         "QPushButton {"
         "    background-color: rgba(247, 22, 60, 0.865);"
-        "    border: 2px solid rgba(115, 177, 166, 0.865);"//设置边框
+        "    border: 0px solid rgba(115, 177, 166, 0.865);"//设置边框
         "    color:rgb(5, 12, 12);"// 设置按钮文本的颜色为黑色（RGB值为5, 12, 12）
-        "    border-radius: 6;"// 设置按钮的边框半径为6像素，使其圆角化
+        "    border-radius: 24;"// 设置按钮的边框半径为6像素，使其圆角化
         "    font: 10pt '楷体';"// 设置按钮文本的字体为 10 点大小的楷体
         "}"
         "QPushButton:hover {"
@@ -87,9 +87,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->calBT->setStyleSheet(
         "QPushButton {"
         "    background-color: rgba(239, 135, 135, 0.717);"
-        "    border: 2px solid rgba(115, 177, 166, 0.865);"//设置边框
+        "    border: 0px solid rgba(115, 177, 166, 0.865);"//设置边框
         "    color:rgb(5, 12, 12);"// 设置按钮文本的颜色为黑色（RGB值为5, 12, 12）
-        "    border-radius: 6;"// 设置按钮的边框半径为6像素，使其圆角化
+        "    border-radius: 24;"// 设置按钮的边框半径为6像素，使其圆角化
         "    font: 10pt '楷体';"// 设置按钮文本的字体为 10 点大小的楷体
         "}"
         "QPushButton:hover {"
@@ -101,9 +101,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->pushButton->setStyleSheet(
         "QPushButton {"
         "    background-color: rgba(239, 135, 135, 0.717);"
-        "    border: 2px solid rgba(115, 177, 166, 0.865);"//设置边框
+        "    border: 0px solid rgba(115, 177, 166, 0.865);"//设置边框
         "    color:rgb(5, 12, 12);"// 设置按钮文本的颜色为黑色（RGB值为5, 12, 12）
-        "    border-radius: 6;"// 设置按钮的边框半径为6像素，使其圆角化
+        "    border-radius: 24;"// 设置按钮的边框半径为6像素，使其圆角化
         "    font: 10pt '楷体';"// 设置按钮文本的字体为 10 点大小的楷体
         "}"
         "QPushButton:hover {"
@@ -115,9 +115,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->style->setStyleSheet(
         "QPushButton {"
         "    background-color: rgba(239, 135, 135, 0.717);"
-        "    border: 2px solid rgba(115, 177, 166, 0.865);"//设置边框
+        "    border: 0px solid rgba(115, 177, 166, 0.865);"//设置边框
         "    color:rgb(5, 12, 12);"// 设置按钮文本的颜色为黑色（RGB值为5, 12, 12）
-        "    border-radius: 6;"// 设置按钮的边框半径为6像素，使其圆角化
+        "    border-radius: 24;"// 设置按钮的边框半径为6像素，使其圆角化
         "    font: 10pt '楷体';"// 设置按钮文本的字体为 10 点大小的楷体
         "}"
         "QPushButton:hover {"
