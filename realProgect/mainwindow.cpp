@@ -15,6 +15,7 @@
 #include <QPainter>
 #include <QStyleOption>
 #include "choosetheme.h"
+#include<QPixmap>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -22,6 +23,10 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     ui->calBT->setText("日历");
+    QPixmap pixmain(":image/1.png");
+    pixmain = pixmain.scaled(ui->mainlabel->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
+    ui->mainlabel->setPixmap(pixmain); // 显示 QLabel
+    ui->mainlabel->show();
     /**
      *
      *
@@ -29,6 +34,7 @@ MainWindow::MainWindow(QWidget *parent)
      *
      *
      */
+
     ui->readme->setStyleSheet(
         "QPushButton {"
         "    background-color: rgba(247, 22, 60, 0.865);"
@@ -122,6 +128,9 @@ MainWindow::MainWindow(QWidget *parent)
         );
 
 }
+
+
+
 
 MainWindow::~MainWindow()
 {
