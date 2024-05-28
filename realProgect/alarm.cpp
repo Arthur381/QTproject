@@ -1,6 +1,7 @@
 #include "alarm.h"
 #include "ui_alarm.h"
 #include <QPushButton>
+#include"global.h"
 #include <QMessageBox>
 #include <QDebug>
 #include <QCheckBox>
@@ -209,3 +210,17 @@ void alarm::on_check5_clicked()
     }
 }
 
+void alarm::changetheme(){
+    if(ThemeStyle==0){
+
+    }
+    else if(ThemeStyle==1){
+
+
+    }
+    else if(ThemeStyle==2){
+
+
+    }
+
+}

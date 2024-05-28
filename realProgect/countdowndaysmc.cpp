@@ -9,8 +9,6 @@
 #include<QKeyEvent>
 #include<QFile>
 #include<QCoreApplication>
-//QDate currentDate = QDate::currentDate();
-//qDebug() << "Current Date:" << currentDate.toString(Qt::ISODate);
 
 #include"global.h"
 
@@ -42,8 +40,6 @@ void CountDownDaysMC::PrintForView(){
     ui->tableWidgetCD->setRowCount(cnt);
     //qDebug()<<"cnt:"<<cnt;
     for(int i=0;i<listeve.size();i++){
-
-
         QTableWidgetItem *item = new QTableWidgetItem(QString::number(i));
         item->setTextAlignment(Qt::AlignCenter); // 设置水平和垂直居中对齐
         ui->tableWidgetCD->setItem(i,0,item);
@@ -64,6 +60,22 @@ void CountDownDaysMC::paintEvent(QPaintEvent *e)
     opt.initFrom(this);  // 初始化 QStyleOptionFrame
     QPainter p(this);
     style()->drawPrimitive(QStyle::PE_Widget, &opt, &p, this);
+}
+
+void CountDownDaysMC::changetheme(){
+    if(ThemeStyle==0){
+
+
+    }
+    else if(ThemeStyle==1){
+
+
+
+    }
+    else if(ThemeStyle==2){
+
+    }
+    themechanged();
 }
 
 CountDownDaysMC::~CountDownDaysMC()

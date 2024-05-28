@@ -18,6 +18,9 @@ public:
     //virtual void keyPressEvent(QKeyEvent * event);
     void paintEvent(QPaintEvent *e);
 
+public slots:
+    void changetheme();
+
 private slots:
     void on_pushButton_add_clicked();
     void on_pushButton_delete_clicked();

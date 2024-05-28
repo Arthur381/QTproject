@@ -25,7 +25,7 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="HoverButton" name="pushButton">
+  <widget class="HoverButton" name="themeHP">
    <property name="geometry">
     <rect>
      <x>130</x>

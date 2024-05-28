@@ -56,7 +56,7 @@ void dailyMSY::CreatTableFunc(){//创建sqlite数据表
 
     //执行SQL语句
     if(sql.exec(strsql)==false){
-        QMessageBox::critical(0,"错误","数据表创建失败",QMessageBox::Ok);
+        //QMessageBox::critical(0,"错误","数据表创建失败",QMessageBox::Ok);
     }
     else{
         //QMessageBox::information(0,"正确","恭喜你，数据表创建成功",QMessageBox::Ok);
@@ -118,18 +118,21 @@ bool dailyMSY::addOne(BEventInfo info){
 void dailyMSY::on_allIn_clicked()
 {
     dailymsy_allin *AllDay=new dailymsy_allin;
+    connect(this,&dailyMSY::themechanged,AllDay,&dailymsy_allin::changetheme);
     AllDay->show();
 }
 
 void dailyMSY::on_iNote_clicked()
 {
     dailymsy2 *Bday=new dailymsy2;
+    connect(this,&dailyMSY::themechanged,Bday,&dailymsy2::changetheme);
     Bday->show();
 }
 
 void dailyMSY::on_nine_clicked()
 {
     dailymsy3 *Cday=new dailymsy3;
+    connect(this,&dailyMSY::themechanged,Cday,&dailymsy3::changetheme);
     Cday->show();
 }
 
@@ -137,12 +140,29 @@ void dailyMSY::on_nine_clicked()
 void dailyMSY::on_iAnde_clicked()
 {
     dailymsy4 *Dday=new dailymsy4;
+    connect(this,&dailyMSY::themechanged,Dday,&dailymsy4::changetheme);
     Dday->show();
 }
 
 void dailyMSY::on_eNoti_clicked()
 {
     dailymsy5 *Eday=new dailymsy5;
+    connect(this,&dailyMSY::themechanged,Eday,&dailymsy5::changetheme);
     Eday->show();
 }
 
+void dailyMSY::changetheme(){
+    if(ThemeStyle==0){
+
+
+    }
+    else if(ThemeStyle==1){
+
+
+
+    }
+    else if(ThemeStyle==2){
+
+    }
+    emit themechanged();
+}

@@ -6,20 +6,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>850</width>
-    <height>450</height>
+    <width>1000</width>
+    <height>618</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>850</width>
-    <height>450</height>
+    <width>1000</width>
+    <height>618</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>850</width>
-    <height>450</height>
+    <width>1000</width>
+    <height>618</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -36,463 +36,437 @@
     background-repeat: no-repeat; /* 图片不重复 */
 }</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout">
-   <item row="0" column="0">
-    <widget class="QLabel" name="label_2">
-     <property name="minimumSize">
-      <size>
-       <width>110</width>
-       <height>30</height>
-      </size>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>6</x>
+     <y>6</y>
+     <width>110</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>110</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>110</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:700; color:#aa0000;&quot;&gt;已有事项&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="total" native="true">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>390</y>
+     <width>781</width>
+     <height>200</height>
+    </rect>
+   </property>
+   <widget class="QWidget" name="add" native="true">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>40</y>
+      <width>200</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <widget class="QDateEdit" name="inputdate">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
      </property>
-     <property name="maximumSize">
-      <size>
-       <width>110</width>
-       <height>30</height>
-      </size>
+    </widget>
+    <widget class="QTimeEdit" name="inputtime">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>40</y>
+       <width>71</width>
+       <height>21</height>
+      </rect>
      </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="delete_2" native="true">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>50</y>
+      <width>200</width>
+      <height>71</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>10</y>
+      <width>180</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>180</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>180</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>标题（不可重复）:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditID">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>30</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>80</y>
+      <width>71</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string> 时间：</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="WriteEve">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>20</y>
+      <width>181</width>
+      <height>161</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_add">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>20</y>
+      <width>101</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>加入日历</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_moodchange">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>140</y>
+      <width>181</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <item>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:700; color:#aa0000;&quot;&gt;已有事项&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>自信满满</string>
      </property>
-    </widget>
-   </item>
-   <item row="1" column="0">
-    <widget class="QTableWidget" name="tableWidgetInmod">
-     <property name="minimumSize">
-      <size>
-       <width>800</width>
-       <height>150</height>
-      </size>
+     <property name="icon">
+      <iconset>
+       <normaloff>:/image/confid.jpg</normaloff>:/image/confid.jpg</iconset>
      </property>
-     <property name="maximumSize">
-      <size>
-       <width>800</width>
-       <height>150</height>
-      </size>
+    </item>
+    <item>
+     <property name="text">
+      <string>开心</string>
      </property>
-     <attribute name="horizontalHeaderStretchLastSection">
-      <bool>true</bool>
-     </attribute>
-     <attribute name="verticalHeaderVisible">
-      <bool>false</bool>
-     </attribute>
-     <column>
-      <property name="text">
-       <string>序号</string>
-      </property>
-      <property name="font">
-       <font>
-        <fontweight>Light</fontweight>
-       </font>
-      </property>
-      <property name="background">
-       <color>
-        <red>255</red>
-        <green>255</green>
-        <blue>0</blue>
-       </color>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>标题</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>日期</string>
-      </property>
-      <property name="background">
-       <color>
-        <red>0</red>
-        <green>255</green>
-        <blue>255</blue>
-       </color>
-      </property>
-      <property name="icon">
-       <iconset theme="call-start"/>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>时间</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>心情</string>
-      </property>
-      <property name="background">
-       <color>
-        <red>255</red>
-        <green>192</green>
-        <blue>114</blue>
-       </color>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>具体内容</string>
-      </property>
-     </column>
-    </widget>
-   </item>
-   <item row="2" column="0">
-    <widget class="QWidget" name="total" native="true">
-     <property name="minimumSize">
-      <size>
-       <width>600</width>
-       <height>200</height>
-      </size>
+     <property name="icon">
+      <iconset>
+       <normaloff>:/image/happy.jpg</normaloff>:/image/happy.jpg</iconset>
      </property>
-     <property name="maximumSize">
-      <size>
-       <width>600</width>
-       <height>200</height>
-      </size>
+    </item>
+    <item>
+     <property name="text">
+      <string>焦虑</string>
      </property>
-     <layout class="QGridLayout" name="gridLayout_2">
-      <item row="0" column="2">
-       <widget class="QWidget" name="detail" native="true">
-        <property name="minimumSize">
-         <size>
-          <width>200</width>
-          <height>200</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>200</width>
-          <height>200</height>
-         </size>
-        </property>
-        <widget class="QLabel" name="label_5">
-         <property name="geometry">
-          <rect>
-           <x>0</x>
-           <y>0</y>
-           <width>110</width>
-           <height>30</height>
-          </rect>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>110</width>
-           <height>30</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>110</width>
-           <height>25</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:700; color:#005500;&quot;&gt;事项明细&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="WriteEve">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>60</y>
-           <width>141</width>
-           <height>111</height>
-          </rect>
-         </property>
-        </widget>
-       </widget>
-      </item>
-      <item row="0" column="3">
-       <widget class="QWidget" name="delete_2" native="true">
-        <property name="minimumSize">
-         <size>
-          <width>200</width>
-          <height>200</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>200</width>
-          <height>200</height>
-         </size>
-        </property>
-        <widget class="QLabel" name="label_3">
-         <property name="geometry">
-          <rect>
-           <x>0</x>
-           <y>0</y>
-           <width>200</width>
-           <height>30</height>
-          </rect>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>200</width>
-           <height>30</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>200</width>
-           <height>30</height>
-          </size>
-         </property>
-         <property name="cursor">
-          <cursorShape>OpenHandCursor</cursorShape>
-         </property>
-         <property name="text">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:700; color:#5500ff;&quot;&gt;输入删除事项的标题&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="lineEdit_eve">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>40</y>
-           <width>91</width>
-           <height>22</height>
-          </rect>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="pushButton_delete">
-         <property name="geometry">
-          <rect>
-           <x>20</x>
-           <y>80</y>
-           <width>60</width>
-           <height>60</height>
-          </rect>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>60</width>
-           <height>60</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>60</width>
-           <height>60</height>
-          </size>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset resource="images.qrc">
-           <normaloff>:/image/bin.jpg</normaloff>:/image/bin.jpg</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>40</width>
-           <height>40</height>
-          </size>
-         </property>
-         <property name="checkable">
-          <bool>false</bool>
-         </property>
-        </widget>
-       </widget>
-      </item>
-      <item row="0" column="0">
-       <widget class="QWidget" name="add" native="true">
-        <property name="minimumSize">
-         <size>
-          <width>200</width>
-          <height>200</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>200</width>
-          <height>200</height>
-         </size>
-        </property>
-        <widget class="QDateEdit" name="inputdate">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>80</y>
-           <width>111</width>
-           <height>21</height>
-          </rect>
-         </property>
-        </widget>
-        <widget class="QTimeEdit" name="inputtime">
-         <property name="geometry">
-          <rect>
-           <x>120</x>
-           <y>80</y>
-           <width>71</width>
-           <height>21</height>
-          </rect>
-         </property>
-        </widget>
-        <widget class="QComboBox" name="comboBox_moodchange">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>100</y>
-           <width>181</width>
-           <height>61</height>
-          </rect>
-         </property>
-         <item>
-          <property name="text">
-           <string>自信满满</string>
-          </property>
-          <property name="icon">
-           <iconset resource="images.qrc">
-            <normaloff>:/image/confid.jpg</normaloff>:/image/confid.jpg</iconset>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>开心</string>
-          </property>
-          <property name="icon">
-           <iconset resource="images.qrc">
-            <normaloff>:/image/happy.jpg</normaloff>:/image/happy.jpg</iconset>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>焦虑</string>
-          </property>
-          <property name="icon">
-           <iconset resource="images.qrc">
-            <normaloff>:/image/worry.jpg</normaloff>:/image/worry.jpg</iconset>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>激动</string>
-          </property>
-          <property name="icon">
-           <iconset resource="images.qrc">
-            <normaloff>:/image/excit.jpg</normaloff>:/image/excit.jpg</iconset>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>紧张</string>
-          </property>
-          <property name="icon">
-           <iconset resource="images.qrc">
-            <normaloff>:/image/ner.jpg</normaloff>:/image/ner.jpg</iconset>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>伤心</string>
-          </property>
-          <property name="icon">
-           <iconset resource="images.qrc">
-            <normaloff>:/image/sad.jpg</normaloff>:/image/sad.jpg</iconset>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>无法形容</string>
-          </property>
-          <property name="icon">
-           <iconset resource="images.qrc">
-            <normaloff>:/image/dog.jpg</normaloff>:/image/dog.jpg</iconset>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>波澜不惊</string>
-          </property>
-          <property name="icon">
-           <iconset resource="images.qrc">
-            <normaloff>:/image/plain.jpg</normaloff>:/image/plain.jpg</iconset>
-          </property>
-         </item>
-        </widget>
-        <widget class="QPushButton" name="pushButton_add">
-         <property name="geometry">
-          <rect>
-           <x>6</x>
-           <y>168</y>
-           <width>80</width>
-           <height>18</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>加入日历</string>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="lineEditID">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>50</y>
-           <width>91</width>
-           <height>22</height>
-          </rect>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_4">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>30</y>
-           <width>180</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>180</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>180</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>标题（不可重复）</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label">
-         <property name="geometry">
-          <rect>
-           <x>0</x>
-           <y>0</y>
-           <width>130</width>
-           <height>25</height>
-          </rect>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>130</width>
-           <height>25</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>130</width>
-           <height>25</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:700; color:#ff00ff;&quot;&gt;加入新事项&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-         </property>
-        </widget>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
-  </layout>
+     <property name="icon">
+      <iconset>
+       <normaloff>:/image/worry.jpg</normaloff>:/image/worry.jpg</iconset>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>激动</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>:/image/excit.jpg</normaloff>:/image/excit.jpg</iconset>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>紧张</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>:/image/ner.jpg</normaloff>:/image/ner.jpg</iconset>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>伤心</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>:/image/sad.jpg</normaloff>:/image/sad.jpg</iconset>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>无法形容</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>:/image/dog.jpg</normaloff>:/image/dog.jpg</iconset>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>波澜不惊</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>:/image/plain.jpg</normaloff>:/image/plain.jpg</iconset>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>140</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>我的心情是：</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QTableWidget" name="tableWidgetInmod">
+   <property name="geometry">
+    <rect>
+     <x>126</x>
+     <y>40</y>
+     <width>831</width>
+     <height>321</height>
+    </rect>
+   </property>
+   <attribute name="horizontalHeaderStretchLastSection">
+    <bool>true</bool>
+   </attribute>
+   <attribute name="verticalHeaderVisible">
+    <bool>false</bool>
+   </attribute>
+   <column>
+    <property name="text">
+     <string>序号</string>
+    </property>
+    <property name="font">
+     <font>
+      <fontweight>Light</fontweight>
+     </font>
+    </property>
+    <property name="background">
+     <color>
+      <red>255</red>
+      <green>255</green>
+      <blue>0</blue>
+     </color>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>标题</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>日期</string>
+    </property>
+    <property name="background">
+     <color>
+      <red>0</red>
+      <green>255</green>
+      <blue>255</blue>
+     </color>
+    </property>
+    <property name="icon">
+     <iconset theme="call-start"/>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>时间</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>心情</string>
+    </property>
+    <property name="background">
+     <color>
+      <red>255</red>
+      <green>192</green>
+      <blue>114</blue>
+     </color>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>具体内容</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>750</x>
+     <y>390</y>
+     <width>200</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>200</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>200</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:700; color:#5500ff;&quot;&gt;输入删除事项的标题&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_eve">
+   <property name="geometry">
+    <rect>
+     <x>740</x>
+     <y>430</y>
+     <width>241</width>
+     <height>41</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_delete">
+   <property name="geometry">
+    <rect>
+     <x>880</x>
+     <y>490</y>
+     <width>101</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>:/image/bin.jpg</normaloff>:/image/bin.jpg</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>380</y>
+     <width>110</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>110</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>110</width>
+     <height>25</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:700; color:#005500;&quot;&gt;事项明细&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>380</y>
+     <width>130</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>130</width>
+     <height>25</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>130</width>
+     <height>25</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:700; color:#ff00ff;&quot;&gt;加入新事项&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
  </widget>
- <resources>
-  <include location="images.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

@@ -53,6 +53,9 @@ public:
 
     ~calendarMC();
 
+signals:
+    void themeChanged();//在更改主题之后，传递更改完成的信号
+
 private slots:
     void on_Modify_clicked();
     void on_countdowndays_clicked();
@@ -85,6 +88,8 @@ public:
     virtual void paintEvent(QPaintEvent *e);
 
 
+public slots:
+    void changetheme();
 private:
     Ui::calendarMC *ui;
 

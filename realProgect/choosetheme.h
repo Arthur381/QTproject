@@ -19,10 +19,17 @@ class ChooseTheme : public QWidget
 {
     Q_OBJECT
 
+
 public:
 
     explicit ChooseTheme(QWidget *parent = nullptr);
     ~ChooseTheme();
+
+signals:
+    void themeChanged();
+
+private slots:
+    void changebegin();
 
 private:
     Ui::ChooseTheme *ui;

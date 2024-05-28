@@ -47,12 +47,19 @@ public:
     bool addone(CEventInfo info);
     bool delone(CEventInfo info);
 
+public slots:
+    void changetheme();
+
+
 private slots:
     void on_pushButton_clicked();
 
     void on_pushButton_2_clicked();
 
     void on_delCourse_clicked();
+
+signals:
+    void themechanged();
 
 private:
     Ui::coursemsy *ui;

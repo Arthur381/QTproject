@@ -5,6 +5,7 @@
 #include<QFile>
 #include<QCoreApplication>
 #include <QPainter>
+#include"global.h"
 #include <QStyleOption>
 
 //现存的问题：List始终是空的，每次添加一个元素，就要打印出来；
@@ -90,6 +91,21 @@ void ModEvent::paintEvent(QPaintEvent *e)
     opt.initFrom(this);  // 初始化 QStyleOptionFrame
     QPainter p(this);
     style()->drawPrimitive(QStyle::PE_Widget, &opt, &p, this);
+}
+
+void ModEvent::changetheme(){
+    if(ThemeStyle==0){
+
+
+    }
+    else if(ThemeStyle==1){
+
+
+
+    }
+    else if(ThemeStyle==2){
+
+    }
 }
 
 

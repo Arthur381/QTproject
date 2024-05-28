@@ -25,6 +25,13 @@ public:
     ~CountDownDaysMC();
     void paintEvent(QPaintEvent *e);
 
+signals:
+    void themechanged();
+
+public slots:
+    void changetheme();//槽函数
+
+
 private:
     Ui::CountDownDaysMC *ui;
 };

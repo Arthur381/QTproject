@@ -12,8 +12,8 @@ dailymsy5::dailymsy5(QWidget *parent)
 
     //固定行宽
     ui->eNoti->horizontalHeader()->setSectionResizeMode(QHeaderView::Fixed);
-    ui->eNoti->setColumnWidth(0,200);
-    ui->eNoti->setColumnWidth(1,200);
+    ui->eNoti->setColumnWidth(0,100);
+    ui->eNoti->setColumnWidth(1,175);
 
     modifyDatabase();
 }
@@ -53,5 +53,20 @@ void dailymsy5::modifyDatabase(){
     for(int i=0;i<l.size();i++){
         ui->eNoti->setItem(i,0,new QTableWidgetItem(QString::number(i)));
         ui->eNoti->setItem(i,1,new QTableWidgetItem(l[i].thingsname));
+    }
+}
+
+void dailymsy5::changetheme(){
+    if(ThemeStyle==0){
+
+
+    }
+    else if(ThemeStyle==1){
+
+
+
+    }
+    else if(ThemeStyle==2){
+
     }
 }

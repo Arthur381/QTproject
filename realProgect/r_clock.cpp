@@ -4,6 +4,7 @@
 #include <QMessageBox>
 #include <QLabel>
 #include <QMovie>
+#include"global.h"
 
 static bool if_pause;
 
@@ -118,3 +119,17 @@ void r_clock::on_pause_clicked()
     }
 }
 
+void r_clock::changetheme(){
+    if(ThemeStyle==0){
+
+    }
+    else if(ThemeStyle==1){
+
+
+    }
+    else if(ThemeStyle==2){
+
+
+    }
+
+}

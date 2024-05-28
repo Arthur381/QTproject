@@ -1,4 +1,5 @@
 #include "coursemsy.h"
+#include"global.h"
 #include "ui_coursemsy.h"
 #include "schedulemsy.h"
 //建立数据库存储所有数据
@@ -27,12 +28,35 @@ coursemsy::coursemsy(QWidget *parent)
     ui->selectTime->addItem("3");
     ui->selectTime->addItem("4");
     ui->selectTime->addItem("5");
-    ui->selectTime->addItem("6");
-    ui->selectTime->addItem("7");
-    ui->selectTime->addItem("8");
-    ui->selectTime->addItem("9");
-    ui->selectTime->addItem("10");
-    ui->selectTime->addItem("11");
+    // ui->selectTime->addItem("6");
+    // ui->selectTime->addItem("7");
+    // ui->selectTime->addItem("8");
+    // ui->selectTime->addItem("9");
+    // ui->selectTime->addItem("10");
+    // ui->selectTime->addItem("11");
+
+    QFont font1("YouYuan",15);
+    ui->label_20->setFont(font1);
+
+    QFont font3("YouYuan",15);
+    ui->label_19->setFont(font3);
+    ui->label_18->setFont(font3);
+
+    QFont font2("FZShuTi",11);
+    ui->label->setFont(font2);
+    ui->label_6->setFont(font2);
+    ui->label_2->setFont(font2);
+    ui->label_3->setFont(font2);
+    ui->label_4->setFont(font2);
+    ui->label_5->setFont(font2);
+    ui->label_6->setFont(font2);
+    ui->label_7->setFont(font2);
+    ui->label_8->setFont(font2);
+    ui->label_9->setFont(font2);
+     ui->label_11->setFont(font2);
+      ui->label_12->setFont(font2);
+       ui->label_15->setFont(font2);
+
 
 
     /*
@@ -179,3 +203,18 @@ void coursemsy::on_delCourse_clicked()
     coursemsy::getinstance()->delone(info);
 }
 
+void coursemsy::changetheme(){
+    if(ThemeStyle==0){
+
+
+    }
+    else if(ThemeStyle==1){
+
+
+
+    }
+    else if(ThemeStyle==2){
+
+    }
+    emit themechanged();
+}

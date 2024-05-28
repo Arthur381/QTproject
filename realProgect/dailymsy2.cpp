@@ -16,8 +16,8 @@ dailymsy2::dailymsy2(QWidget *parent)
     ui->setupUi(this);
     //固定行宽
     ui->showImNem->horizontalHeader()->setSectionResizeMode(QHeaderView::Fixed);
-    ui->showImNem->setColumnWidth(0,200);
-    ui->showImNem->setColumnWidth(1,200);
+    ui->showImNem->setColumnWidth(0,100);
+    ui->showImNem->setColumnWidth(1,175);
     modifyDatabase();
 }
 
@@ -56,5 +56,20 @@ void dailymsy2::modifyDatabase(){
     for(int i=0;i<l.size();i++){
         ui->showImNem->setItem(i,0,new QTableWidgetItem(QString::number(i)));
         ui->showImNem->setItem(i,1,new QTableWidgetItem(l[i].thingsname));
+    }
+}
+
+void dailymsy2::changetheme(){
+    if(ThemeStyle==0){
+
+
+    }
+    else if(ThemeStyle==1){
+
+
+
+    }
+    else if(ThemeStyle==2){
+
     }
 }

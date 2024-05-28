@@ -24,7 +24,7 @@ bool HoverButton::eventFilter(QObject *obj, QEvent *event)//手动添加过滤�
             //std::cout << "entered!" << std::endl;
             animateSize(QSize(200, 100));
         } else if (event->type() == QEvent::Leave) {
-            animateSize(QSize(100, 50));
+            animateSize(QSize(140, 70));
         }
     }
     return QPushButton::eventFilter(obj, event);
@@ -48,7 +48,7 @@ void HoverButton::animateSize(QSize size)
     // 创建动画对象
     QPropertyAnimation *animation = new QPropertyAnimation(this, "geometry");
     // 设置动画持续时间
-    animation->setDuration(500);
+    animation->setDuration(400);
     // 设置起始值
     animation->setStartValue(startRect);
     // 设置结束值

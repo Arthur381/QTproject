@@ -3,7 +3,7 @@
 #include <QApplication>
 #include <QLocale>
 #include <QTranslator>
-
+#include<QPixmap>
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
@@ -19,7 +19,12 @@ int main(int argc, char *argv[])
     }
 
     MainWindow w;
-    w.resize(900, 600);
+
+    //w.resize(900, 600);
+
+    // 加载背景图片
     w.show();
+
     return a.exec();
+    w.close();
 }
