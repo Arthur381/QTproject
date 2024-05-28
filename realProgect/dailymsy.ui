@@ -6,20 +6,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1000</width>
-    <height>618</height>
+    <width>700</width>
+    <height>432</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>1000</width>
-    <height>618</height>
+    <width>700</width>
+    <height>430</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>1000</width>
-    <height>618</height>
+    <width>700</width>
+    <height>432</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -29,9 +29,9 @@
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>10</y>
-     <width>171</width>
-     <height>101</height>
+     <y>0</y>
+     <width>281</width>
+     <height>161</height>
     </rect>
    </property>
    <property name="text">
@@ -41,10 +41,10 @@
   <widget class="QPushButton" name="iAnde">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>7</y>
-     <width>171</width>
-     <height>101</height>
+     <x>400</x>
+     <y>0</y>
+     <width>301</width>
+     <height>161</height>
     </rect>
    </property>
    <property name="text">
@@ -55,9 +55,9 @@
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>190</y>
-     <width>171</width>
-     <height>101</height>
+     <y>250</y>
+     <width>281</width>
+     <height>201</height>
     </rect>
    </property>
    <property name="text">
@@ -67,10 +67,10 @@
   <widget class="QPushButton" name="eNoti">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>190</y>
-     <width>171</width>
-     <height>101</height>
+     <x>400</x>
+     <y>250</y>
+     <width>301</width>
+     <height>181</height>
     </rect>
    </property>
    <property name="text">
@@ -80,9 +80,9 @@
   <widget class="QPushButton" name="allIn">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>120</y>
-     <width>121</width>
+     <x>230</x>
+     <y>170</y>
+     <width>241</width>
      <height>61</height>
     </rect>
    </property>

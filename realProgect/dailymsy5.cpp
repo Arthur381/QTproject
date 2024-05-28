@@ -12,8 +12,8 @@ dailymsy5::dailymsy5(QWidget *parent)
 
     //固定行宽
     ui->eNoti->horizontalHeader()->setSectionResizeMode(QHeaderView::Fixed);
-    ui->eNoti->setColumnWidth(0,200);
-    ui->eNoti->setColumnWidth(1,200);
+    ui->eNoti->setColumnWidth(0,100);
+    ui->eNoti->setColumnWidth(1,175);
 
     modifyDatabase();
 }
