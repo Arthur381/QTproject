@@ -25,6 +25,10 @@ public:
     //void paintEvent(QPaintEvent *e);
     void setAW();
 
+signals:
+    void themeChanged();//在更改主题之后，传递更改完成的信号
+
+
 private slots:
     void on_calBT_clicked();
 
@@ -37,6 +41,8 @@ private slots:
     void on_readme_clicked();
 
     void on_style_clicked();
+
+    void changetheme();
 
 private:
     Ui::MainWindow *ui;

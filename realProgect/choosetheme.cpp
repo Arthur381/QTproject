@@ -11,7 +11,7 @@ ChooseTheme::ChooseTheme(QWidget *parent)
     ui->setupUi(this);
 
     //connect(ui->pushButton, &HoverButton::changeSize, this, &ChooseTheme::animateSize);
-    ui->pushButton->setStyleSheet(
+    ui->themeHP->setStyleSheet(
         "QPushButton {"
         "    background-color: lightgray;"
         "    border: none;"
@@ -27,7 +27,9 @@ ChooseTheme::ChooseTheme(QWidget *parent)
         "    font: 18pt '楷体';"// 设置按钮文本的字体为 10 点大小的楷体
         "    transition: all 0.1s ease;"
         "}"
+
     );
+    connect(ui->themeHP, &QPushButton::clicked, this, &ChooseTheme::changebegin);
 }
 
 ChooseTheme::~ChooseTheme()
@@ -36,4 +38,12 @@ ChooseTheme::~ChooseTheme()
 }
 
 
+
+
+void ChooseTheme::changebegin()
+{
+    ThemeStyle=1;
+    emit themeChanged();
+
+}
 

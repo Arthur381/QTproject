@@ -12,6 +12,7 @@
 #include<qpainter.h>
 #include<QKeyEvent>
 #include<QFile>
+#include"global.h"
 #include<QCoreApplication>
 
 calendarMC* calendarMC::ptrcalendar = nullptr;//在类外初始化
@@ -28,6 +29,7 @@ calendarMC::calendarMC(QWidget *parent)
     //ui->calendarWidget->setFont(QFont("Timers",8,QFont::Bold));
     CreatDataFunc();
     CreatTableFunc();
+    this->changetheme();
 }
 
 calendarMC::~calendarMC()
@@ -301,6 +303,7 @@ void calendarMC::on_countdowndays_clicked()
 {
     CountDownDaysMC* days=new CountDownDaysMC;
     days->show();
+
 }
 
 //单击信号
@@ -339,4 +342,32 @@ void calendarMC::clickedSlot(const QDate date)
         small_win->show();//仍然是单例
         small_win->FindAndPrint(sssList);
     }
+}
+
+void calendarMC::changetheme(){
+    if(ThemeStyle==0){
+        this->setStyleSheet("background-image: url(:/background/HP5.jpg);");
+
+    }
+    else if(ThemeStyle==1){
+        this->setStyleSheet(
+            "QWidget{"
+            "    background-image: url(:/background/pku_mainbg.jpg);" // 设置背景图片
+            "    background-position: center;" // 将图片放置在中心
+            "    background-repeat: no-repeat;" // 禁止图片重复
+            "    background-size: 100% 100%;" // 使图片拉伸以适应窗口大小
+            "}"
+            );
+    }
+    else if(ThemeStyle==2){
+        this->setStyleSheet(
+            "QWidget{"
+            "    background-image: url(:/background/pku_mainbg.jpg);" // 设置背景图片
+            "    background-position: center;" // 将图片放置在中心
+            "    background-repeat: no-repeat;" // 禁止图片重复
+            "    background-size: 100% 100%;" // 使图片拉伸以适应窗口大小
+            "}"
+            );
+    }
+    emit themeChanged();
 }

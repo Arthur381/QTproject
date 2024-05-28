@@ -22,6 +22,13 @@ public:
     QTimer timer_cur;
     QDateTime curDTime;
 
+
+    void paintEvent(QPaintEvent *e);
+
+signals:
+    void themeChanged();
+
+
 private slots:
     //void on_pushButton_3_clicked();
 
@@ -32,6 +39,8 @@ private slots:
     void on_alarms_clicked();
 
     void showcurtime();
+
+    void changetheme();
 
 private:
     Ui::clockHZJ *ui;

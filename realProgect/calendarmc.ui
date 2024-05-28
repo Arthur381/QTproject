@@ -26,15 +26,11 @@
    <string>日历</string>
   </property>
   <property name="windowIcon">
-   <iconset>
+   <iconset resource="images.qrc">
     <normaloff>:/image/cal_ico.jpg</normaloff>:/image/cal_ico.jpg</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true">QWidget#calendarMC{
-    background-image: url(:/background/HP1.jpg);
-    background-position: center; 
-    background-repeat: no-repeat; 
-}</string>
+   <string notr="true"/>
   </property>
   <widget class="QFrame" name="frame">
    <property name="geometry">
@@ -145,6 +141,8 @@
    </layout>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
  <connections/>
 </ui>
