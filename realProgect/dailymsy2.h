@@ -24,6 +24,7 @@ public:
     void modifyDatabase();
     //QSqlDatabase sqldb=QSqlDatabase::addDatabase("QSQLITE");//创建qt和数据库连接
 
+    void paintEvent(QPaintEvent *e);
 public slots:
     void changetheme();
 private:
