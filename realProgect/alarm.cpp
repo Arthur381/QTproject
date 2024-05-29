@@ -5,6 +5,9 @@
 #include <QMessageBox>
 #include <QDebug>
 #include <QCheckBox>
+#include<QStyleOptionFrame>
+#include<QPainter>
+
 static bool cs1,cs2,cs3,cs4,cs5;
 static bool con1,con2,con3,con4,con5;
 
@@ -26,11 +29,20 @@ alarm::alarm(QWidget *parent)
     ui->curtime->setText("0000-00-00 00:00:00");
     timerunner.start(1000);
     connect(&timerunner,SIGNAL(timeout()), this, SLOT(checktime()));
+    changetheme();
 }
 
 alarm::~alarm()
 {
     delete ui;
+}
+
+void alarm::paintEvent(QPaintEvent *e)
+{
+    QStyleOptionFrame opt;
+    opt.initFrom(this);  // 初始化 QStyleOptionFrame
+    QPainter p(this);
+    style()->drawPrimitive(QStyle::PE_Widget, &opt, &p, this);
 }
 
 void alarm::checktime(){
@@ -212,7 +224,21 @@ void alarm::on_check5_clicked()
 
 void alarm::changetheme(){
     if(ThemeStyle==0){
+        QPixmap pixmain3(":PKU/mini5.png");
+        pixmain3 = pixmain3.scaled(ui->l1->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
+        ui->l1->setPixmap(pixmain3); // 显示 QLabel
+        ui->l1->show();
 
+        this->setStyleSheet(
+            "QWidget#alarm{"
+            "    background-image: url(:/PKU/yh.png);" // 设置背景图片
+            "    background-position: center;" // 将图片放置在中心
+            "    background-repeat: no-repeat;" // 禁止图片重复
+            "    background-size: 100% 100%;" // 使图片拉伸以适应窗口大小
+            "}"
+
+
+            );
     }
     else if(ThemeStyle==1){
 

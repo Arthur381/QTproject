@@ -23,6 +23,7 @@ public:
     QTimer timer_cur,timerunner;
     QDateTime curDTime;
 
+    void paintEvent(QPaintEvent *e);
 public slots:
     void changetheme();
 

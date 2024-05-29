@@ -400,22 +400,6 @@ void calendarMC::changetheme(){
 
 
             );
-
-        /*QPixmap pixmap(":/PKU/hg.png");
-
-        // 创建一个透明背景的pixmap
-        QPixmap transparentPixmap(pixmap.size());
-        transparentPixmap.fill(Qt::transparent);
-
-        QPainter painter(&transparentPixmap);
-        painter.setOpacity(0.9); // 设置透明度
-        painter.drawPixmap(0, 0, pixmap);
-        painter.end();
-
-        QPalette palette;
-        palette.setBrush(QPalette::Window, QBrush(transparentPixmap));
-        this->setAutoFillBackground(true);
-        this->setPalette(palette);*/
         this->setStyleSheet(
             "QWidget#calendarMC{"
             "    background-image: url(:/PKU/hg.png);" // 设置背景图片

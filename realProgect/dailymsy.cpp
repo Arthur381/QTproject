@@ -20,6 +20,7 @@ dailyMSY::dailyMSY(QWidget *parent)
 
     CreatDataFunc();
     CreatTableFunc();
+    changetheme();
 
 }
 
@@ -150,9 +151,62 @@ void dailyMSY::on_eNoti_clicked()
     Eday->show();
 }
 
+void dailyMSY::paintEvent(QPaintEvent *e)
+{
+    QStyleOptionFrame opt;
+    opt.initFrom(this);  // 初始化 QStyleOptionFrame
+    QPainter p(this);
+    style()->drawPrimitive(QStyle::PE_Widget, &opt, &p, this);
+}
+
 void dailyMSY::changetheme(){
     if(ThemeStyle==0){
+        this->setStyleSheet(
+            "QWidget#dailyMSY{"
+            "    background-image: url(:/PKU/evebg.png);" // 设置背景图片
+            "    background-position: center;" // 将图片放置在中心
+            "    background-repeat: no-repeat;" // 禁止图片重复
+            "    background-size: 100% 100%;" // 使图片拉伸以适应窗口大小
+            "}"
+            );
+        ui->allIn->setStyleSheet(
+            "QPushButton {"
+            "background-color: rgba(255,255,255, 0.001);"
+            "}"
 
+            );
+        ui->iAnde->setStyleSheet(
+            "QPushButton {"
+            "    background-image: url(:/PKU/event00.png);" // 设置背景图片
+            "    background-position: center;" // 将图片放置在中心
+            "    background-repeat: no-repeat;" // 禁止图片重复
+            "    background-size: 100% 100%;" // 使图片拉伸以适应窗口大小
+            "}"
+            );
+        ui->eNoti->setStyleSheet(
+            "QPushButton {"
+            "    background-image: url(:/PKU/event11.png);" // 设置背景图片
+            "    background-position: center;" // 将图片放置在中心
+            "    background-repeat: no-repeat;" // 禁止图片重复
+            "    background-size: 100% 100%;" // 使图片拉伸以适应窗口大小
+            "}"
+            );
+        ui->iNote->setStyleSheet(
+            "QPushButton {"
+            "    background-image: url(:/PKU/event01.png);" // 设置背景图片
+            "    background-position: center;" // 将图片放置在中心
+            "    background-repeat: no-repeat;" // 禁止图片重复
+            "    background-size: 100% 100%;" // 使图片拉伸以适应窗口大小
+            "}"
+            );
+        ui->nine->setStyleSheet(
+            "QPushButton {"
+            "    background-image: url(:/PKU/even10.png);" // 设置背景图片
+            "    background-position: center;" // 将图片放置在中心
+            "    background-repeat: no-repeat;" // 禁止图片重复
+            "    background-size: 100% 100%;" // 使图片拉伸以适应窗口大小
+            "}"
+            );
 
     }
     else if(ThemeStyle==1){

@@ -32,7 +32,7 @@
    <property name="geometry">
     <rect>
      <x>300</x>
-     <y>120</y>
+     <y>170</y>
      <width>111</width>
      <height>61</height>
     </rect>
@@ -44,7 +44,7 @@
   <widget class="QPushButton" name="alarms">
    <property name="geometry">
     <rect>
-     <x>420</x>
+     <x>400</x>
      <y>260</y>
      <width>111</width>
      <height>61</height>
@@ -57,7 +57,7 @@
   <widget class="QPushButton" name="sec_clock">
    <property name="geometry">
     <rect>
-     <x>180</x>
+     <x>200</x>
      <y>260</y>
      <width>121</width>
      <height>61</height>
