@@ -49,7 +49,7 @@ void dailyMSY::CreatTableFunc(){//创建sqlite数据表
     QSqlQuery sql(sqldb);
 //这里设置的thingname是不能为空的，但是为什么我可以为空
     QString strsql=QString("create table event("
-                             "id int not null,"
+                             "id int primary key not null,"
                              "thingsname text not null,"
                              "im int not null,"
                              "em int not null)");
@@ -86,10 +86,9 @@ QList<BEventInfo> dailyMSY::getPage(int page,int uicnt){//根本目的是得到�
     QString strsql=QString("select * from event order by id limit %1 offset %2")
                          .arg(uicnt).arg(page*uicnt);
     sql.exec(strsql);
-    int id;
     BEventInfo info;
     while(sql.next()){
-        id=sql.value(0).toInt();
+        info.id=sql.value(0).toInt();
         info.thingsname=sql.value(1).toString();
         info.im=sql.value(2).toUInt();
         info.em=sql.value(3).toUInt();

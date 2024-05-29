@@ -41,9 +41,9 @@
   <widget class="QPushButton" name="iAnde">
    <property name="geometry">
     <rect>
-     <x>400</x>
+     <x>410</x>
      <y>0</y>
-     <width>301</width>
+     <width>291</width>
      <height>161</height>
     </rect>
    </property>
@@ -67,9 +67,9 @@
   <widget class="QPushButton" name="eNoti">
    <property name="geometry">
     <rect>
-     <x>400</x>
+     <x>410</x>
      <y>250</y>
-     <width>301</width>
+     <width>291</width>
      <height>181</height>
     </rect>
    </property>
@@ -82,7 +82,7 @@
     <rect>
      <x>280</x>
      <y>160</y>
-     <width>121</width>
+     <width>131</width>
      <height>91</height>
     </rect>
    </property>
