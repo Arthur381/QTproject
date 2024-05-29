@@ -15,6 +15,7 @@ dailymsy2::dailymsy2(QWidget *parent)
 {
     ui->setupUi(this);
     //固定行宽
+    changetheme();
     ui->showImNem->horizontalHeader()->setSectionResizeMode(QHeaderView::Fixed);
     ui->showImNem->setColumnWidth(0,100);
     ui->showImNem->setColumnWidth(1,175);
@@ -59,9 +60,32 @@ void dailymsy2::modifyDatabase(){
     }
 }
 
+void dailymsy2::paintEvent(QPaintEvent *e)
+{
+    QStyleOptionFrame opt;
+    opt.initFrom(this);  // 初始化 QStyleOptionFrame
+    QPainter p(this);
+    style()->drawPrimitive(QStyle::PE_Widget, &opt, &p, this);
+}
+
+
+
 void dailymsy2::changetheme(){
     if(ThemeStyle==0){
-
+        ui->showImNem->setStyleSheet(
+            "QTableWidget{background-color:rgba(250, 250,250, 0.327);"
+            "text-decoration-color: rgba(90, 66, 59, 0.163);"
+            "text-lightcolor;"
+            "}"
+            );
+        this->setStyleSheet(
+            "QDialog{"
+            "    background-image: url(:/PKU/length.jpg);" // 设置背景图片
+            "    background-position: center;" // 将图片放置在中心
+            "    background-repeat: no-repeat;" // 禁止图片重复
+            "    background-size: 100% 100%;" // 使图片拉伸以适应窗口大小
+            "}"
+            );
 
     }
     else if(ThemeStyle==1){

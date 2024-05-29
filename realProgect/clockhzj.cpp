@@ -79,10 +79,36 @@ void clockHZJ::changetheme(){
     if(ThemeStyle==0){
         this->setStyleSheet(
             "QWidget#clockHZJ{"
-            "    background-image: url(:/background/current.jpg);" // 设置背景图片
+            "    background-image: url(:/PKU/width.jpg);" // 设置背景图片
             "    background-position: center;" // 将图片放置在中心
             "    background-repeat: no-repeat;" // 禁止图片重复
             "    background-size: 100% 100%;" // 使图片拉伸以适应窗口大小
+            "}"
+            );
+        ui->alarms->setStyleSheet(
+            "QPushButton {"
+            "    background-color: rgba(247, 22, 60, 0.865);"
+            "    border: 0px solid rgba(115, 177, 166, 0.865);"//设置边框
+            "    color:rgb(5, 12, 12);"// 设置按钮文本的颜色为黑色（RGB值为5, 12, 12）
+            "    border-radius: 24;"// 设置按钮的边框半径为6像素，使其圆角化
+            "    font: 10pt '楷体';"// 设置按钮文本的字体为 10 点大小的楷体
+            "}"
+            );
+        ui->rsec_clo->setStyleSheet(
+            "QPushButton {"
+            "    background-color: rgba(247, 22, 60, 0.865);"
+            "    border: 0px solid rgba(115, 177, 166, 0.865);"//设置边框
+            "    color:rgb(5, 12, 12);"// 设置按钮文本的颜色为黑色（RGB值为5, 12, 12）
+            "    border-radius: 24;"// 设置按钮的边框半径为6像素，使其圆角化
+            "    font: 10pt '楷体';"// 设置按钮文本的字体为 10 点大小的楷体
+            "}");
+        ui->sec_clock->setStyleSheet(
+            "QPushButton {"
+            "    background-color: rgba(247, 22, 60, 0.865);"
+            "    border: 0px solid rgba(115, 177, 166, 0.865);"//设置边框
+            "    color:rgb(5, 12, 12);"// 设置按钮文本的颜色为黑色（RGB值为5, 12, 12）
+            "    border-radius: 24;"// 设置按钮的边框半径为6像素，使其圆角化
+            "    font: 10pt '楷体';"// 设置按钮文本的字体为 10 点大小的楷体
             "}"
             );
 
