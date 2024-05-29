@@ -118,6 +118,22 @@
     </property>
    </column>
   </widget>
+  <widget class="QLabel" name="daoshu">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>9</y>
+     <width>211</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 48pt &quot;华文彩云&quot;;</string>
+   </property>
+   <property name="text">
+    <string>倒数日</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

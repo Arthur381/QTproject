@@ -41,6 +41,9 @@ r_clock::r_clock(QWidget *parent)
     connect(ui->sb_sec, SIGNAL(valueChanged(int)), this, SLOT(secChanged()));
     display_number();
 
+    QFont font1("YouYuan",15);
+    ui->label_5->setFont(font1);
+
     changetheme();
 }
 

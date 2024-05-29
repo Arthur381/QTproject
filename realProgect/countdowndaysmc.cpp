@@ -25,6 +25,10 @@ CountDownDaysMC::CountDownDaysMC(QWidget *parent)
     calendarMC* m_ptrcalendar=calendarMC::getinstance();
     CountDownDaysMC::PrintForView();
     changetheme();
+
+    QFont font1("YouYuan",15);
+    ui->daoshu->setFont(font1);
+
 }
 
 void CountDownDaysMC::PrintForView(){

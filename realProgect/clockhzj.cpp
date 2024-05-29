@@ -15,6 +15,10 @@ clockHZJ::clockHZJ(QWidget *parent)
 {
     ui->setupUi(this);
     this->changetheme();
+
+    QFont font1("YouYuan",25);
+    ui->label->setFont(font1);
+
     /**
      * @brief connect
      *
@@ -22,7 +26,6 @@ clockHZJ::clockHZJ(QWidget *parent)
      * 如果ui编辑界面的样式表已经设置但是注释了，还是会有冲突导致无法实现
      *
      */
-
     connect(&timer_cur, SIGNAL(timeout()), this, SLOT(showcurtime()));
     timer_cur.start(1000);
     ui->curtime->setText("0000-00-00 00:00:00");
@@ -91,7 +94,7 @@ void clockHZJ::changetheme(){
             "    border: 0px solid rgba(115, 177, 166, 0.865);"//设置边框
             "    color:rgb(5, 12, 12);"// 设置按钮文本的颜色为黑色（RGB值为5, 12, 12）
             "    border-radius: 24;"// 设置按钮的边框半径为6像素，使其圆角化
-            "    font: 10pt '楷体';"// 设置按钮文本的字体为 10 点大小的楷体
+            "    font: 10pt '幼圆';"// 设置按钮文本的字体为 10 点大小的楷体
             "}"
             );
         ui->rsec_clo->setStyleSheet(
@@ -100,7 +103,7 @@ void clockHZJ::changetheme(){
             "    border: 0px solid rgba(115, 177, 166, 0.865);"//设置边框
             "    color:rgb(5, 12, 12);"// 设置按钮文本的颜色为黑色（RGB值为5, 12, 12）
             "    border-radius: 24;"// 设置按钮的边框半径为6像素，使其圆角化
-            "    font: 10pt '楷体';"// 设置按钮文本的字体为 10 点大小的楷体
+            "    font: 10pt '幼圆';"// 设置按钮文本的字体为 10 点大小的楷体
             "}");
         ui->sec_clock->setStyleSheet(
             "QPushButton {"
@@ -108,7 +111,7 @@ void clockHZJ::changetheme(){
             "    border: 0px solid rgba(115, 177, 166, 0.865);"//设置边框
             "    color:rgb(5, 12, 12);"// 设置按钮文本的颜色为黑色（RGB值为5, 12, 12）
             "    border-radius: 24;"// 设置按钮的边框半径为6像素，使其圆角化
-            "    font: 10pt '楷体';"// 设置按钮文本的字体为 10 点大小的楷体
+            "    font: 10pt '幼圆';"// 设置按钮文本的字体为 10 点大小的楷体
             "}"
             );
 

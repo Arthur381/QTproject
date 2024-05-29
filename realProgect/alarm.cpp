@@ -30,6 +30,13 @@ alarm::alarm(QWidget *parent)
     timerunner.start(1000);
     connect(&timerunner,SIGNAL(timeout()), this, SLOT(checktime()));
     changetheme();
+
+    QFont font1("YouYuan",15);
+    ui->label->setFont(font1);
+    ui->label_2->setFont(font1);
+    ui->label_3->setFont(font1);
+
+
 }
 
 alarm::~alarm()
@@ -236,8 +243,6 @@ void alarm::changetheme(){
             "    background-repeat: no-repeat;" // 禁止图片重复
             "    background-size: 100% 100%;" // 使图片拉伸以适应窗口大小
             "}"
-
-
             );
     }
     else if(ThemeStyle==1){

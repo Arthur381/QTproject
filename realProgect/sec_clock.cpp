@@ -20,6 +20,9 @@ sec_clock::sec_clock(QWidget *parent)
     timer_cur.start(1000);
     ui->curtime->setText("0000-00-00 00:00:00");
 
+    QFont font1("YouYuan",15);
+    ui->label->setFont(font1);
+
     changetheme();
 }
 

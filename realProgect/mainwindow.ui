@@ -26,7 +26,7 @@
    <string>PKU自律指南</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="images.qrc">
+   <iconset>
     <normaloff>:/image/OIP.jpg</normaloff>:/image/OIP.jpg</iconset>
   </property>
   <property name="toolTip">
@@ -67,7 +67,7 @@
      <string notr="true"/>
     </property>
     <property name="text">
-     <string>课程表MSY</string>
+     <string>课程表</string>
     </property>
    </widget>
    <widget class="HoverButton" name="pushButton">
@@ -95,7 +95,7 @@
      <string notr="true"/>
     </property>
     <property name="text">
-     <string>日程MSY</string>
+     <string>日程管理</string>
     </property>
    </widget>
    <widget class="HoverButton" name="readme">
@@ -210,7 +210,7 @@
      <string notr="true"/>
     </property>
     <property name="text">
-     <string>时间HZJ</string>
+     <string>时间管理</string>
     </property>
    </widget>
    <widget class="QLabel" name="mainlabel">
@@ -271,8 +271,6 @@
    <header>hoverbutton.h</header>
   </customwidget>
  </customwidgets>
- <resources>
-  <include location="images.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
