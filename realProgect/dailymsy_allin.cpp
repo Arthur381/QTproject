@@ -16,6 +16,7 @@ dailymsy_allin::dailymsy_allin(QWidget *parent)
     ui->workTable->setSelectionMode(QAbstractItemView::SingleSelection);
     ui->workTable->setEditTriggers(QAbstractItemView::NoEditTriggers);//禁止对表格内容进行修改
     PrintP();
+    changetheme();
 }
 
 dailymsy_allin::~dailymsy_allin()
@@ -143,9 +144,13 @@ void dailymsy_allin::on_deleteMission_clicked()
 
 void dailymsy_allin::changetheme(){
     if(ThemeStyle==0){
-
+        QPixmap pixmain3(":PKU/ki.jpg");
+        pixmain3 = pixmain3.scaled(ui->pic->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
+        ui->pic->setPixmap(pixmain3); // 显示 QLabel
+        ui->pic->show();
 
     }
+
     else if(ThemeStyle==1){
 
 

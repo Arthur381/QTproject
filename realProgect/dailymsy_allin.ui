@@ -112,7 +112,7 @@
     <rect>
      <x>30</x>
      <y>0</y>
-     <width>401</width>
+     <width>461</width>
      <height>251</height>
     </rect>
    </property>
@@ -167,7 +167,7 @@
    <property name="geometry">
     <rect>
      <x>580</x>
-     <y>270</y>
+     <y>290</y>
      <width>80</width>
      <height>18</height>
     </rect>
@@ -226,6 +226,19 @@
    </property>
    <property name="orientation">
     <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="pic">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>10</y>
+     <width>201</width>
+     <height>251</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
    </property>
   </widget>
  </widget>

@@ -47,6 +47,15 @@
         <file>PKU/pkurili.png</file>
         <file>PKU/sda.jpg</file>
         <file>PKU/yh.png</file>
+        <file>PKU/1.jpg</file>
+        <file>PKU/2.jpg</file>
+        <file>PKU/3.jpg</file>
+        <file>PKU/4.jpg</file>
+        <file>PKU/even10.png</file>
+        <file>PKU/event00.png</file>
+        <file>PKU/event01.png</file>
+        <file>PKU/event11.png</file>
+        <file>PKU/evebg.png</file>
     </qresource>
     <qresource prefix="/background"/>
     <qresource prefix="/\PKU"/>

@@ -80,7 +80,7 @@ void dailymsy2::changetheme(){
             );
         this->setStyleSheet(
             "QDialog{"
-            "    background-image: url(:/PKU/length.jpg);" // 设置背景图片
+            "    background-image: url(:/PKU/1.jpg);" // 设置背景图片
             "    background-position: center;" // 将图片放置在中心
             "    background-repeat: no-repeat;" // 禁止图片重复
             "    background-size: 100% 100%;" // 使图片拉伸以适应窗口大小
