@@ -238,6 +238,19 @@
      <string>TextLabel</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label3">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>420</y>
+      <width>301</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

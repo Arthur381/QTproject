@@ -78,10 +78,17 @@ void MainWindow::changetheme(){
         pixmain = pixmain.scaled(ui->mainlabel->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
         ui->mainlabel->setPixmap(pixmain); // 显示 QLabel
         ui->mainlabel->show();
+
+        QPixmap pixmain3(":PKU/mini5.png");
+        pixmain3 = pixmain3.scaled(ui->label3->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
+        ui->label3->setPixmap(pixmain3); // 显示 QLabel
+        ui->label3->show();
+
         /**
          * 设置窗口背景
          *
          */
+
         this->setStyleSheet(
             "QMainWindow {"
             "    background-image: url(:/background/pku_mainbg.jpg);" // 设置背景图片
@@ -139,6 +146,9 @@ void MainWindow::changetheme(){
      *
      *
      */
+        //ui->calBT->setIcon(QIcon(":/PKU/mini2.png"));
+        //ui->calBT->setIconSize(QSize(100, 100));
+        //ui->calBT->setFixedSize(100, 50);
         ui->calBT->setStyleSheet(
             "QPushButton {"
             "    background-color: rgba(239, 135, 135, 0.717);"

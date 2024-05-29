@@ -28,14 +28,25 @@
         <file>background/pku_mainbg.jpg</file>
         <file>PKU/length.jpg</file>
         <file>PKU/mainbg.jpg</file>
-        <file>PKU/mini1.webp</file>
         <file>PKU/mini2.png</file>
         <file>PKU/mini3.png</file>
-        <file>PKU/mini4.webp</file>
         <file>PKU/mini5.png</file>
-        <file>PKU/mini6.webp</file>
         <file>PKU/symbol.png</file>
         <file>PKU/width.jpg</file>
+        <file>PKU/12.jpg</file>
+        <file>PKU/fg.jpg</file>
+        <file>PKU/hg.png</file>
+        <file>PKU/hj.png</file>
+        <file>PKU/hjh.jpg</file>
+        <file>PKU/ju.png</file>
+        <file>PKU/ki.jpg</file>
+        <file>PKU/mini.png</file>
+        <file>PKU/mini1.png</file>
+        <file>PKU/mini4.png</file>
+        <file>PKU/mini6.png</file>
+        <file>PKU/pkurili.png</file>
+        <file>PKU/sda.jpg</file>
+        <file>PKU/yh.png</file>
     </qresource>
     <qresource prefix="/background"/>
     <qresource prefix="/\PKU"/>

@@ -27,6 +27,8 @@ calendarMC::calendarMC(QWidget *parent)
     connect(ui->calendarWidget,SIGNAL(clicked(QDate)),this,SLOT(clickedSlot(QDate)));
     //创建且打开数据库,调用函数
     //ui->calendarWidget->setFont(QFont("Timers",8,QFont::Bold));
+
+
     CreatDataFunc();
     CreatTableFunc();
     this->changetheme();
@@ -348,7 +350,44 @@ void calendarMC::clickedSlot(const QDate date)
 
 void calendarMC::changetheme(){
     if(ThemeStyle==0){
-        this->setStyleSheet("background-image: url(:/background/HP5.jpg);");
+        QPixmap pixmain3(":PKU/pkurili.png");
+        pixmain3 = pixmain3.scaled(ui->label_rd->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
+        ui->label_rd->setPixmap(pixmain3); // 显示 QLabel
+        ui->label_rd->show();
+        ui->calendarWidget->setStyleSheet(
+            "QCalendarWidget {"
+            "    background-color: rgba(255, 255, 255, 0.01);"
+            "    border: 1px solid gray;"
+            "}"
+
+
+
+            );
+
+        /*QPixmap pixmap(":/PKU/hg.png");
+
+        // 创建一个透明背景的pixmap
+        QPixmap transparentPixmap(pixmap.size());
+        transparentPixmap.fill(Qt::transparent);
+
+        QPainter painter(&transparentPixmap);
+        painter.setOpacity(0.9); // 设置透明度
+        painter.drawPixmap(0, 0, pixmap);
+        painter.end();
+
+        QPalette palette;
+        palette.setBrush(QPalette::Window, QBrush(transparentPixmap));
+        this->setAutoFillBackground(true);
+        this->setPalette(palette);*/
+        this->setStyleSheet(
+            "QWidget#calendarMC{"
+            "    background-image: url(:/PKU/hg.png);" // 设置背景图片
+            "    background-position: center;" // 将图片放置在中心
+            "    background-repeat: no-repeat;" // 禁止图片重复
+            "    background-size: 100% 100%;" // 使图片拉伸以适应窗口大小
+            "}"
+
+            );
 
     }
     else if(ThemeStyle==1){
