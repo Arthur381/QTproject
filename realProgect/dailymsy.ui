@@ -35,7 +35,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>重要不紧急</string>
+    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="iAnde">
@@ -48,7 +48,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>重要且紧急</string>
+    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="nine">
@@ -61,7 +61,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>不重要不紧急</string>
+    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="eNoti">
@@ -74,14 +74,14 @@
     </rect>
    </property>
    <property name="text">
-    <string>紧急但不重要</string>
+    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="allIn">
    <property name="geometry">
     <rect>
-     <x>280</x>
-     <y>160</y>
+     <x>290</x>
+     <y>170</y>
      <width>121</width>
      <height>91</height>
     </rect>

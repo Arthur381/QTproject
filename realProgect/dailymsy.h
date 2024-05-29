@@ -39,6 +39,7 @@ public:
     QList<BEventInfo> getPage(int page,int uicnt);//从数据库中读取列表
     QSqlDatabase sqldb;//创建qt和数据库连接
 
+    void paintEvent(QPaintEvent *e);
 private:
     Ui::dailyMSY *ui;
     void CreatDataFunc();//创建SQLite数据库
