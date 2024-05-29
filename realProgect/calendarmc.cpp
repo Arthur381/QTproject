@@ -29,6 +29,7 @@ calendarMC::calendarMC(QWidget *parent)
     //ui->calendarWidget->setFont(QFont("Timers",8,QFont::Bold));
 
 
+
     CreatDataFunc();
     CreatTableFunc();
     this->changetheme();
@@ -353,6 +354,42 @@ void calendarMC::changetheme(){
         QPixmap pixmain3(":PKU/pkurili.png");
         pixmain3 = pixmain3.scaled(ui->label_rd->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
         ui->label_rd->setPixmap(pixmain3); // 显示 QLabel
+        // QFont font3("YouYuan",15);
+        // ui->Modify->setStyleSheet("background-color: rgba(239, 135, 135, 0.717);");
+        // ui->Modify->setFont(font3);
+        // ui->countdowndays->setFont(font3);
+        // ui->countdowndays->setStyleSheet("background-color: rgba(239, 135, 135, 0.717);");
+
+        ui->countdowndays->setStyleSheet(
+            "QPushButton {"
+            "    background-color: rgba(239, 135, 135, 0.717);"
+            "    border: 0px solid rgba(115, 177, 166, 0.865);"//设置边框
+            "    color:rgb(5, 12, 12);"// 设置按钮文本的颜色为黑色（RGB值为5, 12, 12）
+            "    border-radius: 24;"// 设置按钮的边框半径为6像素，使其圆角化
+            "    font: 10pt '幼圆';"// 设置按钮文本的字体为 10 点大小的楷体
+            "}"
+            "QPushButton:hover {"
+            "    background-color: rgba(244, 54, 54, 0.84);"
+            "    font: 18pt '幼圆';"// 设置按钮文本的字体为 10 点大小的楷体
+            "    transition: all 0.1s ease;"
+            "}"
+            );
+
+        ui->Modify->setStyleSheet(
+            "QPushButton {"
+            "    background-color: rgba(239, 135, 135, 0.717);"
+            "    border: 0px solid rgba(115, 177, 166, 0.865);"//设置边框
+            "    color:rgb(5, 12, 12);"// 设置按钮文本的颜色为黑色（RGB值为5, 12, 12）
+            "    border-radius: 24;"// 设置按钮的边框半径为6像素，使其圆角化
+            "    font: 10pt '幼圆';"// 设置按钮文本的字体为 10 点大小的楷体
+            "}"
+            "QPushButton:hover {"
+            "    background-color: rgba(244, 54, 54, 0.84);"
+            "    font: 18pt '幼圆';"// 设置按钮文本的字体为 10 点大小的楷体
+            "    transition: all 0.1s ease;"
+            "}"
+            );
+
         ui->label_rd->show();
         ui->calendarWidget->setStyleSheet(
             "QCalendarWidget {"
