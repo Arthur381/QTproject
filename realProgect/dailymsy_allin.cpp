@@ -32,7 +32,7 @@ void dailymsy_allin::on_missionAdd_clicked()//添加任务并且显示
     // auto cnt = m_ptrdailymsy_allin->CountNum();
     info.thingsname=ui->thingsname->text();
     info.id=cnt+1;
-    qDebug()<<info.id;
+    //qDebug()<<info.id;
     info.im=ui->imNum->text().toInt();
     info.em=ui->emNum->text().toUInt();
     dailyMSY::getinstance()->addOne(info);//将数据加入到数据库中，并加入在相应的List中
@@ -47,7 +47,7 @@ void dailymsy_allin::PrintP(){
     ui->workTable->clearContents();
     ui->workTable->setRowCount(cnt);
     for(int i=0;i<listeve.size();i++){
-        qDebug()<<listeve[i].id;
+        //qDebug()<<listeve[i].id;
         ui->workTable->setItem(i,0,new QTableWidgetItem(QString::number(listeve[i].id)));
         ui->workTable->setItem(i,1,new QTableWidgetItem(listeve[i].thingsname));
         ui->workTable->setItem(i,2,new QTableWidgetItem(QString::number(listeve[i].im)));
@@ -141,7 +141,7 @@ void dailymsy_allin::on_deleteMission_clicked()
     // 准备 SQL 删除语句，根据 id 列删除对应行
     QString deleteStr = QString("DELETE FROM event WHERE id = %1").arg(idValue);
 
-    qDebug()<<idValue;
+    //qDebug()<<idValue;
     // 执行删除语句
     if (!sql.exec(deleteStr)) {
         // 删除失败，打印错误信息
