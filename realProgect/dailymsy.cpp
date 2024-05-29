@@ -50,7 +50,7 @@ void dailyMSY::CreatTableFunc(){//创建sqlite数据表
 //这里设置的thingname是不能为空的，但是为什么我可以为空
     QString strsql=QString("create table event("
                              "id int not null,"
-                             "thingsname text primary key not null,"
+                             "thingsname text not null,"
                              "im int not null,"
                              "em int not null)");
 

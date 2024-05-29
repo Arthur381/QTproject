@@ -133,12 +133,13 @@ void dailymsy_allin::on_deleteMission_clicked()
     int ncount=item[0]->row();
     // ui->workTable->setStyleSheet("selection-background-color:rgb(255,209,128)");
     // ui->workTable->selectRow(ncount);
-    qDebug() << ncount;
-    QString strsql=QString("delete from event where id=%1;").arg(ncount);
-    PrintP();
-    if(sql.exec(strsql)==false){
-        QMessageBox::critical(0,"错误","删除事项失败",QMessageBox::Ok);
-    }
+    //qDebug() << ncount;
+    QString deleteStatement = QString("DELETE FROM event WHERE rowid = %1;").arg(ncount+1);
+    sql.exec(deleteStatement);
+    // QString strsql=QString("delete from event where id=%1;").arg(ncount);
+    // if(sql.exec(strsql)==false){
+    //     QMessageBox::critical(0,"错误","删除事项失败",QMessageBox::Ok);
+    // }
 }
 
 void dailymsy_allin::changetheme(){
