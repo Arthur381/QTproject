@@ -1,6 +1,8 @@
 #include "sec_clock.h"
 #include "ui_sec_clock.h"
 #include"global.h"
+#include<QStyleOptionFrame>
+#include<QPainter>
 
 static int i;//打点计数
 
@@ -17,6 +19,8 @@ sec_clock::sec_clock(QWidget *parent)
     connect(&timer_cur, SIGNAL(timeout()), this, SLOT(showcurtime()));
     timer_cur.start(1000);
     ui->curtime->setText("0000-00-00 00:00:00");
+
+    changetheme();
 }
 
 sec_clock::~sec_clock()
@@ -64,9 +68,24 @@ void sec_clock::on_setpoint_clicked()
     ui->showpoints->append(temp+time.toString("HH:mm:ss.zzz"));
 }
 
+void sec_clock::paintEvent(QPaintEvent *e)
+{
+    QStyleOptionFrame opt;
+    opt.initFrom(this);  // 初始化 QStyleOptionFrame
+    QPainter p(this);
+    style()->drawPrimitive(QStyle::PE_Widget, &opt, &p, this);
+}
+
 void sec_clock::changetheme(){
     if(ThemeStyle==0){
-
+        this->setStyleSheet(
+            "QWidget#sec_clock{"
+            "    background-image: url(:/PKU/hg.png);" // 设置背景图片
+            "    background-position: center;" // 将图片放置在中心
+            "    background-repeat: no-repeat;" // 禁止图片重复
+            "    background-size: 100% 100%;" // 使图片拉伸以适应窗口大小
+            "}"
+            );
     }
     else if(ThemeStyle==1){
 

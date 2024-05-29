@@ -402,11 +402,12 @@ void calendarMC::changetheme(){
             );
         this->setStyleSheet(
             "QWidget#calendarMC{"
-            "    background-image: url(:/PKU/hg.png);" // 设置背景图片
+            "    background-image: url(:/background/pku_mainbg.jpg);" // 设置背景图片
             "    background-position: center;" // 将图片放置在中心
             "    background-repeat: no-repeat;" // 禁止图片重复
             "    background-size: 100% 100%;" // 使图片拉伸以适应窗口大小
             "}"
+
 
             );
 

@@ -5,6 +5,7 @@
 #include<QDate>
 #include <QPainter>
 #include <QStyleOption>
+#include"global.h"
 win_cal_viewMC* win_cal_viewMC::ptrWCV = nullptr;//在类外初始化
 
 win_cal_viewMC::win_cal_viewMC(QWidget *parent)
@@ -12,6 +13,7 @@ win_cal_viewMC::win_cal_viewMC(QWidget *parent)
     , ui(new Ui::win_cal_viewMC)
 {
     ui->setupUi(this);
+    changetheme();
 }
 
 void win_cal_viewMC::FindAndPrint(QList<AEventInfo> speeve){
@@ -39,7 +41,9 @@ void win_cal_viewMC::FindAndPrint(QList<AEventInfo> speeve){
         QTableWidgetItem *item = new QTableWidgetItem(s1+s2+s3+s4+s5+s6+s7);
         //item->setTextAlignment(Qt::AlignCenter); // 设置水平和垂直居中对齐
         ui->tableWidget->setItem(i,0,item);
+
     }
+    changetheme();
 
 }
 
@@ -55,4 +59,38 @@ void win_cal_viewMC::paintEvent(QPaintEvent *e)
 win_cal_viewMC::~win_cal_viewMC()
 {
     delete ui;
+}
+
+
+void win_cal_viewMC::changetheme(){
+    if(ThemeStyle==0){
+        this->setStyleSheet(
+            "QWidget#win_cal_viewMC{"
+            "background-image: url(:/PKU/ju.png);"
+            "background-position: center;"
+            "background-repeat: no-repeat;"
+            "}"
+
+            "QTableWidget#tableWidgetCD{"
+            "background-color:rgba(255, 255, 255, 0.527);"
+            "text-decoration-color: rgba(164, 225, 156, 0.963);"
+            "}"
+            );
+
+    }
+    else if(ThemeStyle==1){
+        this->setStyleSheet(
+            "QWidget#win_cal_viewMC{"
+            "background-image: url(:/background/HP7.jpg);"
+            "background-position: center;"
+            "background-repeat: no-repeat;"
+            "}"
+            );
+
+    }
+    else if(ThemeStyle==2){
+
+
+    }
+
 }

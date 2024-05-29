@@ -77,7 +77,7 @@ void clockHZJ::paintEvent(QPaintEvent *e)
 
 void clockHZJ::changetheme(){
     if(ThemeStyle==0){
-        this->setStyleSheet(
+        this->setStyleSheet(//这里需要使用diy
             "QWidget#clockHZJ{"
             "    background-image: url(:/PKU/width.jpg);" // 设置背景图片
             "    background-position: center;" // 将图片放置在中心

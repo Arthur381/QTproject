@@ -5,6 +5,8 @@
 #include <QLabel>
 #include <QMovie>
 #include"global.h"
+#include<QStyleOptionFrame>
+#include<QPainter>
 
 static bool if_pause;
 
@@ -38,6 +40,8 @@ r_clock::r_clock(QWidget *parent)
     connect(ui->sb_min, SIGNAL(valueChanged(int)), this, SLOT(minChanged()));
     connect(ui->sb_sec, SIGNAL(valueChanged(int)), this, SLOT(secChanged()));
     display_number();
+
+    changetheme();
 }
 
 r_clock::~r_clock()
@@ -119,8 +123,54 @@ void r_clock::on_pause_clicked()
     }
 }
 
+void r_clock::paintEvent(QPaintEvent *e)
+{
+    QStyleOptionFrame opt;
+    opt.initFrom(this);  // 初始化 QStyleOptionFrame
+    QPainter p(this);
+    style()->drawPrimitive(QStyle::PE_Widget, &opt, &p, this);
+}
+
 void r_clock::changetheme(){
     if(ThemeStyle==0){
+        /*this->setStyleSheet(
+            "QWidget#r_clock{"
+            "    background-image: url(:/PKU/symbol.png);" // 设置背景图片
+            "    background-position: center;" // 将图片放置在中心
+            "    background-repeat: no-repeat;" // 禁止图片重复
+            "    background-size: 100% 100%;" // 使图片拉伸以适应窗口大小
+            "}"
+        );*/
+        ui->pushButton->setStyleSheet(
+            "QPushButton {"
+            "    background-color: rgba(231, 113, 26, 0.865);"
+            "    border: 0px solid rgba(115, 177, 166, 0.865);"//设置边框
+            "    color:rgb(5, 12, 12);"// 设置按钮文本的颜色为黑色（RGB值为5, 12, 12）
+            "    border-radius: 24;"// 设置按钮的边框半径为6像素，使其圆角化
+            "    font: 10pt '楷体';"// 设置按钮文本的字体为 10 点大小的楷体
+            "}"
+            );
+        ui->pause->setStyleSheet(
+            "QPushButton {"
+            "    background-color: rgba(171, 175, 33, 0.865);"
+            "    border: 0px solid rgba(115, 177, 166, 0.865);"//设置边框
+            "    color:rgb(5, 12, 12);"// 设置按钮文本的颜色为黑色（RGB值为5, 12, 12）
+            "    border-radius: 24;"// 设置按钮的边框半径为6像素，使其圆角化
+            "    font: 10pt '楷体';"// 设置按钮文本的字体为 10 点大小的楷体
+            "}"
+            );
+        ui->end->setStyleSheet(
+            "QPushButton {"
+            "    background-color: rgba(213, 177, 39, 0.865);"
+            "    border: 0px solid rgba(115, 177, 166, 0.865);"//设置边框
+            "    color:rgb(5, 12, 12);"// 设置按钮文本的颜色为黑色（RGB值为5, 12, 12）
+            "    border-radius: 24;"// 设置按钮的边框半径为6像素，使其圆角化
+            "    font: 10pt '楷体';"// 设置按钮文本的字体为 10 点大小的楷体
+            "}"
+            );
+
+
+
 
     }
     else if(ThemeStyle==1){
