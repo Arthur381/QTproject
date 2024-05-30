@@ -16,6 +16,7 @@ dailymsy4::dailymsy4(QWidget *parent)
     ui->iAndE->setColumnWidth(1,175);
     changetheme();
     modifyDatabase();
+    ui->iAndE->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 }
 
 dailymsy4::~dailymsy4()
