@@ -1,3 +1,3 @@
 #include"global.h"
 
-int ThemeStyle=1;
+int ThemeStyle=0;

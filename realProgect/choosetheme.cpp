@@ -68,3 +68,10 @@ void ChooseTheme::changebegin()
 
 }
 
+
+void ChooseTheme::on_PKU_clicked()
+{
+    ThemeStyle=0;
+    emit themeChanged();
+}
+

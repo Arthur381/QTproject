@@ -83,9 +83,14 @@ void win_cal_viewMC::changetheme(){
     else if(ThemeStyle==1){
         this->setStyleSheet(
             "QWidget#win_cal_viewMC{"
-            "background-image: url(:/background/HP7.jpg);"
+            "background-image: url(:/happydog/mmcc.jpg);"
             "background-position: center;"
             "background-repeat: no-repeat;"
+            "}"
+
+            "QTableWidget#tableWidgetCD{"
+            "background-color:rgba(255, 255, 255, 0.527);"
+            "text-decoration-color: rgba(164, 225, 156, 0.963);"
             "}"
             );
 
