@@ -76,7 +76,20 @@
         <file>image/ala.png</file>
         <file>image/rtt.png</file>
         <file>image/stt.png</file>
+        <file>happydog/21.jpg</file>
+        <file>happydog/22.png</file>
+        <file>happydog/23.png</file>
+        <file>happydog/24.png</file>
+        <file>happydog/25.png</file>
+        <file>happydog/1b.jpg</file>
+        <file>happydog/1b.png</file>
+        <file>happydog/13.png</file>
+        <file>happydog/c1.jpg</file>
+        <file>happydog/time.jpg</file>
+        <file>happydog/call.png</file>
     </qresource>
     <qresource prefix="/background"/>
     <qresource prefix="/\PKU"/>
+    <qresource prefix="/\happydog"/>
+    <qresource prefix="/happydog"/>
 </RCC>

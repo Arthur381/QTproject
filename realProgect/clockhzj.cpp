@@ -121,8 +121,8 @@ void clockHZJ::changetheme(){
     }
     else if(ThemeStyle==1){
         this->setStyleSheet(
-            "QWidget{"
-            "    background-image: url(:/background/pku_mainbg.jpg);" // 设置背景图片
+            "QWidget#clockHZJ{"
+            "    background-image: url(:/happydog/c1.jpg);" // 设置背景图片
             "    background-position: center;" // 将图片放置在中心
             "    background-repeat: no-repeat;" // 禁止图片重复
             "    background-size: 100% 100%;" // 使图片拉伸以适应窗口大小
