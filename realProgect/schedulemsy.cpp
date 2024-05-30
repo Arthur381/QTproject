@@ -27,8 +27,10 @@ scheduleMSY::scheduleMSY(QWidget *parent)
     ui->courseTable->setRowHeight(4,80);
     ui->courseTable->setRowHeight(5,80);
     ui->courseTable->setAlternatingRowColors(true);
-
+    ui->courseTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     Print();
+    colored();
+
 }
 
 scheduleMSY::~scheduleMSY()
@@ -53,3 +55,50 @@ void scheduleMSY::Print(){
  *
  *
  */
+void scheduleMSY::colored(){
+    // 遍历表格并设置背景颜色
+
+
+    QMap<int, QColor> courseColors = {
+        {0, QColor(255, 182, 193)}, // Light Pink
+        {1, QColor(173, 216, 230)}, // Light Blue
+        {2, QColor(144, 238, 144)}, // Light Green
+        {3, QColor(255, 255, 102)}, // Light Yellow
+        {4, QColor(255, 192, 203)}, // Pink
+        {5, QColor(135, 206, 250)}, // Light Sky Blue
+        {6, QColor(255, 222, 173)}, // Navajo White
+        {7, QColor(152, 251, 152)}, // Pale Green
+        {8, QColor(255, 192, 203)}, // Pink
+        {9, QColor(135, 206, 250)}, // Light Sky Blue
+        {10, QColor(255, 222, 173)}, // Navajo White
+        {11, QColor(152, 251, 152)}, // Pale Green
+        {12, QColor(255, 192, 203)}, // Pink
+        {13, QColor(135, 206, 250)}, // Light Sky Blue
+        {14, QColor(255, 222, 173)}, // Navajo White
+        {15, QColor(152, 251, 152)}, // Pale Green
+        // 更多课程及颜色
+    };
+    QMap<QString,int> searchcourses={};
+
+    int current_course_number=0;
+    for (int row = 0; row < ui->courseTable->rowCount(); ++row) {
+        for (int col = 0; col < ui->courseTable->columnCount(); ++col) {
+            QTableWidgetItem *item = ui->courseTable->item(row, col);
+
+            if(item){
+                item->setTextAlignment(Qt::AlignCenter);
+                if (searchcourses.contains(item->text())) {//这是一个第一次出现的课
+                    item->setBackground(courseColors[searchcourses[item->text()]]);
+                }
+                else {//这个课已经出现过
+                    searchcourses[item->text()]=current_course_number;
+                    current_course_number++;
+                    item->setBackground(courseColors[searchcourses[item->text()]]);
+
+
+                }
+            }
+        }
+    }
+    qDebug()<<current_course_number;
+}

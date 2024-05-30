@@ -29,6 +29,9 @@ public:
 
 private:
     Ui::scheduleMSY *ui;
+
+
+    void colored();//给日历中的具体
 };
 
 #endif // SCHEDULEMSY_H
