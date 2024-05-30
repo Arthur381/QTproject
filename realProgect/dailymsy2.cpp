@@ -74,13 +74,14 @@ void dailymsy2::paintEvent(QPaintEvent *e)
 
 
 void dailymsy2::changetheme(){
+    ui->showImNem->setStyleSheet(
+        "QTableWidget{background-color:rgba(250, 250,250, 0.327);"
+        "text-decoration-color: rgba(90, 66, 59, 0.163);"
+        "text-lightcolor;"
+        "}"
+        );
     if(ThemeStyle==0){
-        ui->showImNem->setStyleSheet(
-            "QTableWidget{background-color:rgba(250, 250,250, 0.327);"
-            "text-decoration-color: rgba(90, 66, 59, 0.163);"
-            "text-lightcolor;"
-            "}"
-            );
+
         this->setStyleSheet(
             "QDialog{"
             "    background-image: url(:/PKU/1.jpg);" // 设置背景图片
@@ -92,7 +93,14 @@ void dailymsy2::changetheme(){
 
     }
     else if(ThemeStyle==1){
-
+        this->setStyleSheet(
+            "QDialog{"
+            "    background-image: url(:happydog/111.jpg);" // 设置背景图片
+            "    background-position: center;" // 将图片放置在中心
+            "    background-repeat: no-repeat;" // 禁止图片重复
+            "    background-size: 100% 100%;" // 使图片拉伸以适应窗口大小
+            "}"
+            );
 
 
     }
