@@ -84,11 +84,9 @@ coursemsy::~coursemsy()
 
 void coursemsy::CreatDataFunc(){//创建SQLite数据库
     //1.添加数据库驱动
-    sqldb=QSqlDatabase::addDatabase("QSQLITE");
-
+    sqldb=QSqlDatabase::addDatabase("QSQLITE","msyconnection");
     //2.设置数据库名称
     sqldb.setDatabaseName("CourseShow.db");
-
     //3.打开数据库是否成功
     if(sqldb.open()==true){
         //QMessageBox::information(0,"正确","恭喜你，数据库打开成功",QMessageBox::Ok);
