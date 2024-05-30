@@ -218,6 +218,16 @@ void dailymsy_allin::changetheme(){
     }
 
     else if(ThemeStyle==1){
+        QPixmap pixmain3(":happydog/allin.jpg");
+        pixmain3 = pixmain3.scaled(ui->pic->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
+        ui->pic->setPixmap(pixmain3); // 显示 QLabel
+        ui->pic->show();
+        this->setStyleSheet(
+            "QDialog#dailymsy_allin{"
+            "    background-color: rgba(129, 0, 1, 0.965);"
+            "}"
+
+            );
 
 
 
