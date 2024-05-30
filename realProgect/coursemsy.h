@@ -66,6 +66,7 @@ private:
     void CreatDataFunc();//创建SQLite数据库
     void CreatTableFunc();//创建sqlite数据表
 
+
 };
 
 #endif // COURSEMSY_H

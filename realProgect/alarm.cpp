@@ -250,7 +250,19 @@ void alarm::changetheme(){
             );
     }
     else if(ThemeStyle==1){
+        QPixmap pixmain3(":happydog/time.jpg");
+        pixmain3 = pixmain3.scaled(ui->l1->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
+        ui->l1->setPixmap(pixmain3); // 显示 QLabel
+        ui->l1->show();
 
+        this->setStyleSheet(
+            "QWidget#alarm{"
+            "    background-image: url(:happydog/time.jpg);" // 设置背景图片
+            "    background-position: center;" // 将图片放置在中心
+            "    background-repeat: no-repeat;" // 禁止图片重复
+            "    background-size: 100% 100%;" // 使图片拉伸以适应窗口大小
+            "}"
+            );
 
     }
     else if(ThemeStyle==2){

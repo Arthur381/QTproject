@@ -413,13 +413,59 @@ void calendarMC::changetheme(){
 
     }
     else if(ThemeStyle==1){
+        QPixmap pixmain3(":happydog/call.png");
+        pixmain3 = pixmain3.scaled(ui->label_rd->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
+        ui->label_rd->setPixmap(pixmain3); // 显示 QLabel
+        ui->label_rd->show();
+        ui->countdowndays->setStyleSheet(
+            "QPushButton {"
+            "    background-color: rgba(239, 135, 135, 0.717);"
+            "    border: 0px solid rgba(115, 177, 166, 0.865);"//设置边框
+            "    color:rgb(5, 12, 12);"// 设置按钮文本的颜色为黑色（RGB值为5, 12, 12）
+            "    border-radius: 24;"// 设置按钮的边框半径为6像素，使其圆角化
+            "    font: 10pt '幼圆';"// 设置按钮文本的字体为 10 点大小的楷体
+            "}"
+            "QPushButton:hover {"
+            "    background-color: rgba(244, 54, 54, 0.84);"
+            "    font: 18pt '幼圆';"// 设置按钮文本的字体为 10 点大小的楷体
+            "    transition: all 0.1s ease;"
+            "}"
+            );
+
+        ui->Modify->setStyleSheet(
+            "QPushButton {"
+            "    background-color: rgba(239, 135, 135, 0.717);"
+            "    border: 0px solid rgba(115, 177, 166, 0.865);"//设置边框
+            "    color:rgb(5, 12, 12);"// 设置按钮文本的颜色为黑色（RGB值为5, 12, 12）
+            "    border-radius: 24;"// 设置按钮的边框半径为6像素，使其圆角化
+            "    font: 10pt '幼圆';"// 设置按钮文本的字体为 10 点大小的楷体
+            "}"
+            "QPushButton:hover {"
+            "    background-color: rgba(244, 54, 54, 0.84);"
+            "    font: 18pt '幼圆';"// 设置按钮文本的字体为 10 点大小的楷体
+            "    transition: all 0.1s ease;"
+            "}"
+            );
+
+
+        ui->calendarWidget->setStyleSheet(
+            "QCalendarWidget {"
+            "    background-color: rgba(255, 255, 255, 0.01);"
+            "    border: 1px solid gray;"
+            "}"
+
+
+
+            );
         this->setStyleSheet(
-            "QWidget{"
-            "    background-image: url(:/background/pku_mainbg.jpg);" // 设置背景图片
+            "QWidget#calendarMC{"
+            "    background-image: url(:/happydog/1b.jpg);" // 设置背景图片
             "    background-position: center;" // 将图片放置在中心
             "    background-repeat: no-repeat;" // 禁止图片重复
             "    background-size: 100% 100%;" // 使图片拉伸以适应窗口大小
             "}"
+
+
             );
     }
     else if(ThemeStyle==2){
