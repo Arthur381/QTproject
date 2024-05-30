@@ -31,6 +31,7 @@ public:
     QDate curdate;
     void FindAndPrint(QList<AEventInfo> aeve);
 
+    void changetheme();
 private:
     Ui::win_cal_viewMC *ui;
 

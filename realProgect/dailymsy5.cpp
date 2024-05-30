@@ -14,7 +14,7 @@ dailymsy5::dailymsy5(QWidget *parent)
     ui->eNoti->horizontalHeader()->setSectionResizeMode(QHeaderView::Fixed);
     ui->eNoti->setColumnWidth(0,100);
     ui->eNoti->setColumnWidth(1,175);
-
+    changetheme();
     modifyDatabase();
 }
 
@@ -58,7 +58,20 @@ void dailymsy5::modifyDatabase(){
 
 void dailymsy5::changetheme(){
     if(ThemeStyle==0){
-
+        ui->eNoti->setStyleSheet(
+            "QTableWidget{background-color:rgba(250, 250,250, 0.327);"
+            "text-decoration-color: rgba(90, 66, 59, 0.163);"
+            "text-lightcolor;"
+            "}"
+            );
+        this->setStyleSheet(
+            "QDialog{"
+            "    background-image: url(:/PKU/4.jpg);" // 设置背景图片
+            "    background-position: center;" // 将图片放置在中心
+            "    background-repeat: no-repeat;" // 禁止图片重复
+            "    background-size: 100% 100%;" // 使图片拉伸以适应窗口大小
+            "}"
+            );
 
     }
     else if(ThemeStyle==1){

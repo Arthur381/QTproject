@@ -17,6 +17,7 @@ public:
     ~r_clock();
 
 
+    void paintEvent(QPaintEvent *e);
 private:
     Ui::r_clock *ui;
     QTimer* p_timer;

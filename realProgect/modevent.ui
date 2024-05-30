@@ -182,7 +182,7 @@
       <string>自信满满</string>
      </property>
      <property name="icon">
-      <iconset>
+      <iconset resource="images.qrc">
        <normaloff>:/image/confid.jpg</normaloff>:/image/confid.jpg</iconset>
      </property>
     </item>
@@ -191,7 +191,7 @@
       <string>开心</string>
      </property>
      <property name="icon">
-      <iconset>
+      <iconset resource="images.qrc">
        <normaloff>:/image/happy.jpg</normaloff>:/image/happy.jpg</iconset>
      </property>
     </item>
@@ -200,7 +200,7 @@
       <string>焦虑</string>
      </property>
      <property name="icon">
-      <iconset>
+      <iconset resource="images.qrc">
        <normaloff>:/image/worry.jpg</normaloff>:/image/worry.jpg</iconset>
      </property>
     </item>
@@ -209,7 +209,7 @@
       <string>激动</string>
      </property>
      <property name="icon">
-      <iconset>
+      <iconset resource="images.qrc">
        <normaloff>:/image/excit.jpg</normaloff>:/image/excit.jpg</iconset>
      </property>
     </item>
@@ -218,7 +218,7 @@
       <string>紧张</string>
      </property>
      <property name="icon">
-      <iconset>
+      <iconset resource="images.qrc">
        <normaloff>:/image/ner.jpg</normaloff>:/image/ner.jpg</iconset>
      </property>
     </item>
@@ -227,7 +227,7 @@
       <string>伤心</string>
      </property>
      <property name="icon">
-      <iconset>
+      <iconset resource="images.qrc">
        <normaloff>:/image/sad.jpg</normaloff>:/image/sad.jpg</iconset>
      </property>
     </item>
@@ -236,7 +236,7 @@
       <string>无法形容</string>
      </property>
      <property name="icon">
-      <iconset>
+      <iconset resource="images.qrc">
        <normaloff>:/image/dog.jpg</normaloff>:/image/dog.jpg</iconset>
      </property>
     </item>
@@ -245,7 +245,7 @@
       <string>波澜不惊</string>
      </property>
      <property name="icon">
-      <iconset>
+      <iconset resource="images.qrc">
        <normaloff>:/image/plain.jpg</normaloff>:/image/plain.jpg</iconset>
      </property>
     </item>
@@ -390,7 +390,7 @@
     <string/>
    </property>
    <property name="icon">
-    <iconset>
+    <iconset resource="images.qrc">
      <normaloff>:/image/bin.jpg</normaloff>:/image/bin.jpg</iconset>
    </property>
    <property name="iconSize">
@@ -454,6 +454,8 @@
    </property>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
  <connections/>
 </ui>

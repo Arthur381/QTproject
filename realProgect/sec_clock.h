@@ -23,6 +23,7 @@ public:
     QTime time;
     QDateTime curDTime;
 
+    void paintEvent(QPaintEvent *e);
 public slots:
     void changetheme();
 

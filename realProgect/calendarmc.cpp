@@ -29,6 +29,7 @@ calendarMC::calendarMC(QWidget *parent)
     //ui->calendarWidget->setFont(QFont("Timers",8,QFont::Bold));
 
 
+
     CreatDataFunc();
     CreatTableFunc();
     this->changetheme();
@@ -353,6 +354,42 @@ void calendarMC::changetheme(){
         QPixmap pixmain3(":PKU/pkurili.png");
         pixmain3 = pixmain3.scaled(ui->label_rd->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
         ui->label_rd->setPixmap(pixmain3); // 显示 QLabel
+        // QFont font3("YouYuan",15);
+        // ui->Modify->setStyleSheet("background-color: rgba(239, 135, 135, 0.717);");
+        // ui->Modify->setFont(font3);
+        // ui->countdowndays->setFont(font3);
+        // ui->countdowndays->setStyleSheet("background-color: rgba(239, 135, 135, 0.717);");
+
+        ui->countdowndays->setStyleSheet(
+            "QPushButton {"
+            "    background-color: rgba(239, 135, 135, 0.717);"
+            "    border: 0px solid rgba(115, 177, 166, 0.865);"//设置边框
+            "    color:rgb(5, 12, 12);"// 设置按钮文本的颜色为黑色（RGB值为5, 12, 12）
+            "    border-radius: 24;"// 设置按钮的边框半径为6像素，使其圆角化
+            "    font: 10pt '幼圆';"// 设置按钮文本的字体为 10 点大小的楷体
+            "}"
+            "QPushButton:hover {"
+            "    background-color: rgba(244, 54, 54, 0.84);"
+            "    font: 18pt '幼圆';"// 设置按钮文本的字体为 10 点大小的楷体
+            "    transition: all 0.1s ease;"
+            "}"
+            );
+
+        ui->Modify->setStyleSheet(
+            "QPushButton {"
+            "    background-color: rgba(239, 135, 135, 0.717);"
+            "    border: 0px solid rgba(115, 177, 166, 0.865);"//设置边框
+            "    color:rgb(5, 12, 12);"// 设置按钮文本的颜色为黑色（RGB值为5, 12, 12）
+            "    border-radius: 24;"// 设置按钮的边框半径为6像素，使其圆角化
+            "    font: 10pt '幼圆';"// 设置按钮文本的字体为 10 点大小的楷体
+            "}"
+            "QPushButton:hover {"
+            "    background-color: rgba(244, 54, 54, 0.84);"
+            "    font: 18pt '幼圆';"// 设置按钮文本的字体为 10 点大小的楷体
+            "    transition: all 0.1s ease;"
+            "}"
+            );
+
         ui->label_rd->show();
         ui->calendarWidget->setStyleSheet(
             "QCalendarWidget {"
@@ -363,29 +400,14 @@ void calendarMC::changetheme(){
 
 
             );
-
-        /*QPixmap pixmap(":/PKU/hg.png");
-
-        // 创建一个透明背景的pixmap
-        QPixmap transparentPixmap(pixmap.size());
-        transparentPixmap.fill(Qt::transparent);
-
-        QPainter painter(&transparentPixmap);
-        painter.setOpacity(0.9); // 设置透明度
-        painter.drawPixmap(0, 0, pixmap);
-        painter.end();
-
-        QPalette palette;
-        palette.setBrush(QPalette::Window, QBrush(transparentPixmap));
-        this->setAutoFillBackground(true);
-        this->setPalette(palette);*/
         this->setStyleSheet(
             "QWidget#calendarMC{"
-            "    background-image: url(:/PKU/hg.png);" // 设置背景图片
+            "    background-image: url(:/background/pku_mainbg.jpg);" // 设置背景图片
             "    background-position: center;" // 将图片放置在中心
             "    background-repeat: no-repeat;" // 禁止图片重复
             "    background-size: 100% 100%;" // 使图片拉伸以适应窗口大小
             "}"
+
 
             );
 

@@ -26,11 +26,7 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QWidget#win_cal_viewMC{
-    background-image: url(:/background/HP7.jpg);
-    background-position: center; /* 图片居中 */
-    background-repeat: no-repeat; /* 图片不重复 */
-}</string>
+   <string notr="true"/>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">

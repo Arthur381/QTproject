@@ -20,6 +20,7 @@ ModEvent::ModEvent(QWidget *parent)
     //ui->tableWidget->clear();
     calendarMC* m_ptrcalendar=calendarMC::getinstance();
     PrintP();//将数据显示在TableWidget上；
+    changetheme();
 
 }
 
@@ -95,7 +96,19 @@ void ModEvent::paintEvent(QPaintEvent *e)
 
 void ModEvent::changetheme(){
     if(ThemeStyle==0){
+        this->setStyleSheet(
+            "QWidget#ModEvent{"
+            "    background-image: url(:/PKU/hjh.jpg);"
+            "    background-position: center; "
+            "    background-repeat: no-repeat;"
+            "}"
 
+            "QTableWidget#tableWidgetInmod{"
+            "background-color:rgba(255, 255, 255, 0.427);"
+            "text-decoration-color: rgba(164, 225, 156, 0.963);"
+            "}"
+
+            );
 
     }
     else if(ThemeStyle==1){

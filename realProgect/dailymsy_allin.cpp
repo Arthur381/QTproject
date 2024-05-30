@@ -16,6 +16,19 @@ dailymsy_allin::dailymsy_allin(QWidget *parent)
     ui->workTable->setSelectionMode(QAbstractItemView::SingleSelection);
     ui->workTable->setEditTriggers(QAbstractItemView::NoEditTriggers);//禁止对表格内容进行修改
     PrintP();
+    changetheme();
+
+    ui->workTable->setColumnWidth(0,70);
+    ui->workTable->setColumnWidth(1,160);
+    ui->workTable->setColumnWidth(2,115);
+    ui->workTable->setColumnWidth(3,115);
+
+    QFont font1("YouYuan",10);
+    ui->label->setFont(font1);
+    ui->label_2->setFont(font1);
+    ui->label_3->setFont(font1);
+    ui->showMission->setFont(font1);
+
 }
 
 dailymsy_allin::~dailymsy_allin()
@@ -25,11 +38,14 @@ dailymsy_allin::~dailymsy_allin()
 
 void dailymsy_allin::on_missionAdd_clicked()//添加任务并且显示
 {
+    dailyMSY* m_ptrdailymsy_allin=dailyMSY::getinstance();
+    auto cnt = m_ptrdailymsy_allin->CountNum();
     BEventInfo info;
     // dailyMSY* m_ptrdailymsy_allin=dailyMSY::getinstance();
     // auto cnt = m_ptrdailymsy_allin->CountNum();
     info.thingsname=ui->thingsname->text();
-    info.id=1;
+    info.id=cnt+1;
+    //qDebug()<<info.id;
     info.im=ui->imNum->text().toInt();
     info.em=ui->emNum->text().toUInt();
     dailyMSY::getinstance()->addOne(info);//将数据加入到数据库中，并加入在相应的List中
@@ -44,7 +60,8 @@ void dailymsy_allin::PrintP(){
     ui->workTable->clearContents();
     ui->workTable->setRowCount(cnt);
     for(int i=0;i<listeve.size();i++){
-        ui->workTable->setItem(i,0,new QTableWidgetItem(QString::number(i)));
+        //qDebug()<<listeve[i].id;
+        ui->workTable->setItem(i,0,new QTableWidgetItem(QString::number(listeve[i].id)));
         ui->workTable->setItem(i,1,new QTableWidgetItem(listeve[i].thingsname));
         ui->workTable->setItem(i,2,new QTableWidgetItem(QString::number(listeve[i].im)));
         ui->workTable->setItem(i,3,new QTableWidgetItem(QString::number(listeve[i].em)));
@@ -130,22 +147,70 @@ void dailymsy_allin::on_deleteMission_clicked()
     QSqlQuery sql(db);
     //这里有问题，我先将其划线，再从中删去可以实现么
     QList<QTableWidgetItem*> item=ui->workTable->selectedItems();
-    int ncount=item[0]->row();
+    int idValue=item[0]->text().toInt();
+    // 获取要删除的行的唯一标识，假设在第一列
+    // 这里假设标识是整数类型的，根据实际情况修改
+
+    // 准备 SQL 删除语句，根据 id 列删除对应行
+    QString deleteStr = QString("DELETE FROM event WHERE id = %1").arg(idValue);
+
+    //qDebug()<<idValue;
+    // 执行删除语句
+    if (!sql.exec(deleteStr)) {
+        // 删除失败，打印错误信息
+        qDebug() << "Delete query failed:" << sql.lastError().text();
+    }
+    else {
+        // 删除成功，你可以更新 QTableWidget 中的显示以反映删除
+        // 例如，删除 QTableWidget 中的当前行
+        int row = item[0]->row();
+        ui->workTable->removeRow(row);
+    }
     // ui->workTable->setStyleSheet("selection-background-color:rgb(255,209,128)");
     // ui->workTable->selectRow(ncount);
-    qDebug() << ncount;
-    QString strsql=QString("delete from event where id=%1;").arg(ncount);
-    PrintP();
-    if(sql.exec(strsql)==false){
-        QMessageBox::critical(0,"错误","删除事项失败",QMessageBox::Ok);
-    }
+    // 准备 SQL 查询语句，根据行号查询对应行的 id 列的值
+    // QString queryStr = QString("SELECT id FROM event WHERE rowid = %1").arg(ncount);
+    // // 执行查询语句
+    // if (sql.exec(queryStr)) {
+    //     // 如果查询成功，获取结果
+    //     if (sql.next()) {
+    //         // 从查询结果中获取 id 列的值
+    //         int idValue = sql.value(0).toInt();
+    //         // 这里的 idValue 就是你要获取的 id 列的值
+    //         QString deleteStatement = QString("DELETE FROM event WHERE id = %1;").arg(idValue);
+    //         sql.exec(deleteStatement);
+    //     } else {
+    //         // 没有找到对应行的数据
+    //         qDebug() << "No data found for row number";
+    //     }
+    // } else {
+    //     // 查询失败，打印错误信息
+    //     qDebug() << "Query failed:" << sql.lastError().text();
+    // }
+    // //qDebug() << ncount;
+    // //QString deleteStatement = QString("DELETE FROM event WHERE rowid = %1;").arg(ncount+1);
+    // //sql.exec(deleteStatement);
+    // // QString strsql=QString("delete from event where id=%1;").arg(ncount);
+    // // if(sql.exec(strsql)==false){
+    // //     QMessageBox::critical(0,"错误","删除事项失败",QMessageBox::Ok);
+    // // }
 }
 
 void dailymsy_allin::changetheme(){
     if(ThemeStyle==0){
+        QPixmap pixmain3(":PKU/ki.jpg");
+        pixmain3 = pixmain3.scaled(ui->pic->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
+        ui->pic->setPixmap(pixmain3); // 显示 QLabel
+        ui->pic->show();
+        this->setStyleSheet(
+            "QDialog#dailymsy_allin{"
+            "    background-color: rgba(129, 0, 1, 0.965);"
+            "}"
 
+            );
 
     }
+
     else if(ThemeStyle==1){
 
 

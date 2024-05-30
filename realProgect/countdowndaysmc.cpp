@@ -24,9 +24,11 @@ CountDownDaysMC::CountDownDaysMC(QWidget *parent)
     ui->tableWidgetCD->horizontalHeader()->setSectionResizeMode(0, QHeaderView::Stretch);
     calendarMC* m_ptrcalendar=calendarMC::getinstance();
     CountDownDaysMC::PrintForView();
-    if(ThemeStyle==1){
-        this->setStyleSheet("background-image: url(:/background/HP5.jpg);");
-    }
+    changetheme();
+
+    QFont font1("YouYuan",15);
+    ui->daoshu->setFont(font1);
+
 }
 
 void CountDownDaysMC::PrintForView(){
@@ -64,7 +66,18 @@ void CountDownDaysMC::paintEvent(QPaintEvent *e)
 
 void CountDownDaysMC::changetheme(){
     if(ThemeStyle==0){
+        this->setStyleSheet(
+            "QWidget#CountDownDaysMC{"
+            "    background-image: url(:/PKU/hj.png);"
+            "    background-position: center; "
+            "    background-repeat: no-repeat;"
+            "}"
 
+            "QTableWidget#tableWidgetCD{"
+            "background-color:rgba(255, 255, 255, 0.527);"
+            "text-decoration-color: rgba(164, 225, 156, 0.963);"
+            "}"
+            );
 
     }
     else if(ThemeStyle==1){

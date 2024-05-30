@@ -103,11 +103,11 @@ void MainWindow::changetheme(){
             "    border: 0px solid rgba(115, 177, 166, 0.865);"//设置边框
             "    color:rgb(5, 12, 12);"// 设置按钮文本的颜色为黑色（RGB值为5, 12, 12）
             "    border-radius: 24;"// 设置按钮的边框半径为6像素，使其圆角化
-            "    font: 10pt '楷体';"// 设置按钮文本的字体为 10 点大小的楷体
+            "    font: 14pt '华文新魏';"// 设置按钮文本的字体为 10 点大小的楷体
             "}"
             "QPushButton:hover {"
             "    background-color: rgba(251, 205, 205, 0.84);"
-            "    font: 18pt '楷体';"// 设置按钮文本的字体为 10 点大小的楷体
+            "    font: 18pt '华文新魏';"// 设置按钮文本的字体为 10 点大小的楷体
             "    transition: all 0.1s ease;"
             "}"
             );
@@ -117,11 +117,11 @@ void MainWindow::changetheme(){
             "    border: 0px solid rgba(115, 177, 166, 0.865);"//设置边框
             "    color:rgb(5, 12, 12);"// 设置按钮文本的颜色为黑色（RGB值为5, 12, 12）
             "    border-radius: 24;"// 设置按钮的边框半径为6像素，使其圆角化
-            "    font: 10pt '楷体';"// 设置按钮文本的字体为 10 点大小的楷体
+            "    font: 14pt '华文新魏';"// 设置按钮文本的字体为 10 点大小的楷体
             "}"
             "QPushButton:hover {"
             "    background-color: rgba(251, 205, 205, 0.84);"
-            "    font: 18pt '楷体';"// 设置按钮文本的字体为 10 点大小的楷体
+            "    font: 18pt '华文新魏';"// 设置按钮文本的字体为 10 点大小的楷体
             "    transition: all 0.1s ease;"
             "}"
             );
@@ -131,11 +131,11 @@ void MainWindow::changetheme(){
             "    border: 0px solid rgba(115, 177, 166, 0.865);"//设置边框
             "    color:rgb(5, 12, 12);"// 设置按钮文本的颜色为黑色（RGB值为5, 12, 12）
             "    border-radius: 24;"// 设置按钮的边框半径为6像素，使其圆角化
-            "    font: 10pt '楷体';"// 设置按钮文本的字体为 10 点大小的楷体
+            "    font: 14pt '华文新魏';"// 设置按钮文本的字体为 10 点大小的楷体
             "}"
             "QPushButton:hover {"
             "    background-color: rgba(251, 205, 205, 0.84);"
-            "    font: 18pt '楷体';"// 设置按钮文本的字体为 10 点大小的楷体
+            "    font: 18pt '华文新魏';"// 设置按钮文本的字体为 10 点大小的楷体
             "    transition: all 0.1s ease;"
             "}"
             );
@@ -155,11 +155,11 @@ void MainWindow::changetheme(){
             "    border: 0px solid rgba(115, 177, 166, 0.865);"//设置边框
             "    color:rgb(5, 12, 12);"// 设置按钮文本的颜色为黑色（RGB值为5, 12, 12）
             "    border-radius: 24;"// 设置按钮的边框半径为6像素，使其圆角化
-            "    font: 10pt '楷体';"// 设置按钮文本的字体为 10 点大小的楷体
+            "    font: 14pt '华文新魏';"// 设置按钮文本的字体为 10 点大小的楷体
             "}"
             "QPushButton:hover {"
             "    background-color: rgba(244, 54, 54, 0.84);"
-            "    font: 18pt '楷体';"// 设置按钮文本的字体为 10 点大小的楷体
+            "    font: 18pt '华文新魏';"// 设置按钮文本的字体为 10 点大小的楷体
             "    transition: all 0.1s ease;"
             "}"
             );
@@ -169,11 +169,11 @@ void MainWindow::changetheme(){
             "    border: 0px solid rgba(115, 177, 166, 0.865);"//设置边框
             "    color:rgb(5, 12, 12);"// 设置按钮文本的颜色为黑色（RGB值为5, 12, 12）
             "    border-radius: 24;"// 设置按钮的边框半径为6像素，使其圆角化
-            "    font: 10pt '楷体';"// 设置按钮文本的字体为 10 点大小的楷体
+            "    font: 14pt '华文新魏';"// 设置按钮文本的字体为 10 点大小的楷体
             "}"
             "QPushButton:hover {"
             "    background-color: rgba(244, 54, 54, 0.84);"
-            "    font: 18pt '楷体';"// 设置按钮文本的字体为 10 点大小的楷体
+            "    font: 18pt '华文新魏';"// 设置按钮文本的字体为 10 点大小的楷体
             "    transition: all 0.1s ease;"
             "}"
             );
@@ -183,11 +183,11 @@ void MainWindow::changetheme(){
             "    border: 0px solid rgba(115, 177, 166, 0.865);"//设置边框
             "    color:rgb(5, 12, 12);"// 设置按钮文本的颜色为黑色（RGB值为5, 12, 12）
             "    border-radius: 24;"// 设置按钮的边框半径为6像素，使其圆角化
-            "    font: 10pt '楷体';"// 设置按钮文本的字体为 10 点大小的楷体
+            "    font: 14pt '华文新魏';"// 设置按钮文本的字体为 10 点大小的楷体
             "}"
             "QPushButton:hover {"
             "    background-color: rgba(244, 54, 54, 0.84);"
-            "    font: 18pt '楷体';"// 设置按钮文本的字体为 10 点大小的楷体
+            "    font: 18pt '华文新魏';"// 设置按钮文本的字体为 10 点大小的楷体
             "    transition: all 0.1s ease;"
             "}"
             );
