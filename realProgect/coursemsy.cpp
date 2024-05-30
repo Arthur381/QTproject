@@ -301,17 +301,17 @@ void coursemsy::changetheme(){
          *
          */
         ui->label_18->setStyleSheet(
-            "background-color: rgba(255,255,255, 0.865);"
+            "background-color: rgba(255,255,255, 0);"
             "font: 14pt '幼圆';"// 设置按钮文本的字体为 10 点大小
             "qproperty-alignment: 'AlignCenter';"  // 样式表中设置文本居中对齐
             );
         ui->label_19->setStyleSheet(
-            "background-color: rgba(255,255,255, 0.865);"
+            "background-color: rgba(255,255,255, 0);"
             "font: 14pt '幼圆';"// 设置按钮文本的字体为 10 点大小
             "qproperty-alignment: 'AlignCenter';"  // 样式表中设置文本居中对齐
             );
         ui->label_20->setStyleSheet(
-            "background-color: rgba(255,255,255, 0.865);"
+            "background-color: rgba(255,255,255, 0);"
             "font: 14pt '幼圆';"// 设置按钮文本的字体为 10 点大小
             "qproperty-alignment: 'AlignCenter';"  // 样式表中设置文本居中对齐
             );
