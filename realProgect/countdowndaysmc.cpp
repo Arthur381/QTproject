@@ -17,6 +17,8 @@ CountDownDaysMC::CountDownDaysMC(QWidget *parent)
     , ui(new Ui::CountDownDaysMC)
 {
     ui->setupUi(this);
+    setWindowTitle(QStringLiteral("倒数日"));
+    setWindowIcon(QIcon(":/icon/cal.jpg"));
     //ui->tableWidget->setColumnWidth(0, 50); // 设置第一列固定宽度
     ui->tableWidgetCD->setColumnWidth(1, 100);
     ui->tableWidgetCD->setColumnWidth(2, 100); // 第二列根据内容调整

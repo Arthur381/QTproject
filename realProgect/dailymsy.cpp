@@ -17,7 +17,6 @@ dailyMSY::dailyMSY(QWidget *parent)
     , ui(new Ui::dailyMSY)
 {
     ui->setupUi(this);//建立窗口和界面的关系
-
     CreatDataFunc();
     CreatTableFunc();
     changetheme();
