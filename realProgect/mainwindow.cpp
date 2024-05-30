@@ -24,7 +24,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     ui->calBT->setText("日历");
     this->changetheme();
-    connect(this,&MainWindow::themeChanged,this->cal,&calendarMC::changetheme);
+
 }
 
 
@@ -36,8 +36,9 @@ MainWindow::~MainWindow()
 }
 void MainWindow::on_calBT_clicked()
 {
-    this->cal->show();
-    cal->ColorDays();
+    connect(this,&MainWindow::themeChanged,calendarMC::getinstance(),&calendarMC::changetheme);
+    calendarMC::getinstance()->show();
+    calendarMC::getinstance()->ColorDays();
 }
 void MainWindow::on_clockBT_clicked()//闹钟系列
 {

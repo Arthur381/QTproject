@@ -31,25 +31,48 @@ ChooseTheme::ChooseTheme(QWidget *parent)
 
     setWindowTitle(QStringLiteral("选择一个你喜欢的主题吧~"));
     setWindowIcon(QIcon(":/icon/changetheme.png"));
-    //connect(ui->pushButton, &HoverButton::changeSize, this, &ChooseTheme::animateSize);
     ui->themeHP->setStyleSheet(
         "QPushButton {"
-        "    background-color: lightgray;"
-        "    border: none;"
-        "    min-width:100px;"//设置最小宽度
-        "    border: 2px solid rgba(115, 177, 166, 0.865);"//设置边框
+        "    background-color: rgba(166, 215, 255, 0.865);"
+        "    border: 0px solid rgba(115, 177, 166, 0.865);"//设置边框
         "    color:rgb(5, 12, 12);"// 设置按钮文本的颜色为黑色（RGB值为5, 12, 12）
-        "    border-radius: 6;"// 设置按钮的边框半径为6像素，使其圆角化
-        "    font: 10pt '楷体';"// 设置按钮文本的字体为 10 点大小的楷体
+        "    border-radius: 24;"// 设置按钮的边框半径为6像素，使其圆角化
+        "    font: 14pt '华文新魏';"// 设置按钮文本的字体为 10 点大小的楷体
         "}"
         "QPushButton:hover {"
-        "    background-color: lightyellow;"
-        "    min-width:200px;"
-        "    font: 18pt '楷体';"// 设置按钮文本的字体为 10 点大小的楷体
+        "    background-color: rgba(255, 250, 198, 0.865);"
+        "    font: 18pt '华文新魏';"// 设置按钮文本的字体为 10 点大小的楷体
         "    transition: all 0.1s ease;"
         "}"
-
-    );
+        );
+    ui->PKU->setStyleSheet(
+        "QPushButton {"
+        "    background-color: rgba(166, 215, 255, 0.865);"
+        "    border: 0px solid rgba(115, 177, 166, 0.865);"//设置边框
+        "    color:rgb(5, 12, 12);"// 设置按钮文本的颜色为黑色（RGB值为5, 12, 12）
+        "    border-radius: 24;"// 设置按钮的边框半径为6像素，使其圆角化
+        "    font: 14pt '华文新魏';"// 设置按钮文本的字体为 10 点大小的楷体
+        "}"
+        "QPushButton:hover {"
+        "    background-color:rgba(255, 250, 198, 0.865);"
+        "    font: 18pt '华文新魏';"// 设置按钮文本的字体为 10 点大小的楷体
+        "    transition: all 0.1s ease;"
+        "}"
+        );
+    ui->HappyDog->setStyleSheet(
+        "QPushButton {"
+        "    background-color: rgba(166, 215, 255, 0.865);"
+        "    border: 0px solid rgba(115, 177, 166, 0.865);"//设置边框
+        "    color:rgb(5, 12, 12);"// 设置按钮文本的颜色为黑色（RGB值为5, 12, 12）
+        "    border-radius: 24;"// 设置按钮的边框半径为6像素，使其圆角化
+        "    font: 14pt '华文新魏';"// 设置按钮文本的字体为 10 点大小的楷体
+        "}"
+        "QPushButton:hover {"
+        "    background-color: rgba(255, 250, 198, 0.865);"
+        "    font: 18pt '华文新魏';"// 设置按钮文本的字体为 10 点大小的楷体
+        "    transition: all 0.1s ease;"
+        "}"
+        );
     connect(ui->themeHP, &QPushButton::clicked, this, &ChooseTheme::changebegin);
 }
 

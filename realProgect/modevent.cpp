@@ -22,6 +22,8 @@ ModEvent::ModEvent(QWidget *parent)
     //ui->tableWidget->clear();
     calendarMC* m_ptrcalendar=calendarMC::getinstance();
     PrintP();//将数据显示在TableWidget上；
+    QDate defaultDate = QDate::currentDate();
+    ui->inputdate->setDate(defaultDate);
     changetheme();
 
 }

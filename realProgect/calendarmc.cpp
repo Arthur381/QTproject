@@ -20,16 +20,12 @@ calendarMC* calendarMC::ptrcalendar = nullptr;//在类外初始化
 calendarMC::calendarMC(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::calendarMC)
-    ,TToday(2000,1,1)
+
 {
     ui->setupUi(this);
     TToday=QDate::currentDate();
     connect(ui->calendarWidget,SIGNAL(clicked(QDate)),this,SLOT(clickedSlot(QDate)));
     //创建且打开数据库,调用函数
-    //ui->calendarWidget->setFont(QFont("Timers",8,QFont::Bold));
-
-
-
     CreatDataFunc();
     CreatTableFunc();
     this->changetheme();
@@ -76,13 +72,6 @@ void calendarMC::ChangeOneDay(const QDate date,const QString mood){
     else if(mood=="波澜不惊"){
         specialDayFormat.setBackground(Qt::cyan);
     }
-    //specialDayFormat.setBackground(Qt::red); // 设置背景色为红色
-    //specialDayFormat.setForeground(Qt::white); // 设置文本颜色为白色
-
-    // 要标记的特定日期
-    //QDate specialDate(2024, 5, 15);
-
-    // 设置特定日期的文本格式
     qDebug()<<"oneday";
     ui->calendarWidget->setDateTextFormat(date, specialDayFormat);
 
@@ -186,7 +175,6 @@ QList<AEventInfo> calendarMC::selectPage(int page,int uicnt){//根本目的是�
 
 void calendarMC::CreatTableFunc(){
     //创建SQL
-
     QSqlQuery createquery;
     QString strsql=QString("create table event("
                              "id int not null,"

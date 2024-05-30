@@ -139,7 +139,7 @@ bool coursemsy::addone(CEventInfo info){
 
     QString text=ui->inputName->text();
     if (text.isEmpty()) {
-        QMessageBox::warning(this, "Input Error", "The input field is empty. Please enter some text.");
+        QMessageBox::warning(this, "Input Error", "课程名为空，请填写课程名！");
         return false;
     }
     else{
