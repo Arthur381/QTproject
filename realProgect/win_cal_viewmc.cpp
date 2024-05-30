@@ -12,6 +12,8 @@ win_cal_viewMC::win_cal_viewMC(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::win_cal_viewMC)
 {
+    setWindowTitle(QStringLiteral("今天的日程"));
+     setWindowIcon(QIcon(":/icon/changetheme.png"));
     ui->setupUi(this);
     changetheme();
 }

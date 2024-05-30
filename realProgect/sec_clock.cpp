@@ -11,6 +11,8 @@ sec_clock::sec_clock(QWidget *parent)
     , ui(new Ui::sec_clock)
 {
     ui->setupUi(this);
+    setWindowTitle(QStringLiteral("计时器"));
+    setWindowIcon(QIcon(":/icon/hzj2.jpg"));
     connect(&timer,SIGNAL(timeout()),this,SLOT(timeout_slot()));
 
     time.setHMS(0,0,0,0);//时间初始化

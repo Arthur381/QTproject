@@ -39,6 +39,7 @@ coursemsy::coursemsy(QWidget *parent)
     ui->label_20->setFont(font1);
 
     setWindowTitle(QStringLiteral("课程表"));
+    setWindowIcon(QIcon(":/icon/coursemsy1.jpg"));
     QFont font3("YouYuan",15);
     ui->label_19->setFont(font3);
     ui->label_18->setFont(font3);

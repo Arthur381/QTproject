@@ -9,6 +9,8 @@ dailymsy4::dailymsy4(QWidget *parent)
     , ui(new Ui::dailymsy4)
 {
     ui->setupUi(this);
+    setWindowTitle(QStringLiteral("显示日程"));
+     setWindowIcon(QIcon(":/icon/dailymsy3.jpg"));
 
     //固定行宽
     ui->iAndE->horizontalHeader()->setSectionResizeMode(QHeaderView::Fixed);

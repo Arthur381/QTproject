@@ -11,6 +11,8 @@ dailymsy5::dailymsy5(QWidget *parent)
     ui->setupUi(this);
 
     //固定行宽
+    setWindowTitle(QStringLiteral("显示日程"));
+     setWindowIcon(QIcon(":/icon/dailymsy3.jpg"));
     ui->eNoti->horizontalHeader()->setSectionResizeMode(QHeaderView::Fixed);
     ui->eNoti->setColumnWidth(0,100);
     ui->eNoti->setColumnWidth(1,200);

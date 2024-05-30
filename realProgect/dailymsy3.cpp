@@ -16,6 +16,8 @@ dailymsy3::dailymsy3(QWidget *parent)
     ui->nine->setColumnWidth(1,185);
     //ui->nine->resizeColumnsToContents();
     changetheme();
+    setWindowTitle(QStringLiteral("显示日程"));
+    setWindowIcon(QIcon(":/icon/dailymsy3.jpg"));
     modifyDatabase();
     ui->nine->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 }

@@ -10,6 +10,8 @@ ChooseTheme::ChooseTheme(QWidget *parent)
 {
     ui->setupUi(this);
 
+    setWindowTitle(QStringLiteral("选择一个你喜欢的主题吧~"));
+    setWindowIcon(QIcon(":/icon/changetheme.png"));
     //connect(ui->pushButton, &HoverButton::changeSize, this, &ChooseTheme::animateSize);
     ui->themeHP->setStyleSheet(
         "QPushButton {"

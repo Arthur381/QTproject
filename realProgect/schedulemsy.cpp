@@ -9,6 +9,8 @@ scheduleMSY::scheduleMSY(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::scheduleMSY)
 {
+    setWindowTitle(QStringLiteral("请查收你的课程表~"));
+     setWindowIcon(QIcon(":/icon/coursemsy2.png"));
     ui->setupUi(this);
     ui->courseTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Fixed);
     ui->courseTable->setEditTriggers(QAbstractItemView::NoEditTriggers);//禁止对表格内容进行修改

@@ -15,6 +15,10 @@ alarm::alarm(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::alarm)
 {
+
+    setWindowTitle(QStringLiteral("闹钟"));
+    setWindowIcon(QIcon(":/icon/hzj4.jpg"));
+
     cs1=cs2=cs3=cs4=cs5=0;
     con1=con2=con3=con4=con5=1;
     ui->setupUi(this);

@@ -17,7 +17,7 @@ clockHZJ::clockHZJ(QWidget *parent)
     this->changetheme();
 
     setWindowTitle(QStringLiteral("时间管理"));
-
+    setWindowIcon(QIcon(":/icon/hzj2.jpg"));
     //setWindowIcon("");
     QFont font1("YouYuan",25);
     ui->label->setFont(font1);

@@ -22,6 +22,7 @@ dailyMSY::dailyMSY(QWidget *parent)
     CreatTableFunc();
     changetheme();
     setWindowTitle(QStringLiteral("日程管理"));
+    setWindowIcon(QIcon(":/icon/dailymsy1.png"));
 
 }
 

@@ -15,6 +15,8 @@ r_clock::r_clock(QWidget *parent)
     , ui(new Ui::r_clock)
 {
     ui->setupUi(this);
+    setWindowTitle(QStringLiteral("倒计时"));
+    setWindowIcon(QIcon(":/icon/hzj3.png"));
     //设置输入时间范围
     ui->sb_hour->setMinimum(0);
     ui->sb_hour->setMaximum(99);
