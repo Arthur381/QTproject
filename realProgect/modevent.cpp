@@ -16,6 +16,8 @@ ModEvent::ModEvent(QWidget *parent)
 {
 
     ui->setupUi(this);
+    setWindowTitle(QStringLiteral("修改日程"));
+     setWindowIcon(QIcon(":/icon/cal.jpg"));
 
     //ui->tableWidget->clear();
     calendarMC* m_ptrcalendar=calendarMC::getinstance();

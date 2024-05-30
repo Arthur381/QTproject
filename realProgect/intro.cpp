@@ -6,6 +6,8 @@ Intro::Intro(QWidget *parent)
     , ui(new Ui::Intro)
 {
     ui->setupUi(this);
+    setWindowTitle(QStringLiteral("介绍一下PKU自律指南吧~"));
+     setWindowIcon(QIcon(":/icon/changetheme.png"));
 }
 
 Intro::~Intro()

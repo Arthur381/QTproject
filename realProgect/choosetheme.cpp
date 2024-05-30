@@ -10,6 +10,27 @@ ChooseTheme::ChooseTheme(QWidget *parent)
 {
     ui->setupUi(this);
 
+    QPixmap pix1(":image\\16.png");
+    QPixmap pix2(":image\\17.png");
+    QPixmap pix3(":image\\18.png");
+    QPixmap pix4(":image\\19.png");
+    ////////!!!!!!!
+    pix1 = pix1.scaled(ui->laPKU->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
+    pix2 = pix2.scaled(ui->laHP->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
+    pix3 = pix3.scaled(ui->laHPDOG->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
+    pix4 = pix4.scaled(ui->laQIDAI->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
+    ui->laPKU->setPixmap(pix1);
+    ui->laHP->setPixmap(pix2);
+    ui->laHPDOG->setPixmap(pix3);
+    ui->laQIDAI->setPixmap(pix4);
+    ui->laPKU->show();
+    ui->laHP->show();
+    ui->laHPDOG->show();
+    ui->laQIDAI->show();
+
+
+    setWindowTitle(QStringLiteral("选择一个你喜欢的主题吧~"));
+    setWindowIcon(QIcon(":/icon/changetheme.png"));
     //connect(ui->pushButton, &HoverButton::changeSize, this, &ChooseTheme::animateSize);
     ui->themeHP->setStyleSheet(
         "QPushButton {"

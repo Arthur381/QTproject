@@ -69,6 +69,13 @@
         <file>icon/hzj3.png</file>
         <file>icon/hzj4.jpg</file>
         <file>icon/微信图片_20240530203655.jpg</file>
+        <file>image/16.png</file>
+        <file>image/17.png</file>
+        <file>image/18.png</file>
+        <file>image/19.png</file>
+        <file>image/ala.png</file>
+        <file>image/rtt.png</file>
+        <file>image/stt.png</file>
     </qresource>
     <qresource prefix="/background"/>
     <qresource prefix="/\PKU"/>

@@ -15,6 +15,10 @@ alarm::alarm(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::alarm)
 {
+
+    setWindowTitle(QStringLiteral("闹钟"));
+    setWindowIcon(QIcon(":/icon/hzj4.jpg"));
+
     cs1=cs2=cs3=cs4=cs5=0;
     con1=con2=con3=con4=con5=1;
     ui->setupUi(this);
@@ -31,7 +35,7 @@ alarm::alarm(QWidget *parent)
     connect(&timerunner,SIGNAL(timeout()), this, SLOT(checktime()));
     changetheme();
 
-    QFont font1("YouYuan",15);
+    QFont font1("YouYuan",20);
     ui->label->setFont(font1);
     ui->label_2->setFont(font1);
     ui->label_3->setFont(font1);

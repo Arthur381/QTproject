@@ -127,9 +127,9 @@ font: 22pt &quot;幼圆&quot;;</string>
   <widget class="QLabel" name="curtime">
    <property name="geometry">
     <rect>
-     <x>280</x>
-     <y>20</y>
-     <width>231</width>
+     <x>260</x>
+     <y>40</y>
+     <width>271</width>
      <height>51</height>
     </rect>
    </property>
@@ -148,10 +148,10 @@ font: 22pt &quot;幼圆&quot;;</string>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>20</y>
+     <x>0</x>
+     <y>30</y>
      <width>261</width>
-     <height>81</height>
+     <height>91</height>
     </rect>
    </property>
    <property name="font">

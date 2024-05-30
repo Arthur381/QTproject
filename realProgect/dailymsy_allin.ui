@@ -29,10 +29,16 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>260</y>
+     <y>265</y>
      <width>91</width>
-     <height>31</height>
+     <height>21</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>华文琥珀</family>
+     <pointsize>12</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>任务描述：</string>
@@ -52,10 +58,16 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>289</y>
+     <y>300</y>
      <width>101</width>
-     <height>31</height>
+     <height>21</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>华文琥珀</family>
+     <pointsize>10</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>该任务有多重要：</string>
@@ -65,10 +77,16 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>319</y>
+     <y>330</y>
      <width>101</width>
-     <height>31</height>
+     <height>21</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>华文琥珀</family>
+     <pointsize>10</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>该任务有多紧急：</string>
@@ -152,6 +170,12 @@
      <height>31</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>华文琥珀</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
    <property name="text">
     <string>当前选中：</string>
    </property>
@@ -162,7 +186,7 @@
      <x>320</x>
      <y>380</y>
      <width>151</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -194,7 +218,7 @@
      <x>170</x>
      <y>380</y>
      <width>121</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -221,7 +245,7 @@
    <property name="geometry">
     <rect>
      <x>120</x>
-     <y>300</y>
+     <y>304</y>
      <width>160</width>
      <height>16</height>
     </rect>

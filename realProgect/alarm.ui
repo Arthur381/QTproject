@@ -22,9 +22,6 @@
     <height>432</height>
    </size>
   </property>
-  <property name="windowTitle">
-   <string>Form</string>
-  </property>
   <widget class="QLabel" name="curtime">
    <property name="geometry">
     <rect>
@@ -49,9 +46,9 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>0</y>
-     <width>101</width>
+     <x>20</x>
+     <y>20</y>
+     <width>121</width>
      <height>61</height>
     </rect>
    </property>
@@ -70,10 +67,10 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>0</y>
+     <x>210</x>
+     <y>20</y>
      <width>161</width>
-     <height>51</height>
+     <height>61</height>
     </rect>
    </property>
    <property name="font">
@@ -91,10 +88,10 @@
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>480</x>
-     <y>-1</y>
+     <x>430</x>
+     <y>20</y>
      <width>151</width>
-     <height>51</height>
+     <height>61</height>
     </rect>
    </property>
    <property name="font">
@@ -109,275 +106,367 @@
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>60</y>
-     <width>101</width>
-     <height>271</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <item>
-     <widget class="QTimeEdit" name="time1">
-      <property name="font">
-       <font>
-        <pointsize>9</pointsize>
-       </font>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QTimeEdit" name="time2">
-      <property name="font">
-       <font>
-        <pointsize>9</pointsize>
-       </font>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QTimeEdit" name="time3">
-      <property name="font">
-       <font>
-        <pointsize>9</pointsize>
-       </font>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QTimeEdit" name="time4">
-      <property name="font">
-       <font>
-        <pointsize>9</pointsize>
-       </font>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QTimeEdit" name="time5">
-      <property name="font">
-       <font>
-        <pointsize>9</pointsize>
-       </font>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>110</x>
-     <y>60</y>
-     <width>291</width>
-     <height>271</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout_2">
-    <item>
-     <widget class="QLineEdit" name="line1">
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-       </font>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLineEdit" name="line2">
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-       </font>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLineEdit" name="line3">
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-       </font>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLineEdit" name="line4">
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-       </font>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLineEdit" name="line5">
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-       </font>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>440</x>
-     <y>60</y>
-     <width>101</width>
-     <height>271</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout_3">
-    <item>
-     <widget class="QPushButton" name="set1">
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>仅一次</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="set2">
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>仅一次</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="set3">
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>仅一次</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="set4">
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>仅一次</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="set5">
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>仅一次</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>570</x>
-     <y>60</y>
-     <width>101</width>
-     <height>271</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout_4">
-    <item>
-     <widget class="QPushButton" name="check1">
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>启用</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="check2">
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>启用</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="check3">
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>启用</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="check4">
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>启用</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="check5">
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>启用</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
   <widget class="QLabel" name="l1">
    <property name="geometry">
     <rect>
-     <x>0</x>
+     <x>155</x>
      <y>320</y>
-     <width>211</width>
-     <height>111</height>
+     <width>255</width>
+     <height>141</height>
     </rect>
    </property>
    <property name="text">
     <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QTimeEdit" name="time5">
+   <property name="geometry">
+    <rect>
+     <x>11</x>
+     <y>281</y>
+     <width>132</width>
+     <height>38</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>幼圆</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </widget>
+  <widget class="QTimeEdit" name="time3">
+   <property name="geometry">
+    <rect>
+     <x>11</x>
+     <y>183</y>
+     <width>132</width>
+     <height>38</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>幼圆</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </widget>
+  <widget class="QTimeEdit" name="time1">
+   <property name="geometry">
+    <rect>
+     <x>11</x>
+     <y>85</y>
+     <width>132</width>
+     <height>38</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>幼圆</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </widget>
+  <widget class="QTimeEdit" name="time4">
+   <property name="geometry">
+    <rect>
+     <x>11</x>
+     <y>232</y>
+     <width>132</width>
+     <height>38</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>幼圆</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </widget>
+  <widget class="QTimeEdit" name="time2">
+   <property name="geometry">
+    <rect>
+     <x>11</x>
+     <y>134</y>
+     <width>132</width>
+     <height>38</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>幼圆</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="line2">
+   <property name="geometry">
+    <rect>
+     <x>155</x>
+     <y>134</y>
+     <width>255</width>
+     <height>38</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>幼圆</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="line4">
+   <property name="geometry">
+    <rect>
+     <x>155</x>
+     <y>232</y>
+     <width>255</width>
+     <height>38</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>幼圆</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="line3">
+   <property name="geometry">
+    <rect>
+     <x>155</x>
+     <y>183</y>
+     <width>255</width>
+     <height>38</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>幼圆</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="line1">
+   <property name="geometry">
+    <rect>
+     <x>155</x>
+     <y>85</y>
+     <width>255</width>
+     <height>38</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>幼圆</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="line5">
+   <property name="geometry">
+    <rect>
+     <x>155</x>
+     <y>281</y>
+     <width>255</width>
+     <height>38</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>幼圆</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="set3">
+   <property name="geometry">
+    <rect>
+     <x>441</x>
+     <y>183</y>
+     <width>120</width>
+     <height>38</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>幼圆</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>仅一次</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="set5">
+   <property name="geometry">
+    <rect>
+     <x>441</x>
+     <y>281</y>
+     <width>120</width>
+     <height>38</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>幼圆</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>仅一次</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="set4">
+   <property name="geometry">
+    <rect>
+     <x>441</x>
+     <y>232</y>
+     <width>120</width>
+     <height>38</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>幼圆</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>仅一次</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="set2">
+   <property name="geometry">
+    <rect>
+     <x>441</x>
+     <y>134</y>
+     <width>120</width>
+     <height>38</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>幼圆</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>仅一次</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="set1">
+   <property name="geometry">
+    <rect>
+     <x>441</x>
+     <y>85</y>
+     <width>120</width>
+     <height>38</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>幼圆</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>仅一次</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="check3">
+   <property name="geometry">
+    <rect>
+     <x>571</x>
+     <y>183</y>
+     <width>80</width>
+     <height>38</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>幼圆</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>启用</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="check5">
+   <property name="geometry">
+    <rect>
+     <x>571</x>
+     <y>281</y>
+     <width>80</width>
+     <height>38</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>幼圆</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>启用</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="check2">
+   <property name="geometry">
+    <rect>
+     <x>571</x>
+     <y>134</y>
+     <width>80</width>
+     <height>38</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>幼圆</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>启用</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="check4">
+   <property name="geometry">
+    <rect>
+     <x>571</x>
+     <y>232</y>
+     <width>80</width>
+     <height>38</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>幼圆</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>启用</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="check1">
+   <property name="geometry">
+    <rect>
+     <x>571</x>
+     <y>85</y>
+     <width>80</width>
+     <height>38</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>幼圆</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>启用</string>
    </property>
   </widget>
  </widget>

@@ -26,7 +26,7 @@
    <string>PKU自律指南</string>
   </property>
   <property name="windowIcon">
-   <iconset>
+   <iconset resource="images.qrc">
     <normaloff>:/image/OIP.jpg</normaloff>:/image/OIP.jpg</iconset>
   </property>
   <property name="toolTip">
@@ -241,10 +241,10 @@
    <widget class="QLabel" name="label3">
     <property name="geometry">
      <rect>
-      <x>690</x>
-      <y>420</y>
-      <width>301</width>
-      <height>171</height>
+      <x>730</x>
+      <y>450</y>
+      <width>311</width>
+      <height>181</height>
      </rect>
     </property>
     <property name="text">
@@ -271,6 +271,8 @@
    <header>hoverbutton.h</header>
   </customwidget>
  </customwidgets>
- <resources/>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
  <connections/>
 </ui>
