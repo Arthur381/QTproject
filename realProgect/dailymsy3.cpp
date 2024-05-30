@@ -13,7 +13,8 @@ dailymsy3::dailymsy3(QWidget *parent)
     //固定行宽
     ui->nine->horizontalHeader()->setSectionResizeMode(QHeaderView::Fixed);
     ui->nine->setColumnWidth(0,100);
-    ui->nine->setColumnWidth(1,175);
+    ui->nine->setColumnWidth(1,185);
+    //ui->nine->resizeColumnsToContents();
     changetheme();
     modifyDatabase();
     ui->nine->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
