@@ -419,14 +419,14 @@ void calendarMC::changetheme(){
         ui->label_rd->show();
         ui->countdowndays->setStyleSheet(
             "QPushButton {"
-            "    background-color: rgba(239, 135, 135, 0.717);"
+            "    background-color: rgba(166, 215, 255, 0.865);"
             "    border: 0px solid rgba(115, 177, 166, 0.865);"//设置边框
             "    color:rgb(5, 12, 12);"// 设置按钮文本的颜色为黑色（RGB值为5, 12, 12）
             "    border-radius: 24;"// 设置按钮的边框半径为6像素，使其圆角化
             "    font: 10pt '幼圆';"// 设置按钮文本的字体为 10 点大小的楷体
             "}"
             "QPushButton:hover {"
-            "    background-color: rgba(244, 54, 54, 0.84);"
+            "    background-color: rgba(255, 250, 198, 0.865);"
             "    font: 18pt '幼圆';"// 设置按钮文本的字体为 10 点大小的楷体
             "    transition: all 0.1s ease;"
             "}"
@@ -434,14 +434,14 @@ void calendarMC::changetheme(){
 
         ui->Modify->setStyleSheet(
             "QPushButton {"
-            "    background-color: rgba(239, 135, 135, 0.717);"
+            "    background-color: rgba(237, 205, 223, 0.865);"
             "    border: 0px solid rgba(115, 177, 166, 0.865);"//设置边框
             "    color:rgb(5, 12, 12);"// 设置按钮文本的颜色为黑色（RGB值为5, 12, 12）
             "    border-radius: 24;"// 设置按钮的边框半径为6像素，使其圆角化
             "    font: 10pt '幼圆';"// 设置按钮文本的字体为 10 点大小的楷体
             "}"
             "QPushButton:hover {"
-            "    background-color: rgba(244, 54, 54, 0.84);"
+            "    background-color: rgba(255, 250, 198, 0.865);"
             "    font: 18pt '幼圆';"// 设置按钮文本的字体为 10 点大小的楷体
             "    transition: all 0.1s ease;"
             "}"
