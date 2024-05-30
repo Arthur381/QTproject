@@ -88,6 +88,7 @@
         <file>happydog/time.jpg</file>
         <file>happydog/call.png</file>
         <file>happydog/countdown.jpg</file>
+        <file>happydog/course.jpg</file>
     </qresource>
     <qresource prefix="/background"/>
     <qresource prefix="/\PKU"/>

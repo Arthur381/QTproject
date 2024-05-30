@@ -225,100 +225,101 @@ void coursemsy::on_delCourse_clicked()
 }
 
 void coursemsy::changetheme(){
-    if(ThemeStyle==0){
-        ui->label->setStyleSheet(
-            "background-color: rgba(255,255,255, 0.565);"
-            "font: 18pt '幼圆';"// 设置按钮文本的字体为 10 点大小
-            "qproperty-alignment: 'AlignCenter';"  // 样式表中设置文本居中对齐
-            "font-weight: bold;"  // 设置字体加粗
-            );
-        ui->label_11->setStyleSheet(
-            "background-color: rgba(255,255,255, 0.565);"
-            "font: 14pt '幼圆';"// 设置按钮文本的字体为 10 点大小
-            "qproperty-alignment: 'AlignCenter';"  // 样式表中设置文本居中对齐
-            );
-        ui->label_12->setStyleSheet(
-            "background-color: rgba(255,255,255, 0.565);"
-            "font: 14pt '幼圆';"// 设置按钮文本的字体为 10 点大小
-            "qproperty-alignment: 'AlignCenter';"  // 样式表中设置文本居中对齐
-            );
-        ui->label_15->setStyleSheet(
-            "background-color: rgba(255,255,255, 0.565);"
-            "font: 14pt '幼圆';"// 设置按钮文本的字体为 10 点大小
-            "qproperty-alignment: 'AlignCenter';"  // 样式表中设置文本居中对齐
-            );
+    ui->label->setStyleSheet(
+        "background-color: rgba(255,255,255, 0.565);"
+        "font: 18pt '幼圆';"// 设置按钮文本的字体为 10 点大小
+        "qproperty-alignment: 'AlignCenter';"  // 样式表中设置文本居中对齐
+        "font-weight: bold;"  // 设置字体加粗
+        );
+    ui->label_11->setStyleSheet(
+        "background-color: rgba(255,255,255, 0.565);"
+        "font: 14pt '幼圆';"// 设置按钮文本的字体为 10 点大小
+        "qproperty-alignment: 'AlignCenter';"  // 样式表中设置文本居中对齐
+        );
+    ui->label_12->setStyleSheet(
+        "background-color: rgba(255,255,255, 0.565);"
+        "font: 14pt '幼圆';"// 设置按钮文本的字体为 10 点大小
+        "qproperty-alignment: 'AlignCenter';"  // 样式表中设置文本居中对齐
+        );
+    ui->label_15->setStyleSheet(
+        "background-color: rgba(255,255,255, 0.565);"
+        "font: 14pt '幼圆';"// 设置按钮文本的字体为 10 点大小
+        "qproperty-alignment: 'AlignCenter';"  // 样式表中设置文本居中对齐
+        );
 
-        ui->label_2->setStyleSheet(
-            "background-color: rgba(255,255,255, 0.565);"
-            "font: 18pt '幼圆';"// 设置按钮文本的字体为 10 点大小
-            "qproperty-alignment: 'AlignCenter';"  // 样式表中设置文本居中对齐
-            "font-weight: bold;"  // 设置字体加粗
-            );
+    ui->label_2->setStyleSheet(
+        "background-color: rgba(255,255,255, 0.565);"
+        "font: 18pt '幼圆';"// 设置按钮文本的字体为 10 点大小
+        "qproperty-alignment: 'AlignCenter';"  // 样式表中设置文本居中对齐
+        "font-weight: bold;"  // 设置字体加粗
+        );
 
-        ui->label_3->setStyleSheet(
-            "background-color: rgba(255,255,255, 0.565);"
-            "font: 18pt '幼圆';"// 设置按钮文本的字体为 10 点大小
-            "qproperty-alignment: 'AlignCenter';"  // 样式表中设置文本居中对齐
-            "font-weight: bold;"  // 设置字体加粗
-            );
-        ui->label_4->setStyleSheet(
-            "background-color: rgba(255,255,255, 0.565);"
-            "font: 18pt '幼圆';"// 设置按钮文本的字体为 10 点大小
-            "qproperty-alignment: 'AlignCenter';"  // 样式表中设置文本居中对齐
-            "font-weight: bold;"  // 设置字体加粗
-            );
-        ui->label_5->setStyleSheet(
-            "background-color: rgba(255,255,255, 0.565);"
-            "font: 18pt '幼圆';"// 设置按钮文本的字体为 10 点大小
-            "qproperty-alignment: 'AlignCenter';"  // 样式表中设置文本居中对齐
-            "font-weight: bold;"  // 设置字体加粗
-            );
-        ui->label_6->setStyleSheet(
-            "background-color: rgba(255,255,255, 0.565);"
-            "font: 18pt '幼圆';"// 设置按钮文本的字体为 10 点大小
-            "qproperty-alignment: 'AlignCenter';"  // 样式表中设置文本居中对齐
-            "font-weight: bold;"  // 设置字体加粗
-            );
-        ui->label_7->setStyleSheet(
-            "background-color: rgba(255,255,255, 0.565);"
-            "font: 18pt '幼圆';"// 设置按钮文本的字体为 10 点大小
-            "qproperty-alignment: 'AlignCenter';"  // 样式表中设置文本居中对齐
-            "font-weight: bold;"  // 设置字体加粗
-            );
-        ui->label_8->setStyleSheet(
-            "background-color: rgba(255,255,255, 0.565);"
-            "font: 14pt '幼圆';"// 设置按钮文本的字体为 10 点大小
-            "qproperty-alignment: 'AlignCenter';"  // 样式表中设置文本居中对齐
-            );
-        ui->label_9->setStyleSheet(
-            "background-color: rgba(255,255,255, 0.565);"
-            "font: 14pt '幼圆';"// 设置按钮文本的字体为 10 点大小
-            "qproperty-alignment: 'AlignCenter';"  // 样式表中设置文本居中对齐
-            );
-        /**
+    ui->label_3->setStyleSheet(
+        "background-color: rgba(255,255,255, 0.565);"
+        "font: 18pt '幼圆';"// 设置按钮文本的字体为 10 点大小
+        "qproperty-alignment: 'AlignCenter';"  // 样式表中设置文本居中对齐
+        "font-weight: bold;"  // 设置字体加粗
+        );
+    ui->label_4->setStyleSheet(
+        "background-color: rgba(255,255,255, 0.565);"
+        "font: 18pt '幼圆';"// 设置按钮文本的字体为 10 点大小
+        "qproperty-alignment: 'AlignCenter';"  // 样式表中设置文本居中对齐
+        "font-weight: bold;"  // 设置字体加粗
+        );
+    ui->label_5->setStyleSheet(
+        "background-color: rgba(255,255,255, 0.565);"
+        "font: 18pt '幼圆';"// 设置按钮文本的字体为 10 点大小
+        "qproperty-alignment: 'AlignCenter';"  // 样式表中设置文本居中对齐
+        "font-weight: bold;"  // 设置字体加粗
+        );
+    ui->label_6->setStyleSheet(
+        "background-color: rgba(255,255,255, 0.565);"
+        "font: 18pt '幼圆';"// 设置按钮文本的字体为 10 点大小
+        "qproperty-alignment: 'AlignCenter';"  // 样式表中设置文本居中对齐
+        "font-weight: bold;"  // 设置字体加粗
+        );
+    ui->label_7->setStyleSheet(
+        "background-color: rgba(255,255,255, 0.565);"
+        "font: 18pt '幼圆';"// 设置按钮文本的字体为 10 点大小
+        "qproperty-alignment: 'AlignCenter';"  // 样式表中设置文本居中对齐
+        "font-weight: bold;"  // 设置字体加粗
+        );
+    ui->label_8->setStyleSheet(
+        "background-color: rgba(255,255,255, 0.565);"
+        "font: 14pt '幼圆';"// 设置按钮文本的字体为 10 点大小
+        "qproperty-alignment: 'AlignCenter';"  // 样式表中设置文本居中对齐
+        );
+    ui->label_9->setStyleSheet(
+        "background-color: rgba(255,255,255, 0.565);"
+        "font: 14pt '幼圆';"// 设置按钮文本的字体为 10 点大小
+        "qproperty-alignment: 'AlignCenter';"  // 样式表中设置文本居中对齐
+        );
+    /**
          *
          *三个比较特殊的label
          *
          */
-        ui->label_18->setStyleSheet(
-            "background-color: rgba(255,255,255, 0);"
-            "font: 14pt '幼圆';"// 设置按钮文本的字体为 10 点大小
-            "qproperty-alignment: 'AlignCenter';"  // 样式表中设置文本居中对齐
-            );
-        ui->label_19->setStyleSheet(
-            "background-color: rgba(255,255,255, 0);"
-            "font: 14pt '幼圆';"// 设置按钮文本的字体为 10 点大小
-            "qproperty-alignment: 'AlignCenter';"  // 样式表中设置文本居中对齐
-            );
-        ui->label_20->setStyleSheet(
-            "background-color: rgba(255,255,255, 0);"
-            "font: 14pt '幼圆';"// 设置按钮文本的字体为 10 点大小
-            "qproperty-alignment: 'AlignCenter';"  // 样式表中设置文本居中对齐
-            );
+    ui->label_18->setStyleSheet(
+        "background-color: rgba(255,255,255, 0);"
+        "font: 14pt '幼圆';"// 设置按钮文本的字体为 10 点大小
+        "qproperty-alignment: 'AlignCenter';"  // 样式表中设置文本居中对齐
+        );
+    ui->label_19->setStyleSheet(
+        "background-color: rgba(255,255,255, 0);"
+        "font: 14pt '幼圆';"// 设置按钮文本的字体为 10 点大小
+        "qproperty-alignment: 'AlignCenter';"  // 样式表中设置文本居中对齐
+        );
+    ui->label_20->setStyleSheet(
+        "background-color: rgba(255,255,255, 0);"
+        "font: 14pt '幼圆';"// 设置按钮文本的字体为 10 点大小
+        "qproperty-alignment: 'AlignCenter';"  // 样式表中设置文本居中对齐
+        );
 
-        /**
+    /**
          * 设置背景
          */
+    if(ThemeStyle==0){
+
         this->setStyleSheet(
             "QDialog{"
             "    background-image: url(:/PKU/sda.jpg);" // 设置背景图片
@@ -331,7 +332,14 @@ void coursemsy::changetheme(){
 
     }
     else if(ThemeStyle==1){
-
+        this->setStyleSheet(
+            "QDialog{"
+            "    background-image: url(:/happydog/course.jpg);" // 设置背景图片
+            "    background-position: center;" // 将图片放置在中心
+            "    background-repeat: no-repeat;" // 禁止图片重复
+            "    background-size: 100% 100%;" // 使图片拉伸以适应窗口大小
+            "}"
+        );
 
 
     }
