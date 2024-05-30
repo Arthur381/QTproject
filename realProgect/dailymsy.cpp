@@ -172,7 +172,9 @@ void dailyMSY::changetheme(){
         ui->allIn->setStyleSheet(
             "QPushButton {"
             "background-color: rgba(255,255,255, 0.001);"
+            "    border: none;"  // 去除按钮边框
             "}"
+
 
             );
         ui->iAnde->setStyleSheet(
@@ -181,6 +183,10 @@ void dailyMSY::changetheme(){
             "    background-position: center;" // 将图片放置在中心
             "    background-repeat: no-repeat;" // 禁止图片重复
             "    background-size: 100% 100%;" // 使图片拉伸以适应窗口大小
+            "    border: none;"  // 去除按钮边框
+            "}"
+            "QPushButton:hover {"
+            "    background-color: white;"  // 悬停时的背景颜色
             "}"
             );
         ui->eNoti->setStyleSheet(
@@ -189,6 +195,10 @@ void dailyMSY::changetheme(){
             "    background-position: center;" // 将图片放置在中心
             "    background-repeat: no-repeat;" // 禁止图片重复
             "    background-size: 100% 100%;" // 使图片拉伸以适应窗口大小
+            "    border: none;"  // 去除按钮边框
+            "}"
+            "QPushButton:hover {"
+            "    background-color: white;"  // 悬停时的背景颜色
             "}"
             );
         ui->iNote->setStyleSheet(
@@ -197,6 +207,10 @@ void dailyMSY::changetheme(){
             "    background-position: center;" // 将图片放置在中心
             "    background-repeat: no-repeat;" // 禁止图片重复
             "    background-size: 100% 100%;" // 使图片拉伸以适应窗口大小
+            "    border: none;"  // 去除按钮边框
+            "}"
+            "QPushButton:hover {"
+            "    background-color: white;"  // 悬停时的背景颜色
             "}"
             );
         ui->nine->setStyleSheet(
@@ -205,6 +219,10 @@ void dailyMSY::changetheme(){
             "    background-position: center;" // 将图片放置在中心
             "    background-repeat: no-repeat;" // 禁止图片重复
             "    background-size: 100% 100%;" // 使图片拉伸以适应窗口大小
+            "    border: none;"  // 去除按钮边框
+            "}"
+            "QPushButton:hover {"
+            "    background-color: white;"  // 悬停时的背景颜色
             "}"
             );
 

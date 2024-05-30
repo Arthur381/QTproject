@@ -7,6 +7,7 @@
 #include <QPropertyAnimation>
 #include <iostream>
 #include <QTimer>
+#include<QDebug>
 #include<QThread>
 #include <QEventLoop>
 HoverButton::HoverButton(QWidget *parent)//构造函数
@@ -48,7 +49,7 @@ void HoverButton::animateSize(QSize size)
     // 创建动画对象
     QPropertyAnimation *animation = new QPropertyAnimation(this, "geometry");
     // 设置动画持续时间
-    animation->setDuration(400);
+    animation->setDuration(200);
     // 设置起始值
     animation->setStartValue(startRect);
     // 设置结束值

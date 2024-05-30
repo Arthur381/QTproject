@@ -43,8 +43,6 @@
     <rect>
      <x>410</x>
      <y>0</y>
-     <width>290</width>
-     <height>160</height>
      <width>291</width>
      <height>161</height>
     </rect>
@@ -57,9 +55,9 @@
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>270</y>
+     <y>259</y>
      <width>290</width>
-     <height>160</height>
+     <height>171</height>
     </rect>
    </property>
    <property name="text">
@@ -69,10 +67,6 @@
   <widget class="QPushButton" name="eNoti">
    <property name="geometry">
     <rect>
-     <x>410</x>
-     <y>270</y>
-     <width>290</width>
-     <height>160</height>
      <x>410</x>
      <y>250</y>
      <width>291</width>
@@ -86,9 +80,6 @@
   <widget class="QPushButton" name="allIn">
    <property name="geometry">
     <rect>
-     <x>290</x>
-     <y>170</y>
-     <width>121</width>
      <x>280</x>
      <y>160</y>
      <width>131</width>

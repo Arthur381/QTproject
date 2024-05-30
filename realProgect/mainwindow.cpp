@@ -204,6 +204,14 @@ void MainWindow::changetheme(){
 
 
     }
+    else if(ThemeStyle==2){
+
+
+
+
+
+
+    }
     /**
      * @主题更改完成之后发送信号
      *

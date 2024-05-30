@@ -46,6 +46,9 @@
      <height>350</height>
     </size>
    </property>
+   <attribute name="verticalHeaderVisible">
+    <bool>false</bool>
+   </attribute>
    <column>
     <property name="text">
      <string>id</string>
