@@ -50,30 +50,30 @@
     <string>哈利波特主题</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="laPKU">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>30</y>
+     <x>100</x>
+     <y>20</y>
      <width>231</width>
      <height>201</height>
     </rect>
    </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2">
+  <widget class="QLabel" name="laHP">
    <property name="geometry">
     <rect>
-     <x>450</x>
-     <y>0</y>
+     <x>470</x>
+     <y>20</y>
      <width>221</width>
      <height>201</height>
     </rect>
    </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="PKU">
@@ -89,17 +89,17 @@
     <string>北京大学主题</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_3">
+  <widget class="QLabel" name="laHPDOG">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>300</y>
+     <x>100</x>
+     <y>310</y>
      <width>231</width>
      <height>201</height>
     </rect>
    </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="HappyDog">
@@ -115,17 +115,17 @@
     <string>快乐小狗主题</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_4">
+  <widget class="QLabel" name="laQIDAI">
    <property name="geometry">
     <rect>
      <x>470</x>
-     <y>340</y>
-     <width>191</width>
-     <height>151</height>
+     <y>310</y>
+     <width>231</width>
+     <height>201</height>
     </rect>
    </property>
    <property name="text">
-    <string>期待更新</string>
+    <string/>
    </property>
   </widget>
  </widget>

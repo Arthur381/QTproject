@@ -22,12 +22,12 @@ dailymsy_allin::dailymsy_allin(QWidget *parent)
     ui->workTable->setColumnWidth(1,160);
     ui->workTable->setColumnWidth(2,115);
     ui->workTable->setColumnWidth(3,115);
+
+    ui->label->setStyleSheet("QLabel { color: rgba(255,255,255,1); }");
+    ui->label_2->setStyleSheet("QLabel { color: rgba(255,255,255,1); }");
+    ui->label_3->setStyleSheet("QLabel { color: rgba(255,255,255,1); }");
+    ui->showMission->setStyleSheet("QLabel { color: rgba(255,255,255,1); }");
     setWindowTitle(QStringLiteral("事项设置"));
-    QFont font1("YouYuan",10);
-    ui->label->setFont(font1);
-    ui->label_2->setFont(font1);
-    ui->label_3->setFont(font1);
-    ui->showMission->setFont(font1);
 
 }
 

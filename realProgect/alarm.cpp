@@ -31,7 +31,7 @@ alarm::alarm(QWidget *parent)
     connect(&timerunner,SIGNAL(timeout()), this, SLOT(checktime()));
     changetheme();
 
-    QFont font1("YouYuan",15);
+    QFont font1("YouYuan",20);
     ui->label->setFont(font1);
     ui->label_2->setFont(font1);
     ui->label_3->setFont(font1);

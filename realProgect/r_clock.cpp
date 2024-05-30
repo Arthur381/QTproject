@@ -41,7 +41,7 @@ r_clock::r_clock(QWidget *parent)
     connect(ui->sb_sec, SIGNAL(valueChanged(int)), this, SLOT(secChanged()));
     display_number();
 
-    QFont font1("YouYuan",15);
+    QFont font1("YouYuan",30);
     ui->label_5->setFont(font1);
 
     changetheme();
@@ -150,7 +150,7 @@ void r_clock::changetheme(){
             "    border: 0px solid rgba(115, 177, 166, 0.865);"//设置边框
             "    color:rgb(5, 12, 12);"// 设置按钮文本的颜色为黑色（RGB值为5, 12, 12）
             "    border-radius: 24;"// 设置按钮的边框半径为6像素，使其圆角化
-            "    font: 10pt '楷体';"// 设置按钮文本的字体为 10 点大小的楷体
+            "    font: 14pt '楷体';"// 设置按钮文本的字体为 10 点大小的楷体
             "}"
             );
         ui->pause->setStyleSheet(
@@ -159,7 +159,7 @@ void r_clock::changetheme(){
             "    border: 0px solid rgba(115, 177, 166, 0.865);"//设置边框
             "    color:rgb(5, 12, 12);"// 设置按钮文本的颜色为黑色（RGB值为5, 12, 12）
             "    border-radius: 24;"// 设置按钮的边框半径为6像素，使其圆角化
-            "    font: 10pt '楷体';"// 设置按钮文本的字体为 10 点大小的楷体
+            "    font: 14pt '楷体';"// 设置按钮文本的字体为 10 点大小的楷体
             "}"
             );
         ui->end->setStyleSheet(
@@ -168,7 +168,7 @@ void r_clock::changetheme(){
             "    border: 0px solid rgba(115, 177, 166, 0.865);"//设置边框
             "    color:rgb(5, 12, 12);"// 设置按钮文本的颜色为黑色（RGB值为5, 12, 12）
             "    border-radius: 24;"// 设置按钮的边框半径为6像素，使其圆角化
-            "    font: 10pt '楷体';"// 设置按钮文本的字体为 10 点大小的楷体
+            "    font: 14pt '楷体';"// 设置按钮文本的字体为 10 点大小的楷体
             "}"
             );
 
