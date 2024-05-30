@@ -56,6 +56,19 @@
         <file>PKU/event01.png</file>
         <file>PKU/event11.png</file>
         <file>PKU/evebg.png</file>
+        <file>icon/cal.jpg</file>
+        <file>icon/cal2.jpg</file>
+        <file>icon/cal3.png</file>
+        <file>icon/changetheme.png</file>
+        <file>icon/coursemsy1.jpg</file>
+        <file>icon/coursemsy2.png</file>
+        <file>icon/dailymsy1.png</file>
+        <file>icon/dailymsy2.png</file>
+        <file>icon/dailymsy3.jpg</file>
+        <file>icon/hzj2.jpg</file>
+        <file>icon/hzj3.png</file>
+        <file>icon/hzj4.jpg</file>
+        <file>icon/微信图片_20240530203655.jpg</file>
     </qresource>
     <qresource prefix="/background"/>
     <qresource prefix="/\PKU"/>
