@@ -135,6 +135,12 @@ int coursemsy::countnum(){
 bool coursemsy::addone(CEventInfo info){
     QSqlQuery sqlquery(sqldb);
 
+    QString text=ui->inputName->text();
+    if (text.isEmpty()) {
+        QMessageBox::warning(this, "Input Error", "The input field is empty. Please enter some text.");
+        return false;
+    }
+    else{
     QString strsql=QString("INSERT INTO courseDemo VALUES(%1,%2,%3,'%4')").
                      arg(info.row*8+info.col).arg(info.col).arg(info.row).arg(info.courseName);
 
@@ -151,6 +157,10 @@ bool coursemsy::addone(CEventInfo info){
     }
     else{
         QMessageBox::information(0,"Success","插入新课程成功。",QMessageBox::Ok);
+        ui->inputName->clear();
+        // ui->selectDay->clear();
+        // ui->selectTime->clear();
+    }
     }
     return true;
 }
@@ -184,6 +194,13 @@ void coursemsy::on_pushButton_2_clicked()//将课程添加到课程表中去
 
 bool coursemsy::delone(CEventInfo info){
     QSqlQuery sqlquery(sqldb);
+    QString tex=QString("select from courseDemo where col=%1 and row=%2").//此处不完善，要加上两个条件才好
+                     arg(info.col).arg(info.row);
+
+    if(sqlquery.exec(tex)!=true){
+        QMessageBox::critical(0,"失败","此处尚未插入课程!",QMessageBox::Ok);
+    }
+    else{
     QString strsql=QString("delete from courseDemo where col=%1 and row=%2").//此处不完善，要加上两个条件才好
                      arg(info.col).arg(info.row);
         if(sqlquery.exec(strsql)!=true){
@@ -192,6 +209,7 @@ bool coursemsy::delone(CEventInfo info){
         else{
             QMessageBox::information(0,"Success","删除课程成功。",QMessageBox::Ok);
         }
+    }
     return true;
 }
 

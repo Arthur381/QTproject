@@ -23,7 +23,11 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>hhh</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>PKU/evebg.png</normaloff>PKU/evebg.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true"/>
