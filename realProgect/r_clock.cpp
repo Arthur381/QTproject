@@ -138,14 +138,14 @@ void r_clock::paintEvent(QPaintEvent *e)
 
 void r_clock::changetheme(){
     if(ThemeStyle==0){
-        /*this->setStyleSheet(
+        this->setStyleSheet(
             "QWidget#r_clock{"
-            "    background-image: url(:/PKU/symbol.png);" // 设置背景图片
+            "    background-image: url(:/PKU/rcc.jpg);" // 设置背景图片
             "    background-position: center;" // 将图片放置在中心
             "    background-repeat: no-repeat;" // 禁止图片重复
             "    background-size: 100% 100%;" // 使图片拉伸以适应窗口大小
             "}"
-        );*/
+        );
         ui->pushButton->setStyleSheet(
             "QPushButton {"
             "    background-color: rgba(231, 113, 26, 0.865);"
@@ -179,8 +179,41 @@ void r_clock::changetheme(){
 
     }
     else if(ThemeStyle==1){
-
-
+        this->setStyleSheet(
+            "QWidget#r_clock{"
+            "    background-image: url(:/happydog/rc.jpg);" // 设置背景图片
+            "    background-position: center;" // 将图片放置在中心
+            "    background-repeat: no-repeat;" // 禁止图片重复
+            "    background-size: 100% 100%;" // 使图片拉伸以适应窗口大小
+            "}"
+            );
+        ui->pushButton->setStyleSheet(
+            "QPushButton {"
+            "    background-color: rgba(231, 113, 26, 0.865);"
+            "    border: 0px solid rgba(115, 177, 166, 0.865);"//设置边框
+            "    color:rgb(5, 12, 12);"// 设置按钮文本的颜色为黑色（RGB值为5, 12, 12）
+            "    border-radius: 24;"// 设置按钮的边框半径为6像素，使其圆角化
+            "    font: 14pt '楷体';"// 设置按钮文本的字体为 10 点大小的楷体
+            "}"
+            );
+        ui->pause->setStyleSheet(
+            "QPushButton {"
+            "    background-color: rgba(171, 175, 33, 0.865);"
+            "    border: 0px solid rgba(115, 177, 166, 0.865);"//设置边框
+            "    color:rgb(5, 12, 12);"// 设置按钮文本的颜色为黑色（RGB值为5, 12, 12）
+            "    border-radius: 24;"// 设置按钮的边框半径为6像素，使其圆角化
+            "    font: 14pt '楷体';"// 设置按钮文本的字体为 10 点大小的楷体
+            "}"
+            );
+        ui->end->setStyleSheet(
+            "QPushButton {"
+            "    background-color: rgba(213, 177, 39, 0.865);"
+            "    border: 0px solid rgba(115, 177, 166, 0.865);"//设置边框
+            "    color:rgb(5, 12, 12);"// 设置按钮文本的颜色为黑色（RGB值为5, 12, 12）
+            "    border-radius: 24;"// 设置按钮的边框半径为6像素，使其圆角化
+            "    font: 14pt '楷体';"// 设置按钮文本的字体为 10 点大小的楷体
+            "}"
+            );
     }
     else if(ThemeStyle==2){
 

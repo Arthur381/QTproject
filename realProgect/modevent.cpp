@@ -114,6 +114,19 @@ void ModEvent::changetheme(){
 
     }
     else if(ThemeStyle==1){
+            this->setStyleSheet(
+                "QWidget#ModEvent{"
+                "    background-image: url(:/happydog/calll.jpg);"
+                "    background-position: center; "
+                "    background-repeat: no-repeat;"
+                "}"
+
+                "QTableWidget#tableWidgetInmod{"
+                "background-color:rgba(255, 255, 255, 0.427);"
+                "text-decoration-color: rgba(164, 225, 156, 0.963);"
+                "}"
+
+                );
 
 
 

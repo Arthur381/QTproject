@@ -31,6 +31,8 @@ signals:
 private slots:
     void changebegin();
 
+    void on_PKU_clicked();
+
 private:
     Ui::ChooseTheme *ui;
 };

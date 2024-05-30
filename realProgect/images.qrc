@@ -89,6 +89,16 @@
         <file>happydog/call.png</file>
         <file>happydog/countdown.jpg</file>
         <file>happydog/course.jpg</file>
+        <file>happydog/111.jpg</file>
+        <file>happydog/222.jpg</file>
+        <file>happydog/333.jpg</file>
+        <file>happydog/444.jpg</file>
+        <file>happydog/allin.jpg</file>
+        <file>happydog/cc.jpg</file>
+        <file>happydog/rc.jpg</file>
+        <file>PKU/rcc.jpg</file>
+        <file>happydog/mmcc.jpg</file>
+        <file>happydog/calll.jpg</file>
     </qresource>
     <qresource prefix="/background"/>
     <qresource prefix="/\PKU"/>
