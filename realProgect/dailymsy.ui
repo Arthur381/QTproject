@@ -31,7 +31,7 @@
      <x>0</x>
      <y>20</y>
      <width>290</width>
-     <height>160</height>
+     <height>170</height>
     </rect>
    </property>
    <property name="text">
@@ -41,10 +41,10 @@
   <widget class="QPushButton" name="iAnde">
    <property name="geometry">
     <rect>
-     <x>400</x>
-     <y>20</y>
-     <width>291</width>
-     <height>161</height>
+     <x>410</x>
+     <y>0</y>
+     <width>290</width>
+     <height>170</height>
     </rect>
    </property>
    <property name="text">
@@ -55,9 +55,9 @@
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>230</y>
+     <y>270</y>
      <width>290</width>
-     <height>171</height>
+     <height>170</height>
     </rect>
    </property>
    <property name="text">
@@ -67,10 +67,10 @@
   <widget class="QPushButton" name="eNoti">
    <property name="geometry">
     <rect>
-     <x>400</x>
-     <y>230</y>
-     <width>291</width>
-     <height>181</height>
+     <x>410</x>
+     <y>270</y>
+     <width>290</width>
+     <height>170</height>
     </rect>
    </property>
    <property name="text">
@@ -81,7 +81,7 @@
    <property name="geometry">
     <rect>
      <x>280</x>
-     <y>160</y>
+     <y>170</y>
      <width>131</width>
      <height>91</height>
     </rect>

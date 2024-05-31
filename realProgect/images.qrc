@@ -38,7 +38,6 @@
         <file>PKU/hg.png</file>
         <file>PKU/hj.png</file>
         <file>PKU/hjh.jpg</file>
-        <file>PKU/ju.png</file>
         <file>PKU/ki.jpg</file>
         <file>PKU/mini.png</file>
         <file>PKU/mini1.png</file>
@@ -99,6 +98,7 @@
         <file>PKU/rcc.jpg</file>
         <file>happydog/mmcc.jpg</file>
         <file>happydog/calll.jpg</file>
+        <file>PKU/ju.jpg</file>
     </qresource>
     <qresource prefix="/background"/>
     <qresource prefix="/\PKU"/>

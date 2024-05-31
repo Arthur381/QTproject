@@ -68,7 +68,7 @@ void win_cal_viewMC::changetheme(){
     if(ThemeStyle==0){
         this->setStyleSheet(
             "QWidget#win_cal_viewMC{"
-            "background-image: url(:/PKU/ju.png);"
+            "background-image: url(:/PKU/ju.jpg);"
             "background-position: center;"
             "background-repeat: no-repeat;"
             "}"
