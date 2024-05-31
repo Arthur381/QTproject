@@ -103,7 +103,7 @@ void calendarMC::ColorDays(){
 
 void calendarMC::CreatDataFunc(){//sqldb实际上是一个静态变量
     //1.添加驱动
-    sqldb=QSqlDatabase::addDatabase("QSQLITE");
+    sqldb=QSqlDatabase::addDatabase("QSQLITE","mcconnect");
     //2.名称
     sqldb.setDatabaseName("Event_cal.db");
     //3.数据库打开是否成功
