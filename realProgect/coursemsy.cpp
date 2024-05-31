@@ -194,9 +194,10 @@ void coursemsy::on_pushButton_2_clicked()//将课程添加到课程表中去
 
 bool coursemsy::delone(CEventInfo info){
     QSqlQuery sqlquery(sqldb);
-    QString tex=QString("select from courseDemo where col=%1 and row=%2").//此处不完善，要加上两个条件才好
+    QString tex=QString("select * from courseDemo where col=%1 and row=%2").
                      arg(info.col).arg(info.row);
-
+    qDebug()<<info.col;
+    qDebug()<<info.row;
     if(sqlquery.exec(tex)!=true){
         QMessageBox::critical(0,"失败","此处尚未插入课程!",QMessageBox::Ok);
     }
@@ -207,7 +208,7 @@ bool coursemsy::delone(CEventInfo info){
             QMessageBox::critical(0,"失败","删除课程失败!",QMessageBox::Ok);
         }
         else{
-            QMessageBox::information(0,"Success","删除课程成功。",QMessageBox::Ok);
+            QMessageBox::information(0,"成功","删除课程成功。",QMessageBox::Ok);
         }
     }
     return true;
