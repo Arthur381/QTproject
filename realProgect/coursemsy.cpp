@@ -97,8 +97,8 @@ void coursemsy::CreatDataFunc(){//创建SQLite数据库
 }
 
 void coursemsy::CreatTableFunc(){//创建sqlite数据表
-
-    QSqlQuery creatquery;
+    QSqlDatabase db=QSqlDatabase::database("msyconnection");
+    QSqlQuery creatquery(db);
 
     QString strsql=QString("create table courseDemo("
                              "id int primary key not null,"

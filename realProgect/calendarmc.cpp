@@ -231,15 +231,12 @@ bool calendarMC::iffind(QString name_){
     QSqlQuery sql(sqldb);
     QString queryString = "SELECT COUNT(*) FROM event WHERE name = :name";
     sql.prepare(queryString);
-
     sql.bindValue(":name", name_);
-
     // 执行 SQL 查询
     if (!sql.exec()) {
         qDebug() << "Error executing query:" << sql.lastError().text();
         return false;
     }
-
     // 获取查询结果
     if (sql.next()) {
         qDebug()<<"delete search"<<sql.value(1).toInt();
