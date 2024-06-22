@@ -6,25 +6,38 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>618</width>
-    <height>1000</height>
+    <width>450</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>618</width>
-    <height>1000</height>
+    <width>450</width>
+    <height>600</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>618</width>
-    <height>1000</height>
+    <width>450</width>
+    <height>600</height>
    </size>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>540</y>
+     <width>101</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>下一页</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

@@ -99,6 +99,14 @@
         <file>happydog/mmcc.jpg</file>
         <file>happydog/calll.jpg</file>
         <file>PKU/ju.jpg</file>
+        <file>icon/0(1).jpg</file>
+        <file>icon/0.jpg</file>
+        <file>icon/1(1).jpg</file>
+        <file>icon/1.jpg</file>
+        <file>icon/2(1).jpg</file>
+        <file>icon/2.jpg</file>
+        <file>icon/3(1).jpg</file>
+        <file>icon/3.jpg</file>
     </qresource>
     <qresource prefix="/background"/>
     <qresource prefix="/\PKU"/>
