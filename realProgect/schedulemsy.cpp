@@ -67,14 +67,14 @@ void scheduleMSY::colored(){
         {2, QColor(144, 238, 144)}, // Light Green
         {3, QColor(255, 255, 102)}, // Light Yellow
         {4, QColor(255, 192, 203)}, // Pink
-        {5, QColor(135, 206, 250)}, // Light Sky Blue
-        {6, QColor(255, 222, 173)}, // Navajo White
-        {7, QColor(152, 251, 152)}, // Pale Green
-        {8, QColor(255, 192, 203)}, // Pink
-        {9, QColor(135, 206, 250)}, // Light Sky Blue
-        {10, QColor(255, 222, 173)}, // Navajo White
-        {11, QColor(152, 251, 152)}, // Pale Green
-        {12, QColor(255, 192, 203)}, // Pink
+        {5, QColor(0, 75, 244)},
+        {6, QColor(243,103,42)},
+        {7, QColor(244,180,8)}, //
+        {8, QColor(125,220,225)},
+        {9, QColor(225,176,108)},
+        {10, QColor(241,113,112)},
+        {11, QColor(112,216,236)}, // Pale Green
+        {12, QColor(184,50,87)}, // Pink
         {13, QColor(135, 206, 250)}, // Light Sky Blue
         {14, QColor(255, 222, 173)}, // Navajo White
         {15, QColor(152, 251, 152)}, // Pale Green
