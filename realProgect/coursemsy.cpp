@@ -108,7 +108,7 @@ void coursemsy::CreatTableFunc(){//创建sqlite数据表
                              "unique(col,row))");
 
     //执行SQL语句
-    if(sql.exec(strsql)==false){
+    if(creatquery.exec(strsql)==false){
        // QMessageBox::critical(0,"错误","数据表创建失败",QMessageBox::Ok);
     }
     else{
