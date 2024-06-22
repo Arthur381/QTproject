@@ -175,7 +175,8 @@ QList<AEventInfo> calendarMC::selectPage(int page,int uicnt){//根本目的是�
 
 void calendarMC::CreatTableFunc(){
     //创建SQL
-    QSqlQuery createquery;
+    QSqlDatabase db=QSqlDatabase::database("mcconnect");
+    QSqlQuery createquery(db);
     QString strsql=QString("create table event("
                              "id int not null,"
                              "name text primary key not null,"
@@ -186,7 +187,7 @@ void calendarMC::CreatTableFunc(){
 
     //执行SQL
     if(createquery.exec(strsql)!=true){//已经创建
-        //QMessageBox::critical(0,"抱歉","数据表创建失败!",QMessageBox::Ok);
+        QMessageBox::critical(0,"抱歉","数据表创建失败!",QMessageBox::Ok);
     }
     else{
         QMessageBox::information(0,"Success","数据表创建成功。",QMessageBox::Ok);

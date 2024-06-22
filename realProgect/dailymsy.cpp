@@ -69,10 +69,8 @@ void dailyMSY::CreatTableFunc(){//创建sqlite数据表
 void dailyMSY::CreatDataFunc(){//创建SQLite数据库
     //1.添加数据库驱动
     sqldb=QSqlDatabase::addDatabase("QSQLITE","myConnection");
-
     //2.设置数据库名称
     sqldb.setDatabaseName("ThingsDemo.db");
-
     //3.打开数据库是否成功
     if(sqldb.open()==true){
         //QMessageBox::information(0,"正确","恭喜你，数据库打开成功",QMessageBox::Ok);
