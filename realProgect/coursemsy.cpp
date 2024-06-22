@@ -108,8 +108,8 @@ void coursemsy::CreatTableFunc(){//创建sqlite数据表
                              "unique(col,row))");
 
     //执行SQL语句
-    if(creatquery.exec(strsql)==false){
-        //QMessageBox::critical(0,"错误","数据表创建失败",QMessageBox::Ok);
+    if(sql.exec(strsql)==false){
+       // QMessageBox::critical(0,"错误","数据表创建失败",QMessageBox::Ok);
     }
     else{
        //QMessageBox::information(0,"正确","恭喜你，数据表创建成功",QMessageBox::Ok);
@@ -133,7 +133,12 @@ int coursemsy::countnum(){
 }
 
 bool coursemsy::addone(CEventInfo info){
-    QSqlQuery sqlquery(sqldb);
+    QSqlDatabase db=QSqlDatabase::database("msyconnection");
+    if(!db.isOpen()){
+        qDebug()<<"error";
+    }
+
+    QSqlQuery sqlquery(db);
 
     QString text=ui->inputName->text();
     if (text.isEmpty()) {
@@ -143,15 +148,6 @@ bool coursemsy::addone(CEventInfo info){
     else{
     QString strsql=QString("INSERT INTO courseDemo VALUES(%1,%2,%3,'%4')").
                      arg(info.row*8+info.col).arg(info.col).arg(info.row).arg(info.courseName);
-
-    //查询原表中有没有和当前一样的
-    /*QString strsearch=QString("SELECT col=%1 and row=%2 FROM courseDemo;").
-                        arg(info.col).arg(info.row);
-
-    if(sqlquery.exec(strsearch)==true){//原先这个位置已经有了，不能重复插入
-        QMessageBox::critical(0,"失败","插入新课程失败!该时间段已有课程，请删除后加入新课程",QMessageBox::Ok);
-    }
-    else{*/
     if(sqlquery.exec(strsql)!=true){
         QMessageBox::critical(0,"失败","插入新课程失败!可能是时间重复。",QMessageBox::Ok);
     }
